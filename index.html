@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbra Bannon Milligan. Speaker · Consultant · More Human</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+ /* Brand palette, forest, navy, ivory, gold */
+ --navy:    #0D1F3C;
+ --navy-mid:  #162840;
+ --forest:   #1B3325;
+ --forest-mid: #243D2E;
+ --gold:    #B8922A;
+ --gold-light: #D4AA48;
+ --gold-pale: #F0E4C0;
+ --ivory:   #FAF8F2;
+ --ivory-warm: #F5F1E8;
+ --parchment: #EDE6D6;
+ --ink:    #1A1814;
+ --body-text: #2C2820;
+ --mid-text:  #5A5248;
+ --soft-text: #8A8278;
+ --rule:    #D8D0C0;
+ --rule-dark: rgba(13,31,60,0.12);
+ --f-display: 'Cormorant Garamond', serif;
+ --f-body:   'EB Garamond', serif;
+ --f-sans:   'Jost', sans-serif;
+}
+
+html { scroll-behavior:smooth; }
+body { font-family:var(--f-body); background:var(--ivory); color:var(--body-text); overflow-x:hidden; }
+
+/* ─── TYPE SYSTEM ─── */
+h1,h2,h3 { font-family:var(--f-display); font-weight:400; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes float { 0%,100%{transform:translateY(0) rotate(-6deg)} 50%{transform:translateY(-10px) rotate(-3deg)} }
+@keyframes floatB { 0%,100%{transform:translateY(0) rotate(10deg)} 50%{transform:translateY(-12px) rotate(13deg)} }
+
+.a1{opacity:0;animation:fadeUp .9s .15s ease forwards}
+.a2{opacity:0;animation:fadeUp .9s .35s ease forwards}
+.a3{opacity:0;animation:fadeUp .9s .55s ease forwards}
+.a4{opacity:0;animation:fadeUp .9s .75s ease forwards}
+.a5{opacity:0;animation:fadeUp .9s .95s ease forwards}
+
+/* ══════════════════════════════════════════
+  NAV
+══════════════════════════════════════════ */
+nav {
+ position:fixed; top:0; left:0; right:0; z-index:100;
+ background:rgba(250,248,242,.97); backdrop-filter:blur(14px);
+ border-bottom:1px solid var(--rule);
+ padding:18px 64px;
+ display:flex; justify-content:space-between; align-items:center;
+}
+.nav-logo {
+ font-family:var(--f-display); font-size:18px; font-weight:400;
+ color:var(--navy); letter-spacing:.04em;
+}
+.nav-logo em { font-style:italic; color:var(--gold); }
+.nav-links { display:flex; gap:36px; align-items:center; }
+.nav-link {
+ font-family:var(--f-sans); font-size:11px; font-weight:300;
+ letter-spacing:.22em; text-transform:uppercase;
+ color:var(--soft-text); text-decoration:none; cursor:pointer;
+ transition:color .2s;
+}
+.nav-link:hover { color:var(--navy); }
+.nav-cta {
+ font-family:var(--f-sans); font-size:11px; font-weight:400;
+ letter-spacing:.18em; text-transform:uppercase;
+ color:var(--ivory); background:var(--navy); border:none;
+ padding:11px 24px; cursor:pointer; transition:background .2s;
+}
+.nav-cta:hover { background:var(--navy-mid); }
+
+/* ══════════════════════════════════════════
+  HERO. FULL BLEED MAGAZINE COVER FEEL
+══════════════════════════════════════════ */
+.hero {
+ min-height:100vh;
+ display:grid;
+ grid-template-columns:1.05fr 0.95fr;
+ padding-top:57px;
+ position:relative; overflow:hidden;
+}
+
+.hero-left {
+ background:var(--navy);
+ display:flex; flex-direction:column; justify-content:center;
+ padding:90px 64px 80px 72px;
+ position:relative; overflow:hidden;
+}
+/* Subtle texture on navy panel */
+.hero-left::before {
+ content:'';
+ position:absolute; inset:0;
+ background:
+  radial-gradient(ellipse 70% 60% at 20% 80%, rgba(27,51,37,.5) 0%, transparent 60%),
+  radial-gradient(ellipse 50% 40% at 80% 20%, rgba(184,146,42,.06) 0%, transparent 55%);
+ pointer-events:none;
+}
+
+.hero-issue-label {
+ font-family:var(--f-sans); font-size:10px; font-weight:300;
+ letter-spacing:.4em; text-transform:uppercase;
+ color:var(--gold-light); margin-bottom:24px;
+ display:flex; align-items:center; gap:12px;
+}
+.hero-issue-label::before { content:''; width:28px; height:1px; background:var(--gold); }
+
+.hero-name-first {
+ font-family:var(--f-display); font-size:clamp(54px,6vw,84px);
+ font-weight:300; color:rgba(250,248,242,.9);
+ line-height:.95; letter-spacing:.01em;
+ position:relative; z-index:1;
+}
+.hero-name-last {
+ font-family:var(--f-display); font-size:clamp(54px,6vw,84px);
+ font-weight:600; color:var(--ivory);
+ line-height:.95; letter-spacing:.01em; margin-bottom:6px;
+ position:relative; z-index:1;
+}
+.hero-maiden {
+ font-family:var(--f-display); font-size:14px; font-weight:300;
+ font-style:italic; color:rgba(250,248,242,.38);
+ letter-spacing:.18em; margin-bottom:36px;
+ position:relative; z-index:1;
+}
+
+.hero-tagline {
+ font-family:var(--f-display); font-size:clamp(22px,2.4vw,30px);
+ font-weight:300; font-style:italic;
+ color:var(--gold-light); line-height:1.45;
+ max-width:400px; margin-bottom:40px;
+ position:relative; z-index:1;
+}
+
+/* The three talks in hero */
+.hero-talks {
+ display:flex; flex-direction:column; gap:0;
+ border-top:1px solid rgba(255,255,255,.1);
+ margin-bottom:40px; position:relative; z-index:1;
+}
+.hero-talk {
+ display:grid; grid-template-columns:28px 1fr;
+ align-items:start; gap:16px;
+ padding:16px 0;
+ border-bottom:1px solid rgba(255,255,255,.07);
+}
+.hero-talk:last-child { border-bottom:none; }
+.ht-num {
+ font-family:var(--f-display); font-size:13px; font-weight:300;
+ color:rgba(255,255,255,.25); line-height:1.6; padding-top:2px;
+}
+.ht-text {}
+.ht-title {
+ font-family:var(--f-display); font-size:20px; font-weight:600;
+ color:var(--ivory); line-height:1.2; margin-bottom:3px;
+}
+.ht-subtitle {
+ font-family:var(--f-display); font-size:15px; font-weight:300;
+ font-style:italic; color:var(--gold-light); line-height:1.3;
+ margin-bottom:5px;
+}
+.ht-audience {
+ font-family:var(--f-sans); font-size:10px; font-weight:300;
+ letter-spacing:.18em; text-transform:uppercase;
+ color:rgba(255,255,255,.38);
+}
+
+.hero-buttons {
+ display:flex; gap:12px; position:relative; z-index:1;
+}
+.btn-gold {
+ background:var(--gold); color:var(--navy); border:none;
+ padding:15px 32px; font-family:var(--f-sans); font-size:11px;
+ font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+ cursor:pointer; transition:all .2s;
+}
+.btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 12px 32px rgba(184,146,42,.3); }
+.btn-outline-ivory {
+ background:transparent; color:rgba(255,255,255,.5);
+ border:1px solid rgba(255,255,255,.18);
+ padding:15px 28px; font-family:var(--f-sans); font-size:11px;
+ font-weight:300; letter-spacing:.15em; text-transform:uppercase;
+ cursor:pointer; transition:all .2s;
+}
+.btn-outline-ivory:hover { border-color:var(--gold); color:var(--gold-light); }
+
+/* Hero right, photo */
+.hero-right {
+ background:var(--parchment);
+ display:flex; flex-direction:column;
+ align-items:center; justify-content:center;
+ padding:90px 60px;
+ position:relative; overflow:hidden;
+}
+.hero-right::before {
+ content:'';
+ position:absolute; inset:0;
+ background:radial-gradient(ellipse 80% 70% at 50% 40%, rgba(27,51,37,.07) 0%, transparent 65%);
+ pointer-events:none;
+}
+.photo-frame {
+ position:relative; z-index:2; text-align:center;
+}
+.hero-photo {
+ width:420px; height:420px; border-radius:50%;
+ object-fit:cover; object-position:center top;
+ border:5px solid var(--ivory);
+ box-shadow:0 20px 64px rgba(13,31,60,.18), 0 0 0 1px rgba(13,31,60,.06);
+}
+.photo-leaf-a {
+ position:absolute; top:-26px; right:-22px;
+ width:68px; height:auto; opacity:.65;
+ animation:float 7s ease-in-out infinite;
+}
+.photo-leaf-b {
+ position:absolute; bottom:-16px; left:-24px;
+ width:48px; height:auto; opacity:.45;
+ animation:floatB 10s ease-in-out infinite;
+}
+.photo-caption {
+ margin-top:24px;
+ font-family:var(--f-display); font-size:17px; font-weight:300;
+ font-style:italic; color:var(--forest); line-height:1.5;
+ max-width:280px; margin-left:auto; margin-right:auto;
+}
+.photo-caption span {
+ display:block; font-family:var(--f-sans); font-size:10px;
+ font-weight:300; letter-spacing:.25em; text-transform:uppercase;
+ color:var(--gold); margin-top:8px; font-style:normal;
+}
+
+/* ══════════════════════════════════════════
+  FIVE FACTS BAND
+══════════════════════════════════════════ */
+.facts-band {
+ background:var(--forest);
+ display:grid; grid-template-columns:repeat(5,1fr);
+ border-top:3px solid var(--gold);
+}
+.fact-cell {
+ padding:32px 28px;
+ border-right:1px solid rgba(255,255,255,.06);
+ transition:background .2s; cursor:default;
+ position:relative; overflow:hidden;
+}
+.fact-cell:last-child { border-right:none; }
+.fact-cell:hover { background:rgba(255,255,255,.04); }
+.fact-cell::after {
+ content:''; position:absolute; bottom:0; left:0; right:0;
+ height:2px; background:var(--gold);
+ transform:scaleX(0); transform-origin:left;
+ transition:transform .4s ease;
+}
+.fact-cell:hover::after { transform:scaleX(1); }
+.fc-when {
+ font-family:var(--f-sans); font-size:11px; font-weight:400;
+ letter-spacing:.22em; text-transform:uppercase;
+ color:var(--gold-light); margin-bottom:8px;
+}
+.fc-headline {
+ font-family:var(--f-display); font-size:21px; font-weight:600;
+ color:var(--ivory); line-height:1.2; margin-bottom:8px;
+}
+.fc-body {
+ font-family:var(--f-sans); font-size:13px; font-weight:300;
+ color:rgba(255,255,255,.68); line-height:1.6;
+}
+
+/* ══════════════════════════════════════════
+  EDITORIAL SPEAKING SECTION
+══════════════════════════════════════════ */
+.speaking-section { background:var(--ivory); padding:100px 72px; }
+
+.section-label {
+ font-family:var(--f-sans); font-size:10px; font-weight:300;
+ letter-spacing:.4em; text-transform:uppercase;
+ color:var(--gold); margin-bottom:14px;
+ display:flex; align-items:center; gap:14px;
+}
+.section-label::before { content:''; width:32px; height:1px; background:var(--gold); }
+
+.section-title {
+ font-family:var(--f-display); font-size:clamp(40px,4.5vw,62px);
+ font-weight:300; color:var(--navy);
+ line-height:1.0; letter-spacing:.01em; margin-bottom:56px;
+}
+.section-title em { font-style:italic; color:var(--gold); }
+
+/* Talk cards, magazine article format */
+.talks { display:flex; flex-direction:column; gap:0; }
+
+.talk {
+ display:grid; grid-template-columns:1fr 1fr;
+ gap:0; border-top:1px solid var(--rule);
+ padding:60px 0;
+}
+.talk:last-child { border-bottom:1px solid var(--rule); }
+
+.talk-left { padding-right:64px; }
+.talk-right { padding-left:64px; border-left:1px solid var(--rule); }
+
+.talk-number {
+ font-family:var(--f-display); font-size:80px; font-weight:300;
+ color:rgba(13,31,60,.07); line-height:1; margin-bottom:16px;
+}
+.talk-audience {
+ font-family:var(--f-sans); font-size:12px; font-weight:300;
+ letter-spacing:.22em; text-transform:uppercase;
+ color:var(--gold); margin-bottom:12px;
+}
+.talk-title {
+ font-family:var(--f-display); font-size:clamp(28px,3vw,38px);
+ font-weight:600; color:var(--navy);
+ line-height:1.1; margin-bottom:6px;
+}
+.talk-subtitle {
+ font-family:var(--f-display); font-size:20px; font-weight:300;
+ font-style:italic; color:var(--gold);
+ line-height:1.35; margin-bottom:0;
+}
+
+.talk-body {
+ font-family:var(--f-body); font-size:18px; font-weight:400;
+ color:var(--body-text); line-height:1.78;
+ margin-bottom:24px;
+}
+
+/* The "sell" pull quote inside each talk */
+.talk-pullquote {
+ background:var(--gold-pale); border-left:4px solid var(--gold);
+ padding:20px 24px; margin-bottom:24px;
+}
+.tpq-text {
+ font-family:var(--f-display); font-size:19px; font-weight:400;
+ font-style:italic; color:var(--navy); line-height:1.55;
+}
+.tpq-text strong { font-style:normal; font-weight:700; color:var(--forest); }
+
+.talk-formats { display:flex; gap:8px; flex-wrap:wrap; }
+.talk-format {
+ font-family:var(--f-sans); font-size:12px; font-weight:300;
+ letter-spacing:.12em; text-transform:uppercase;
+ color:var(--navy); border:1px solid rgba(13,31,60,.25);
+ padding:6px 14px;
+}
+
+/* Fees, clean editorial row */
+.fees {
+ display:grid; grid-template-columns:repeat(4,1fr);
+ gap:0; margin-top:56px;
+ border:1px solid var(--rule);
+}
+.fee {
+ padding:28px 24px;
+ border-right:1px solid var(--rule);
+ background:var(--ivory-warm);
+}
+.fee:last-child { border-right:none; }
+.fee-type {
+ font-family:var(--f-sans); font-size:11px; font-weight:300;
+ letter-spacing:.25em; text-transform:uppercase;
+ color:var(--gold); margin-bottom:10px;
+}
+.fee-format {
+ font-family:var(--f-display); font-size:18px; font-weight:600;
+ color:var(--navy); margin-bottom:6px; line-height:1;
+}
+.fee-price {
+ font-family:var(--f-display); font-size:28px; font-weight:300;
+ color:var(--forest);
+}
+.fee-price sup { font-size:.6em; }
+.fee-duration {
+ font-family:var(--f-sans); font-size:13px; font-weight:300;
+ color:var(--soft-text); margin-top:4px;
+}
+.fee-note {
+ font-family:var(--f-sans); font-size:10px; font-weight:400;
+ letter-spacing:.1em; color:var(--gold); margin-top:6px;
+ text-transform:uppercase;
+}
+
+/* ══════════════════════════════════════════
+  STORY. MAGAZINE NARRATIVE
+══════════════════════════════════════════ */
+.story-section { background:var(--ivory-warm); padding:100px 72px; }
+
+/* ── EDITORIAL PHOTO TREATMENTS ── */
+
+/* Single photo — full column width, generous margin */
+.photo-full {
+  margin:44px 0 48px;
+  position:relative;
+}
+.photo-full img {
+  width:100%; display:block;
+  min-height:480px; object-fit:cover; object-position:center top;
+  border-radius:1px;
+  box-shadow:0 12px 48px rgba(13,31,60,.13);
+}
+.photo-full::before {
+  content:'';
+  position:absolute; top:-16px; left:-16px;
+  width:60px; height:60px;
+  border-top:2px solid var(--gold);
+  border-left:2px solid var(--gold);
+  pointer-events:none;
+}
+.photo-caption {
+  font-family:var(--f-sans); font-size:11px; font-weight:300;
+  letter-spacing:.16em; color:var(--soft-text);
+  text-transform:uppercase; margin-top:10px;
+  padding-left:2px;
+}
+
+/* Single photo — pulled right, text wraps left */
+.photo-inset-right {
+  float:right; margin:8px 0 28px 36px;
+  width:38%; position:relative;
+}
+.photo-inset-right img {
+  width:100%; display:block;
+  object-fit:cover; object-position:center top;
+  border-radius:1px;
+  box-shadow:0 8px 32px rgba(13,31,60,.12);
+}
+.photo-inset-right::after {
+  content:'';
+  position:absolute; bottom:-12px; right:-12px;
+  width:40px; height:40px;
+  border-bottom:2px solid var(--gold);
+  border-right:2px solid var(--gold);
+  pointer-events:none;
+}
+
+/* Single photo — pulled left, text wraps right */
+.photo-inset-left {
+  float:left; margin:8px 36px 28px 0;
+  width:36%; position:relative;
+}
+.photo-inset-left img {
+  width:100%; display:block;
+  object-fit:cover; object-position:center top;
+  border-radius:1px;
+  box-shadow:0 8px 32px rgba(13,31,60,.12);
+}
+.photo-inset-left::after {
+  content:'';
+  position:absolute; bottom:-12px; left:-12px;
+  width:40px; height:40px;
+  border-bottom:2px solid var(--gold);
+  border-left:2px solid var(--gold);
+  pointer-events:none;
+}
+
+/* Two-photo grid — USE LANDSCAPE ORIENTATION PHOTOS ONLY (min 16:9 ratio recommended) */
+.photo-grid-2 {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:14px; margin:44px 0 48px;
+}
+.photo-grid-2 .photo-item img {
+  width:100%; display:block;
+  object-fit:cover; height:280px;
+  border-radius:1px;
+  box-shadow:0 8px 32px rgba(13,31,60,.11);
+}
+.photo-grid-2 .photo-item.tall img { height:360px; }
+
+/* Clearfix for float photos */
+.story-body-text + .story-body-text { overflow:auto; }
+.cf::after { content:''; display:table; clear:both; }
+
+.story-intro-grid {
+ display:grid; grid-template-columns:1fr 2fr;
+ gap:80px; align-items:start; margin-bottom:80px;
+}
+.si-left { position:sticky; top:100px; }
+.si-right {}
+.story-lede {
+ font-family:var(--f-display); font-size:clamp(22px,2.5vw,30px);
+ font-weight:300; font-style:italic; color:var(--navy);
+ line-height:1.6; margin-bottom:20px;
+}
+.story-lede strong { font-style:normal; font-weight:700; }
+.story-body-text {
+ font-family:var(--f-body); font-size:17px; font-weight:400;
+ color:var(--body-text); line-height:1.8; margin-bottom:18px;
+}
+.story-body-text strong { font-weight:700; color:var(--navy); }
+
+/* Inline pull quote, the ones that sell */
+.inline-pull {
+ margin:36px 0;
+ padding:28px 36px;
+ border-top:2px solid var(--gold);
+ border-bottom:2px solid var(--gold);
+ background:var(--gold-pale);
+}
+.ip-text {
+ font-family:var(--f-display); font-size:clamp(22px,2.4vw,30px);
+ font-weight:400; font-style:italic;
+ color:var(--navy); line-height:1.5;
+}
+.ip-text strong { font-style:normal; font-weight:700; color:var(--forest); }
+
+/* Chapter markers */
+.chapter-marker {
+ display:flex; align-items:center; gap:16px;
+ margin:48px 0 20px;
+}
+.cm-num {
+ font-family:var(--f-sans); font-size:9px; font-weight:300;
+ letter-spacing:.3em; text-transform:uppercase; color:var(--gold);
+ white-space:nowrap;
+}
+.cm-line { flex:1; height:1px; background:var(--rule); }
+.cm-title {
+ font-family:var(--f-display); font-size:28px; font-weight:600;
+ color:var(--navy); margin-bottom:14px;
+}
+
+/* ══════════════════════════════════════════
+  CONSULTING. DARK NAVY
+══════════════════════════════════════════ */
+.consulting-section {
+ background:var(--navy); padding:100px 72px;
+ display:grid; grid-template-columns:1fr 1fr; gap:80px;
+ align-items:start; position:relative; overflow:hidden;
+}
+.consulting-section::before {
+ content:''; position:absolute; top:-80px; right:-80px;
+ width:400px; height:400px; border-radius:50%;
+ background:radial-gradient(circle,rgba(27,51,37,.3) 0%,transparent 70%);
+ pointer-events:none;
+}
+
+.consulting-label {
+ font-family:var(--f-sans); font-size:10px; font-weight:300;
+ letter-spacing:.4em; text-transform:uppercase;
+ color:var(--gold-light); margin-bottom:14px;
+ display:flex; align-items:center; gap:12px;
+}
+.consulting-label::before { content:''; width:28px; height:1px; background:var(--gold); }
+
+.consulting-title {
+ font-family:var(--f-display); font-size:clamp(34px,3.5vw,50px);
+ font-weight:300; color:var(--ivory);
+ line-height:1.05; margin-bottom:24px;
+}
+.consulting-title em { font-style:italic; color:var(--gold-light); }
+
+.consulting-body {
+ font-family:var(--f-body); font-size:17px; font-weight:400;
+ color:rgba(250,248,242,.55); line-height:1.78; margin-bottom:16px;
+}
+.consulting-body strong { color:rgba(250,248,242,.88); font-weight:700; }
+
+/* Origin callout */
+.origin-callout {
+ border-left:3px solid var(--gold);
+ padding:20px 24px; margin:28px 0 32px;
+ background:rgba(255,255,255,.04);
+}
+.oc-label {
+ font-family:var(--f-sans); font-size:9px; font-weight:300;
+ letter-spacing:.28em; text-transform:uppercase;
+ color:var(--gold-light); margin-bottom:8px;
+}
+.oc-text {
+ font-family:var(--f-display); font-size:17px; font-style:italic;
+ font-weight:300; color:rgba(250,248,242,.75); line-height:1.55;
+}
+.oc-text strong { font-style:normal; font-weight:600; color:var(--ivory); }
+
+.btn-gold-solid {
+ display:inline-block; background:var(--gold); color:var(--navy);
+ border:none; padding:16px 36px; font-family:var(--f-sans);
+ font-size:11px; font-weight:500; letter-spacing:.18em;
+ text-transform:uppercase; cursor:pointer; transition:all .2s;
+}
+.btn-gold-solid:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 12px 32px rgba(184,146,42,.35); }
+
+.services-list { display:flex; flex-direction:column; gap:2px; }
+.svc {
+ display:flex; align-items:center; justify-content:space-between;
+ padding:24px 28px; gap:20px;
+ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07);
+ transition:background .2s;
+}
+.svc:hover { background:rgba(255,255,255,.07); }
+.svc-left {}
+.svc-name {
+ font-family:var(--f-display); font-size:22px; font-weight:600;
+ color:var(--ivory); letter-spacing:.01em;
+}
+.svc-desc {
+ font-family:var(--f-sans); font-size:11px; font-weight:300;
+ color:rgba(255,255,255,.35); margin-top:3px;
+}
+.svc-price {
+ font-family:var(--f-display); font-size:24px; font-weight:300;
+ color:var(--gold-light); white-space:nowrap; flex-shrink:0;
+}
+
+/* ══════════════════════════════════════════
+  TESTIMONIALS
+══════════════════════════════════════════ */
+.testi-section { background:var(--ivory); padding:100px 72px; }
+.testi-grid {
+ display:grid; grid-template-columns:repeat(3,1fr);
+ gap:2px; margin-top:48px;
+}
+.testi-card { background:var(--ivory-warm); padding:44px 36px; }
+.testi-quote {
+ font-family:var(--f-display); font-size:20px; font-weight:300;
+ font-style:italic; color:var(--body-text);
+ line-height:1.65; margin-bottom:28px;
+}
+.testi-divider { width:32px; height:1px; background:var(--gold); margin-bottom:20px; }
+.testi-name {
+ font-family:var(--f-sans); font-size:13px; font-weight:500;
+ color:var(--navy);
+}
+.testi-role {
+ font-family:var(--f-sans); font-size:11px; font-weight:300;
+ color:var(--soft-text); margin-top:3px;
+}
+.testi-card.placeholder {
+ border:1px dashed var(--rule); background:transparent;
+ display:flex; flex-direction:column;
+ align-items:flex-start; justify-content:center;
+ min-height:240px; gap:6px;
+}
+.ph-name { font-family:var(--f-display); font-size:18px; font-weight:400; color:var(--rule); }
+.ph-role { font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.15em; text-transform:uppercase; color:var(--rule); }
+.ph-note { font-family:var(--f-sans); font-size:10px; font-weight:300; color:var(--rule); letter-spacing:.12em; text-transform:uppercase; margin-top:10px; }
+
+/* ══════════════════════════════════════════
+  NEWSLETTER
+══════════════════════════════════════════ */
+.newsletter-section {
+ background:var(--parchment); padding:80px 72px;
+ display:grid; grid-template-columns:1fr 1fr; gap:80px;
+ align-items:center;
+}
+.nl-stat { font-family:var(--f-display); font-size:64px; font-weight:300; color:var(--navy); line-height:1; }
+.nl-stat em { font-style:italic; color:var(--gold); font-size:.8em; }
+.nl-stat-label { font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--soft-text); margin-bottom:28px; }
+.nl-divider { height:1px; background:var(--rule); margin:24px 0; }
+.nl-title { font-family:var(--f-display); font-size:clamp(34px,3.5vw,50px); font-weight:300; color:var(--navy); line-height:1.05; margin-bottom:16px; }
+.nl-title em { font-style:italic; color:var(--gold); }
+.nl-body { font-family:var(--f-body); font-size:17px; font-weight:400; color:var(--body-text); line-height:1.78; margin-bottom:20px; }
+.nl-topics { display:flex; flex-direction:column; gap:10px; }
+.nl-topic { font-family:var(--f-body); font-size:16px; color:var(--mid-text); display:flex; align-items:center; gap:12px; }
+.nl-topic::before { content:''; width:18px; height:1px; background:var(--gold); flex-shrink:0; }
+.nl-form { display:flex; flex-direction:column; gap:10px; margin-top:28px; }
+.nl-input { padding:14px 18px; border:1px solid var(--rule); background:var(--ivory); font-family:var(--f-body); font-size:16px; color:var(--ink); outline:none; transition:border-color .2s; }
+.nl-input:focus { border-color:var(--gold); }
+.nl-input::placeholder { color:var(--rule); }
+.nl-btn { background:var(--navy); color:var(--ivory); border:none; padding:15px 32px; font-family:var(--f-sans); font-size:11px; font-weight:400; letter-spacing:.2em; text-transform:uppercase; cursor:pointer; transition:background .2s; align-self:flex-start; }
+.nl-btn:hover { background:var(--navy-mid); }
+.nl-footnote { font-family:var(--f-sans); font-size:11px; font-weight:300; color:var(--soft-text); }
+
+/* ══════════════════════════════════════════
+  ARTICLES — MORE HUMAN NEWSLETTER
+══════════════════════════════════════════ */
+.articles-section { background:var(--ivory); padding:100px 72px; }
+
+.articles-grid {
+ display:grid; grid-template-columns:repeat(3,1fr);
+ gap:2px; margin-top:56px;
+}
+
+.article-card {
+ background:var(--ivory-warm);
+ padding:44px 36px 40px;
+ display:flex; flex-direction:column;
+ border-top:3px solid transparent;
+ transition:border-color .25s, background .2s;
+ cursor:pointer; text-decoration:none; color:inherit;
+}
+.article-card:hover { background:var(--parchment); border-top-color:var(--gold); }
+
+.article-issue {
+ font-family:var(--f-sans); font-size:10px; font-weight:300;
+ letter-spacing:.32em; text-transform:uppercase;
+ color:var(--gold); margin-bottom:18px;
+ display:flex; align-items:center; gap:10px;
+}
+.article-issue::before { content:''; width:20px; height:1px; background:var(--gold); flex-shrink:0; }
+
+.article-title {
+ font-family:var(--f-display); font-size:clamp(20px,2vw,26px);
+ font-weight:600; color:var(--navy);
+ line-height:1.2; margin-bottom:16px;
+}
+
+.article-excerpt {
+ font-family:var(--f-body); font-size:16px; font-weight:400;
+ color:var(--mid-text); line-height:1.75;
+ flex:1; margin-bottom:28px;
+}
+
+.article-read {
+ font-family:var(--f-sans); font-size:11px; font-weight:400;
+ letter-spacing:.18em; text-transform:uppercase;
+ color:var(--gold); display:flex; align-items:center; gap:8px;
+ align-self:flex-start;
+ transition:gap .2s;
+}
+.article-card:hover .article-read { gap:14px; }
+
+/* ══════════════════════════════════════════
+  CTA
+══════════════════════════════════════════ */
+.cta-section {
+ background:var(--navy); padding:100px 72px;
+ text-align:center; position:relative; overflow:hidden;
+}
+.cta-section::before {
+ content:''; position:absolute; top:50%; left:50%;
+ transform:translate(-50%,-50%);
+ width:700px; height:400px;
+ background:radial-gradient(ellipse,rgba(27,51,37,.35) 0%,transparent 70%);
+ pointer-events:none;
+}
+.cta-title { font-family:var(--f-display); font-size:clamp(42px,5vw,70px); font-weight:300; color:var(--ivory); line-height:1.05; margin-bottom:16px; position:relative; }
+.cta-title em { font-style:italic; color:var(--gold-light); }
+.cta-sub { font-family:var(--f-display); font-size:19px; font-weight:300; font-style:italic; color:rgba(250,248,242,.45); max-width:520px; margin:0 auto 44px; line-height:1.65; position:relative; }
+.cta-buttons { display:flex; gap:14px; justify-content:center; position:relative; }
+.btn-outline-gold { background:transparent; color:rgba(255,255,255,.5); border:1px solid rgba(255,255,255,.18); padding:16px 36px; font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; transition:all .2s; }
+.btn-outline-gold:hover { border-color:var(--gold); color:var(--gold-light); }
+.cta-contact { font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.15em; color:rgba(255,255,255,.22); text-transform:uppercase; margin-top:28px; position:relative; }
+
+/* Credential bar inside consulting */
+.cred-bar {
+ display:grid; grid-template-columns:repeat(3,1fr);
+ gap:2px; margin:28px 0 32px;
+}
+.cred-item {
+ background:rgba(255,255,255,.05);
+ border:1px solid rgba(255,255,255,.08);
+ padding:20px 22px;
+}
+.cred-num {
+ font-family:var(--f-display); font-size:32px; font-weight:600;
+ color:var(--ivory); line-height:1; margin-bottom:5px;
+}
+.cred-num span {
+ font-size:.65em; font-weight:300; color:var(--gold-light);
+}
+.cred-label {
+ font-family:var(--f-sans); font-size:11px; font-weight:300;
+ letter-spacing:.12em; color:rgba(255,255,255,.45);
+ line-height:1.5;
+}
+
+/* ══ FOOTER ══ */
+footer { background:var(--ink); padding:32px 72px; display:flex; justify-content:space-between; align-items:center; }
+.footer-logo { font-family:var(--f-display); font-size:15px; font-weight:400; color:var(--gold-pale); }
+.footer-logo em { font-style:italic; color:var(--gold); }
+.footer-copy { font-family:var(--f-sans); font-size:10px; letter-spacing:.14em; color:rgba(255,255,255,.2); text-transform:uppercase; }
+.footer-links { display:flex; gap:24px; }
+.footer-link { font-family:var(--f-sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.25); text-decoration:none; cursor:pointer; transition:color .2s; }
+.footer-link:hover { color:var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <div class="nav-logo">Barbra Bannon <em>Milligan</em></div>
+ <div class="nav-links">
+  <a class="nav-link" href="#speaking">Speaking</a>
+  <a class="nav-link" href="#story">Story</a>
+  <a class="nav-link" href="#consulting">Consulting</a>
+  <a class="nav-link" href="#newsletter">Newsletter</a>
+  <button class="nav-cta">Book Barbra</button>
+ </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+
+ <!-- Navy left panel -->
+ <div class="hero-left">
+  <div class="hero-issue-label a1">Speaker &nbsp;·&nbsp; Consultant &nbsp;·&nbsp; More Human Newsletter</div>
+
+  <div class="hero-name-first a2">Barbra Bannon</div>
+  <div class="hero-name-last a2">Milligan</div>
+  <div class="hero-maiden a2">Charlottesville, VA</div>
+
+  <div class="hero-tagline a3">
+   She didn't start using AI to be more efficient.<br>She used it to be more human.
+  </div>
+
+  <div class="hero-talks a4">
+   <div class="hero-talk">
+    <div class="ht-num">01</div>
+    <div class="ht-text">
+     <div class="ht-title">More Human</div>
+     <div class="ht-subtitle">How AI Gives You Back Your Life</div>
+     <div class="ht-audience">Entrepreneurs · Business Owners · Working Parents</div>
+    </div>
+   </div>
+   <div class="hero-talk">
+    <div class="ht-num">02</div>
+    <div class="ht-text">
+     <div class="ht-title">Navigating Crisis</div>
+     <div class="ht-subtitle">AI as a Lifeline When Stakes Are Highest</div>
+     <div class="ht-audience">Caregivers · Parents · Healthcare Communities</div>
+    </div>
+   </div>
+   <div class="hero-talk">
+    <div class="ht-num">03</div>
+    <div class="ht-text">
+     <div class="ht-title">Designed to Learn</div>
+     <div class="ht-subtitle">AI-Powered Homeschooling for Every Learning Style</div>
+     <div class="ht-audience">Homeschool Families · Educators · Parent Communities</div>
+    </div>
+   </div>
+  </div>
+
+  <div class="hero-buttons a5">
+   <button class="btn-gold">Book Barbra to Speak</button>
+   <button class="btn-outline-ivory">Download Media Kit</button>
+  </div>
+ </div>
+
+ <!-- Photo right panel -->
+ <div class="hero-right">
+  <div class="photo-frame">
+   <svg class="photo-leaf-a" viewBox="0 0 60 90" fill="none" width="68">
+    <path d="M30 88C30 88 3 60 3 33C3 16 15 3 30 3C45 3 57 16 57 33C57 60 30 88 30 88Z" fill="#1B3325" opacity=".8"/>
+    <line x1="30" y1="9" x2="30" y2="82" stroke="#5C7A62" stroke-width="1.2" opacity=".5"/>
+    <line x1="30" y1="30" x2="16" y2="48" stroke="#5C7A62" stroke-width=".8" opacity=".35"/>
+    <line x1="30" y1="30" x2="44" y2="48" stroke="#5C7A62" stroke-width=".8" opacity=".35"/>
+   </svg>
+   <svg class="photo-leaf-b" viewBox="0 0 50 75" fill="none" width="48">
+    <path d="M25 73C25 73 2 50 2 28C2 13 12 2 25 2C38 2 48 13 48 28C48 50 25 73 25 73Z" fill="#5C7A62" opacity=".65"/>
+   </svg>
+   <img src="./images/hero-barbra-portrait.jpg" alt="Barbra Bannon Milligan" class="hero-photo">
+   <div class="photo-caption">
+    Attention Intelligence for Life's Hardest Moments
+    <span>Available Nationally · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="395b584b5b794a49584b525c4f56554c4d505657175a5654">[email&#160;protected]</a></span>
+   </div>
+  </div>
+ </div>
+
+</section>
+
+<!-- ══════════════ FIVE FACTS BAND ══════════════ -->
+<div class="facts-band">
+ <div class="fact-cell">
+  <div class="fc-when">Age 10</div>
+  <div class="fc-headline">National Enquirer</div>
+  <div class="fc-body">The city tried to shut down her lemonade stand. She made the front page twice.</div>
+ </div>
+ <div class="fact-cell">
+  <div class="fc-when">Age 16</div>
+  <div class="fc-headline">Accepted to <strong>University of New Hampshire</strong></div>
+  <div class="fc-body">First standardized tests she ever took. Homeschooled. Self-directed. No roadmap.</div>
+ </div>
+ <div class="fact-cell">
+  <div class="fc-when">2004</div>
+  <div class="fc-headline">Sports Illustrated + MTV</div>
+  <div class="fc-body">Red Sox Last Supper. On Johnny Damon's wall on MTV Cribs. Sports Illustrated. Viral before viral was a word.</div>
+ </div>
+ <div class="fact-cell">
+  <div class="fc-when">2020</div>
+  <div class="fc-headline">$250K Raised</div>
+  <div class="fc-body">For women in business. A five-year-old. A pandemic. She went outward.</div>
+ </div>
+ <div class="fact-cell">
+  <div class="fc-when">May 2026</div>
+  <div class="fc-headline">Eliza Rings the Bell</div>
+  <div class="fc-body">Diagnosed January 2024. Their company is named Oliza. Ollie + Eliza. Everything was always for them.</div>
+ </div>
+</div>
+
+<!-- ══════════════ STORY ══════════════ -->
+<section class="story-section" id="story">
+ <div class="section-label">The Story</div>
+ <h2 class="section-title">A life built<br><em>all the way through.</em></h2>
+
+ <div class="story-intro-grid">
+  <div class="si-left">
+   <p class="story-lede">She doesn't speak about resilience from a distance. <strong>She speaks from inside it.</strong></p>
+   <p class="story-body-text" style="font-size:15px;color:var(--soft-text);">The thread from the Snack Shack at ten to every stage she walks onto is the same: connection first. Always.</p>
+  </div>
+  <div class="si-right">
+
+   <div class="chapter-marker">
+    <div class="cm-num">Age 10</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">The Snack Shack</div>
+   <p class="story-body-text">This was the 1980s. Homeschooling was not a lifestyle choice, it was a radical act. Strangers stopped Barbra and her brother in grocery stores to quiz them on multiplication tables. Their mother did it anyway, without support, without community, without a roadmap. It worked. Barbra's brother became a Fulbright scholar and tenured math professor at Siena College.</p>
+   <p class="story-body-text">Barbra, wanting friends, built a 6-by-6-foot snack stand in her front yard, hired neighborhood kids, paid them in one-cent Tootsie Rolls to deliver flyers, and got $300 from her dad at Sam's Club. By end of summer she had purchased a trampoline for the whole neighborhood. Every child had to sign a waiver before jumping.</p>
+
+   <div class="inline-pull">
+    <div class="ip-text">The city of Newburyport tried to shut her down. She made the front page twice. <strong>The National Enquirer picked it up.</strong> She was ten years old.</div>
+   </div>
+
+   <p class="story-body-text">At 13, she decided she wanted to pitch softball. No coach. No instruction. She practiced alone in the backyard, four hours a day, until she could throw 67 mph. The reason: to surprise her father. Her team won the <strong>New Hampshire State Championship</strong> that year. This is simply who she is. She identifies what she wants, she builds the path herself, and she does it for the people she loves.</p>
+
+   <div class="chapter-marker">
+    <div class="cm-num">Ages 16–17</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">The First Tests. The First Systems.</div>
+   <p class="story-body-text">At 16, Barbra navigated her own high school graduation through <strong>Oak Meadow</strong> and took the SATs, the first standardized tests she had ever taken in her life, and was accepted to the University of New Hampshire. At 17, as a summer intern, she walked into <strong>Southern New Hampshire Medical Center</strong> and reengineered three departments, eliminated redundancies, and prepared the organization for enterprise <strong>Cactus credentialing software</strong> implementation. In twelve weeks.</p>
+
+   <div class="inline-pull">
+    <div class="ip-text">The strangers who quizzed her in grocery stores never got an update. <strong>She was reengineering hospital departments at 17.</strong> Her mother was right.</div>
+   </div>
+
+   <div class="chapter-marker">
+    <div class="cm-num">2004–2009</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">Going Viral. Building at Scale.</div>
+   <p class="story-body-text">In 2004, the Boston Red Sox won the World Series for the first time in 86 years. Barbra made something that captured the cultural moment, the <strong>Red Sox Last Supper</strong>. It went viral before viral was a word. <strong>Sports Illustrated</strong> featured it. It appeared on the wall of <strong>Johnny Damon's house on MTV Cribs</strong> — the actual painting, on national television, in one of the most famous athlete homes of that era.
+
+   <div style="margin:24px 0 8px;">
+     <video
+       controls
+       style="width:100%;max-width:520px;display:block;border-radius:2px;
+              box-shadow:0 8px 36px rgba(13,31,60,.14);"
+       preload="metadata">
+       <source src="./images/story-video.mp4" type="video/mp4">
+     </video>
+     <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:300;
+                 letter-spacing:.14em;color:#8A8278;text-transform:uppercase;
+                 margin-top:9px;">
+       The Red Sox Last Supper &nbsp;&middot;&nbsp; 2004 &nbsp;&middot;&nbsp; As seen on Johnny Damon's wall, MTV Cribs.
+     </div>
+   </div> At 24, she founded <strong>Cranky Creative</strong>, an environmental graphics company that wrapped the <strong>first McDonald's McCafé vehicle in the United States</strong> and built a Fortune 500 client roster including <strong>Blue Cross Blue Shield, McDonald's, Lenovo, Pepsi, and Kroger.</strong> She became a recognized voice in the signs and graphics industry, speaking at <strong>national industry conferences</strong>, writing quarterly marketing articles for the <strong>SGIA Journal</strong> (the Specialty Graphic Imaging Association's national publication), and authoring <strong><em>How to Build Your Online Marketing Machine</em></strong>, published through the association. In 2005, she was selected for <strong>Leadership Durham</strong>, identifying her as an emerging community leader before she was 25. When the economy collapsed in 2008, Cranky Creative grew. Competitors were closing their doors. Barbra had adopted content marketing early enough that the business had real traction while others were scrambling. That same year she won the <strong>Make Mine a Million Dollar Business Award</strong> through <strong>American Express and Count Me In for Women's Economic Independence</strong>, a nationally competitive award recognizing women entrepreneurs building serious businesses. She didn't win it in spite of the financial crisis. She won it during it.</p>
+   <div class="chapter-marker">
+    <div class="cm-num">2009–2011</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">She Had Been Here Before.</div>
+   <div class="photo-inset-right">
+     <img src="./images/story-mccafe-wrap.png" alt="The first McDonald's McCafé vehicle wrap in the United States, produced by Cranky Creative">
+     <div class="photo-caption">First McCafé vehicle wrap in the US &nbsp;&middot;&nbsp; Cranky Creative.</div>
+   </div>
+
+   <div class="photo-inset-right">
+     <img src="./images/story-mccafe-wrap-inset.png" alt="First McCafe vehicle wrap in the US, produced by Cranky Creative">
+     <div class="photo-caption">First McCafé vehicle wrap in the US &nbsp;&middot;&nbsp; Cranky Creative.</div>
+   </div>
+
+   <p class="story-body-text">After her marriage ended in 2009, Barbra moved home to support her mother in caring for her 97-year-old grandfather, and walked him through hospice too. She took classes at the <strong>University of New Hampshire</strong>, created and taught marketing courses at local economic development chambers to five-star reviews, and founded <strong>SparkEvolution</strong>, a content marketing consulting company. All simultaneously.</p>
+   <p class="story-body-text">During that same season, she applied to a prestigious nursing program that accepts <strong>24 students out of more than 400 applicants</strong>. She got in. But she had made herself a promise: if she landed a client first, that would be the universe telling her which way to go. If she didn't, she would go to nursing school. <strong>She landed a client two weeks before the acceptance letter arrived.</strong> She chose to build.</p>
+   <p class="story-body-text">This is not a chapter about survival. It is the first evidence of a pattern: <strong>Barbra builds through hard things.</strong> And she has always known how to listen for the answer.</p>
+   <p class="story-body-text">SparkEvolution's defining client was <strong>PureFlix</strong>, a faith-based streaming platform now owned by Sony. Barbra built and managed their entire content marketing operation, growing PureFlix into <strong>HubSpot's largest client contact database at the time, with over 7 million contacts.</strong> The former CEO of PureFlix remains a personal friend.</p>
+
+   <div class="chapter-marker">
+    <div class="cm-num">2013</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">She Built the Room. He Walked In.</div>
+   <p class="story-body-text">In 2013, Barbra was organizing a <strong>TED talk</strong> in Wolfeboro, New Hampshire. Not attending. Organizing. Running the room. Creating the conditions for ideas to land. A man named Kurt Milligan walked through the door.</p>
+   <p class="story-body-text">They were two people who believed in the same things: that ideas matter, that building something real is one of the most alive ways to spend a life, that the future belongs to people willing to figure it out before anyone else does. They fell in love the way people do when they find someone who makes them more curious, more ambitious, and more themselves. All at once.</p>
+   <p class="story-body-text">What followed was not a quiet life. It was a life of possibility pursued on purpose. Oliver in 2015. Eliza in 2019. A multimillion dollar business built between nap times. A daughter's diagnosis navigated together. A new company designed from the ground up. Not just as a product, but as a declaration: <strong>we are not done building.</strong></p>
+
+   <div class="inline-pull">
+    <div class="ip-text">They named the company <strong>Oliza</strong>, a blend of Ollie and Eliza. Every line of code Kurt writes, every stage Barbra walks onto, it is a love letter. To their children. To the life they chose to build together.</div>
+   </div>
+
+   <div class="chapter-marker">
+    <div class="cm-num">2017–2019</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">Outsold Hallmark. Built. Exited.</div>
+   <p class="story-body-text">With a toddler at home and a second baby on the way, Barbra reverse-engineered consumer buying data and customer reviews to find a gap in a market dominated by giants. She built a product, launched it on Amazon, and by 2019 had created a multimillion dollar business that was <strong>significantly outselling both Hallmark and American Greetings</strong> in their own category. Then she exited, acquired by <strong>Boosted Commerce</strong>, an Amazon FBA aggregator. The same year Eliza was born.</p>
+
+   <div style="margin:24px 0 32px;">
+     <img src="./images/story-greeting-cards-amazon.png"
+          alt="The greeting cards that outsold Hallmark and American Greetings on Amazon"
+          style="width:100%;max-width:500px;display:block;border-radius:2px;
+                 box-shadow:0 8px 36px rgba(13,31,60,.14);">
+     <div style="font-family:'Jost',sans-serif;font-size:11px;font-weight:300;
+                 letter-spacing:.14em;color:#8A8278;text-transform:uppercase;
+                 margin-top:9px;">The product that outsold Hallmark &amp; American Greetings.</div>
+   </div>
+
+   <div class="chapter-marker">
+    <div class="cm-num">2020–2024</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">The Years That Required Everything.</div>
+   <p class="story-body-text">In December 2020, Barbra's mother broke her leg, while her father Paul was already in hospice care. Both parents. At the same time. During a pandemic that had dismantled every reliable system of support.</p>
+
+      <div class="photo-inset-right">
+     <img src="./images/story-mom-and-bubba.png" alt="Her mom and Bubba">
+     <div class="photo-caption">Her mom &amp; Bubba.</div>
+   </div>
+   </div>
+   <p class="story-body-text">Home care agencies had not yet implemented adequate COVID screening standards. So Barbra did what she has always done when the system isn't there: she built one. She personally vetted individual caregivers, established screening protocols, coordinated care across two parents with different and urgent needs, and set up and managed reimbursement through their Long Term Care Insurance, while raising a one-year-old and a five-year-old, and trying to hold her own family together through a pandemic that left everyone without a roadmap. Her brother was beside her. He handled the hands-on physical care their parents needed every day. Two siblings, each doing what the situation demanded.</p>
+
+      <div class="photo-inset-left">
+     <img src="./images/story-brother-and-bubba.png" alt="Her brother and Bubba">
+     <div class="photo-caption">Her brother &amp; Bubba.</div>
+   </div>
+   </div>
+   <p class="story-body-text">And then there was Kurt. When Barbra needed to be with her children at night, Kurt stepped in as Bubba's hands-on caregiver. He took on the most intimate tasks that hospice requires, the ones only those who have been through it would understand. He didn't flinch. He didn't hesitate. He and Bubba became close in those final months in a way neither of them could have anticipated. During the days, Kurt held down the home, caring for Ollie and Eliza so Barbra could be fully present for her parents.</p>
+      <div class="photo-grid-2">
+     <div class="photo-item">
+       <img src="./images/story-bubba-and-kurt.png" alt="Bubba and Kurt circa 2013">
+       <div class="photo-caption">Bubba &amp; Kurt &nbsp;&middot;&nbsp; circa 2013.</div>
+     </div>
+     <div class="photo-item">
+       <img src="./images/story-barbra-and-bubba.png" alt="Barbra and Bubba">
+       <div class="photo-caption">Barbra &amp; Bubba. He was her cheerleader.</div>
+     </div>
+   </div>
+
+   <p class="story-body-text">Bubba passed in 2021. In his final days, he had leaned close and whispered to Barbra: <em>"You found a great guy, keep him."</em> She kept him. Through all of it, Barbra and her friend <strong>Norma Rapko</strong> raised <strong>$250,000 to support women business owners</strong> who were losing everything in the pandemic. Most people go inward during crisis. Barbra went outward.</p>
+   <p class="story-body-text">In August 2023, while Eliza's diagnosis was still months away. Kurt's brother Aaron was diagnosed with terminal brain cancer. But something had already happened, quietly, in those final months with Bubba: Kurt had learned something that cannot be taught any other way. He knew how to be present with someone dying. He knew how to make them laugh. He knew how to do the hardest things without making them feel hard. When Aaron needed that same care, Kurt already knew how to give it. Aaron died in May 2025. He was not just Kurt's brother. He was one of his closest friends. The loss was devastating.</p>
+
+   <div class="inline-pull">
+    <div class="ip-text">Bubba gave Kurt a gift in his final days, without knowing it. <strong>He taught him how to love someone all the way to the end.</strong> Kurt carried that gift to Aaron's bedside when the time came.</div>
+   </div>
+
+   <!-- ── PHOTO EDITORIAL BLOCK: ELIZA CHAPTER ── -->
+   <div class="photo-full" style="margin-top:48px;">
+     <img src="./images/story-eliza-chemo.png" alt="Barbra holding Eliza during chemotherapy, 2024">
+     <div class="photo-caption">Eliza, during chemotherapy &nbsp;&middot;&nbsp; 2024.</div>
+   </div>
+
+   <div class="photo-grid-2" style="margin-top:0;">
+     <div class="photo-item">
+       <img src="./images/story-ollie-and-eliza.png" alt="Ollie and Eliza">
+       <div class="photo-caption">Ollie &amp; Eliza.</div>
+     </div>
+     <div class="photo-item">
+       <img src="./images/story-milligan-family-uva.png" alt="The Milligan family at UVA football where Eliza was honored at halftime">
+       <div class="photo-caption">Honored at halftime &nbsp;&middot;&nbsp; UVA Football.</div>
+     </div>
+   </div>
+
+      <p class="story-body-text">In January 2024, her daughter Eliza was diagnosed with cancer. Barbra used AI to research treatment protocols, understand medical complexity she had no training for, organize the overwhelming logistics of ongoing care, and stay present for her son Ollie, who held his sister's hand through all of it. She is not a medical professional. She is a mother who refused to be helpless.</p>
+   <p class="story-body-text">Most people would have been undone by any one of these things. She didn't just survive it. She organized it. Her husband made sure she never had to face any of it alone.</p>
+
+   <div class="chapter-marker">
+    <div class="cm-num">The Shift</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">What Crisis Actually Teaches.</div>
+   <p class="story-body-text">Barbra has always had a high locus of control. It is the deep conviction that her decisions shape her outcomes. It is the thread running through every chapter of her life. The snack stand. The nursing school decision. The client before the letter. The caregiving system built from scratch. The Amazon exit. She has always believed, with her whole self, that how she responds to circumstances matters enormously.</p>
+   <p class="story-body-text">Eliza's diagnosis cracked something open in that belief. Not broke it. Cracked it open. There are things you cannot system your way through. There are moments where the only available move is to slow down, surrender the need to control the outcome, and become so attentive to the details of the present moment that nothing important slips past you. Barbra learned that surrender is not the opposite of agency. It is a more sophisticated form of it.</p>
+   <p class="story-body-text">Faith has been the container that made that surrender possible. Not as doctrine. As foundation. The understanding that creation and trust can coexist. That there is something larger than the systems she builds, something that holds what she cannot. That has been as essential to weathering these years as anything else she has built or learned or organized.</p>
+
+   <div class="inline-pull">
+    <div class="ip-text">She spent her life building systems to shape outcomes. <strong>Crisis taught her that the most powerful thing she could do was slow down, pay attention, and trust what she found there.</strong> That is the whole of the More Human philosophy, and it was hard-won.</div>
+   </div>
+
+   <div class="chapter-marker">
+    <div class="cm-num">May 2026</div>
+    <div class="cm-line"></div>
+   </div>
+   <div class="cm-title">Eliza Rings the Bell.</div>
+   <p class="story-body-text">Their AI platform is called Oliza, a blend of Ollie and Eliza's names. Diagnosed in January 2024. Eliza rings the bell in May 2026. Every company Barbra has built, every stage she walks onto, every talk she gives, it is all for them. That is not a tagline. That is the whole story.</p>
+
+  </div>
+ </div>
+</section>
+<!-- ══════════════ SPEAKING ══════════════ -->
+<section class="speaking-section" id="speaking">
+ <div class="section-label">Speaking</div>
+ <h2 class="section-title">Three talks.<br>One <em>thread.</em></h2>
+
+ <div class="talks">
+
+  <!-- Talk 01 -->
+  <div class="talk">
+   <div class="talk-left">
+    <div class="talk-number">01</div>
+    <div class="talk-audience">Entrepreneurs · Business Owners · Working Parents</div>
+    <div class="talk-title">More Human</div>
+    <div class="talk-subtitle">How AI Gives You Back Your Life</div>
+   </div>
+   <div class="talk-right">
+    <p class="talk-body">
+     Barbra used AI to navigate her daughter's cancer diagnosis, help her husband through the loss of his brother, and launch Oliza.ai — a production AI platform she and Kurt built in two weeks. This talk is not about productivity. It is about presence. About how the right tools, used with intention, can give you back the thing you thought you had to sacrifice: your actual life.
+    </p>
+    <div class="talk-pullquote">
+     <div class="tpq-text">"She didn't use AI to be more productive. She used it to be more present, during the moments that mattered most. <strong>That distinction is everything.</strong>"</div>
+    </div>
+    <div class="talk-formats">
+     <div class="talk-format">Keynote</div>
+     <div class="talk-format">Workshop</div>
+     <div class="talk-format">Corporate</div>
+     <div class="talk-format">Entrepreneurial Groups</div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Talk 02 -->
+  <div class="talk">
+   <div class="talk-left">
+    <div class="talk-number">02</div>
+    <div class="talk-audience">Caregivers · Parents · Healthcare Communities</div>
+    <div class="talk-title">Navigating Crisis</div>
+    <div class="talk-subtitle">AI as a Lifeline When Stakes Are Highest</div>
+   </div>
+   <div class="talk-right">
+    <p class="talk-body">
+     When Barbra's daughter was diagnosed with cancer, she had no medical training, no playbook, and no time. She used AI to research treatment options, organize the chaos of caregiving, and stay present for her son. She also used it to help her husband navigate the loss of his brother — researching care options, side effect questions, and treatment decisions in real time, and the logistics and grief that follow when someone you love is gone. This is the talk she wishes someone had given her when it all began.
+    </p>
+    <div class="talk-pullquote">
+     <div class="tpq-text">"Every caregiver in that room felt seen. Not because she had the answers, but because <strong>she had been exactly where they were.</strong>"</div>
+    </div>
+    <div class="talk-formats">
+     <div class="talk-format">Keynote</div>
+     <div class="talk-format">Hospital & Healthcare</div>
+     <div class="talk-format">Caregiver Conferences</div>
+     <div class="talk-format">Cancer Organizations</div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Talk 03 -->
+  <div class="talk">
+   <div class="talk-left">
+    <div class="talk-number">03</div>
+    <div class="talk-audience">Homeschool Families · Educators · Parent Communities</div>
+    <div class="talk-title">Designed to Learn</div>
+    <div class="talk-subtitle">AI-Powered Homeschooling for Every Learning Style</div>
+   </div>
+   <div class="talk-right">
+    <p class="talk-body">
+     Every child learns differently. Their personality, their nervous system, their learning archetype — these are not obstacles to work around. They are the design spec. Barbra uses AI to build education that fits each child precisely: matching curriculum to how they think, removing friction, and creating learning environments that respect the whole child — not just their academic output. No two children in her home learn the same way, and neither should yours.
+    </p>
+    <div class="talk-pullquote">
+     <div class="tpq-text">"She doesn't teach to a curriculum. She builds an education around a child. <strong>AI finally makes that possible for every family.</strong>"</div>
+    </div>
+    <div class="talk-formats">
+     <div class="talk-format">Keynote</div>
+     <div class="talk-format">Workshop</div>
+     <div class="talk-format">Homeschool Conferences</div>
+     <div class="talk-format">Education Summits</div>
+    </div>
+   </div>
+  </div>
+
+ </div>
+
+ <!-- Fees -->
+ <div class="fees">
+  <div class="fee">
+   <div class="fee-type">Format</div>
+   <div class="fee-format">Virtual</div>
+   <div class="fee-price"><sup>$</sup>3K+</div>
+   <div class="fee-duration">60–90 minutes</div>
+  </div>
+  <div class="fee">
+   <div class="fee-type">Format</div>
+   <div class="fee-format">Keynote</div>
+   <div class="fee-price"><sup>$</sup>5K+</div>
+   <div class="fee-duration">45–60 minutes</div>
+  </div>
+  <div class="fee" style="background:var(--gold-pale);">
+   <div class="fee-type">Most Requested</div>
+   <div class="fee-format">Workshop</div>
+   <div class="fee-price"><sup>$</sup>7K+</div>
+   <div class="fee-duration">Half Day · 3–4 hours</div>
+   <div class="fee-note">★ Five-star reviews every session</div>
+  </div>
+  <div class="fee">
+   <div class="fee-type">Format</div>
+   <div class="fee-format">Full Day</div>
+   <div class="fee-price"><sup>$</sup>15K+</div>
+   <div class="fee-duration">6–7 hours</div>
+  </div>
+ </div>
+
+</section>
+<!-- ══════════════ CONSULTING ══════════════ -->
+<section class="consulting-section" id="consulting">
+ <div>
+  <div class="consulting-label">SparkEvolution · Consulting</div>
+  <h2 class="consulting-title">We build AI systems<br>that <em>actually run.</em></h2>
+  <p class="consulting-body">
+   Barbra and her husband Kurt bring a rare combination to every engagement: operator credentials at the highest level, and systems reengineering experience that started long before AI was a buzzword.
+  </p>
+  <div class="origin-callout">
+   <div class="oc-label">Where It Started</div>
+   <div class="oc-text">At 17, as a summer intern, she <strong>reengineered three departments of Southern NH Medical Center and prepared the organization for enterprise software implementation, in 12 weeks.</strong> She has been mapping and rebuilding broken systems ever since.</div>
+  </div>
+  <div class="cred-bar">
+   <div class="cred-item">
+    <div class="cred-num">Age 17<span></span></div>
+    <div class="cred-label">Reengineered 3 hospital departments in 12 weeks · Southern NH Medical Center</div>
+   </div>
+   <div class="cred-item">
+    <div class="cred-num">2<span>yrs</span></div>
+    <div class="cred-label">Built &amp; exited Amazon brand · Outsold Hallmark &amp; American Greetings · Acquired by Boosted Commerce</div>
+   </div>
+   <div class="cred-item">
+    <div class="cred-num">$130K<span>/mo</span></div>
+    <div class="cred-label">HubSpot's largest client contact database · 7 million contacts · SparkEvolution</div>
+   </div>
+  </div>
+  <p class="consulting-body">Add to that <strong>Oliza.ai — a production AI platform built and launched in 2 weeks</strong> — and this is what genuine operator expertise looks like.</p>
+  <button class="btn-gold-solid" style="margin-top:8px;">Start a Conversation →</button>
+ </div>
+ <div class="services-list">
+  <div class="svc">
+   <div class="svc-left">
+    <div class="svc-name">AI Readiness Audit</div>
+    <div class="svc-desc">2–3 weeks · Your top automation opportunities mapped and priced</div>
+   </div>
+   <div class="svc-price">$7K</div>
+  </div>
+  <div class="svc">
+   <div class="svc-left">
+    <div class="svc-name">Implementation Retainer</div>
+    <div class="svc-desc">Ongoing · Scoped individually · Begins with the Audit</div>
+   </div>
+   <div class="svc-price">Scoped</div>
+  </div>
+  <div class="svc">
+   <div class="svc-left">
+    <div class="svc-name">Speaking + Workshop</div>
+    <div class="svc-desc">AI strategy for your team · Practical and operator-first</div>
+   </div>
+   <div class="svc-price">$5K+</div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section class="testi-section">
+ <div class="section-label">What People Say</div>
+ <h2 class="section-title">Voices from the <em>room.</em></h2>
+ <div class="testi-grid">
+  <div class="testi-card placeholder">
+   <div class="ph-name">"She changed how I think about what's possible."</div>
+   <div class="ph-role">CEO · Media Company</div>
+   <div class="ph-note">Testimonial coming soon</div>
+  </div>
+  <div class="testi-card placeholder">
+   <div class="ph-name">"Every person in that room felt seen."</div>
+   <div class="ph-role">Director · Industry Association</div>
+   <div class="ph-note">Testimonial coming soon</div>
+  </div>
+  <div class="testi-card placeholder">
+   <div class="ph-name">"Five stars. I would take this course again tomorrow."</div>
+   <div class="ph-role">Marketing Course Participant · NH</div>
+   <div class="ph-note">Testimonial coming soon</div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════ NEWSLETTER ══════════════ -->
+<section class="newsletter-section" id="newsletter">
+ <div>
+  <div class="section-label">More Human Newsletter</div>
+  <h2 class="nl-title">Attention.<br>Intention. <em>Life.</em></h2>
+  <p class="nl-body">Weekly reflections on using AI to live more deliberately, not more productively. For entrepreneurs, parents, caregivers, and anyone who refuses to let technology run their life.</p>
+  <div class="nl-topics">
+   <div class="nl-topic">Attention Intelligence for your daily life</div>
+   <div class="nl-topic">AI for caregivers, parents, and homeschoolers</div>
+   <div class="nl-topic">Breaking generational patterns with clarity</div>
+   <div class="nl-topic">Building businesses that fit your actual life</div>
+  </div>
+ </div>
+ <div>
+  <div class="nl-stat">500<em>+</em></div>
+  <div class="nl-stat-label">Subscribers and growing</div>
+  <div class="nl-divider"></div>
+  <div class="nl-form">
+   <input class="nl-input" type="text" placeholder="Your first name">
+   <input class="nl-input" type="email" placeholder="Your email address">
+   <button class="nl-btn">Subscribe Free →</button>
+   <div class="nl-footnote">No spam. Unsubscribe anytime. Written by a real human who has lived this.</div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════ ARTICLES ══════════════ -->
+<section class="articles-section" id="writing">
+ <div class="section-label">More Human Newsletter</div>
+ <h2 class="section-title">Writing from the <em>inside.</em></h2>
+
+ <div class="articles-grid">
+
+  <a class="article-card" href="https://www.linkedin.com/pulse/i-didnt-start-using-ai-more-efficient-used-human-barbra-milligan--ot8pe/" target="_blank" rel="noopener">
+   <div class="article-issue">Issue No. 01 &nbsp;·&nbsp; February 2026</div>
+   <div class="article-title">I Didn't Start Using AI to Be More Efficient. I Used It to Be More Human.</div>
+   <div class="article-excerpt">Most conversations about AI ask how much faster we can go. I was trying to learn how to stop. How to rest without guilt. How to stop overfunctioning. What I found changed everything about how I work, parent, and pay attention.</div>
+   <div class="article-read">Read Article →</div>
+  </a>
+
+  <a class="article-card" href="#" target="_blank" rel="noopener" style="opacity:.5; pointer-events:none;">
+   <div class="article-issue">Coming Soon</div>
+   <div class="article-title">Placeholder for Next Article</div>
+   <div class="article-excerpt">More writing from the More Human newsletter — on attention, caregiving, homeschooling, and building a life that fits.</div>
+   <div class="article-read">Coming Soon</div>
+  </a>
+
+  <a class="article-card" href="#" target="_blank" rel="noopener" style="opacity:.5; pointer-events:none;">
+   <div class="article-issue">Coming Soon</div>
+   <div class="article-title">Placeholder for Next Article</div>
+   <div class="article-excerpt">More writing from the More Human newsletter — on attention, caregiving, homeschooling, and building a life that fits.</div>
+   <div class="article-read">Coming Soon</div>
+  </a>
+
+ </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<section class="cta-section">
+ <h2 class="cta-title">Ready to bring this<br>story to your <em>audience?</em></h2>
+ <p class="cta-sub">Every audience Barbra speaks to leaves with something they can use tomorrow, and a story they won't forget.</p>
+ <div class="cta-buttons">
+  <button class="btn-gold">Book Barbra to Speak</button>
+  <button class="btn-outline-gold">Download Media Kit</button>
+ </div>
+ <div class="cta-contact"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c1e1d0e1e3c0f0c1d0e17190a13100908151312521f1311">[email&#160;protected]</a> &nbsp;·&nbsp; Charlottesville, VA &nbsp;·&nbsp; Available Nationally</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <div class="footer-logo">Barbra Bannon <em>Milligan</em></div>
+ <div class="footer-copy">© 2026 Barbra Bannon Milligan · All rights reserved</div>
+ <div class="footer-links">
+  <a class="footer-link" href="#speaking">Speaking</a>
+  <a class="footer-link" href="#story">Story</a>
+  <a class="footer-link" href="#consulting">Consulting</a>
+  <a class="footer-link" href="#newsletter">Newsletter</a>
+  <a class="footer-link" href="/cdn-cgi/l/email-protection#7f1d1e0d1d0d1e3f1d1e0d1d1e0d1e1216131316181e11511c101
