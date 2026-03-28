@@ -117,12 +117,17 @@ nav {
 
 /* ══ SOLUTION SECTION ══ */
 .solution-section { background:var(--ivory-warm); padding:100px 72px; }
-.solution-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-.solution-body { font-family:var(--f-body); font-size:17px; font-weight:400; color:var(--body-text); line-height:1.78; margin-bottom:16px; }
-.solution-body strong { font-weight:700; color:var(--navy); }
-.solution-list { list-style:none; padding:0; margin:0 0 24px 0; }
-.solution-list li { font-family:var(--f-body); font-size:17px; color:var(--body-text); line-height:1.78; padding:8px 0; padding-left:32px; position:relative; }
-.solution-list li::before { content:''; position:absolute; left:0; top:17px; width:18px; height:1px; background:var(--gold); }
+.solution-inner { max-width:780px; margin:0 auto; }
+.solution-intro { font-family:var(--f-body); font-size:20px; font-weight:400; color:var(--body-text); line-height:1.85; margin-bottom:12px; }
+.solution-intro strong { font-weight:700; color:var(--navy); }
+.solution-pullquote { margin:56px 0; padding:40px 48px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); text-align:center; }
+.solution-pullquote-text { font-family:var(--f-display); font-size:clamp(22px,2.4vw,28px); font-weight:400; font-style:italic; color:var(--navy); line-height:1.5; }
+.solution-pullquote-text strong { font-style:normal; font-weight:700; color:var(--forest); }
+.solution-steps { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:56px; }
+.solution-step { background:var(--ivory); padding:40px 36px; border-top:3px solid var(--gold); }
+.solution-step-num { font-family:var(--f-sans); font-size:11px; font-weight:400; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.solution-step-title { font-family:var(--f-display); font-size:24px; font-weight:600; color:var(--navy); margin-bottom:14px; }
+.solution-step-body { font-family:var(--f-body); font-size:17px; color:var(--mid-text); line-height:1.75; }
 
 /* ══ CONSULTING ══ */
 .consulting-section { background:var(--navy); padding:100px 72px; position:relative; overflow:hidden; }
@@ -277,7 +282,8 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .problem-section { padding:64px 24px; }
  .problem-grid { grid-template-columns:1fr; gap:40px; }
  .solution-section { padding:64px 24px; }
- .solution-grid { grid-template-columns:1fr; gap:40px; }
+ .solution-steps { grid-template-columns:1fr 1fr; gap:24px; }
+ .solution-pullquote { padding:32px 28px; }
  .consulting-section { padding:64px 24px; }
  .cred-strip { grid-template-columns:1fr 1fr; }
  .audience-section { padding:64px 24px; }
@@ -309,6 +315,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .hero-photo { width:220px; height:220px; }
  .problem-section { padding:48px 18px; }
  .solution-section { padding:48px 18px; }
+ .solution-steps { grid-template-columns:1fr; gap:20px; }
+ .solution-step { padding:28px 24px; }
+ .solution-pullquote { padding:24px 18px; margin:36px 0; }
  .consulting-section { padding:48px 18px; gap:28px; }
  .svc { flex-direction:column; align-items:flex-start; gap:8px; }
  .audience-section { padding:48px 18px; }
@@ -492,10 +501,10 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="hero-name-last a2">Milligan</div>
   <div class="hero-maiden a2">Charlottesville, VA</div>
   <div class="hero-tagline a3">
-   What you give your attention to is what your life becomes. In a world of infinite noise, that's no longer a philosophy&mdash;it's the most important skill we have.
+   What you give your attention to is what your life becomes. In a world of infinite noise, that's no longer a philosophy. It's the most important skill we have.
   </div>
   <div class="hero-subheadline a4">
-   I'm building a body of work around Attention Intelligence&mdash;helping leaders, caregivers, and builders protect what matters most. Through consulting, speaking, and the More Human newsletter.
+   I'm building a body of work around Attention Intelligence. Helping leaders, caregivers, and builders protect what matters most. Through consulting, speaking, and the More Human newsletter.
   </div>
   <div class="hero-buttons a5">
    <button class="btn-gold" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
@@ -580,11 +589,13 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <p class="attention-body">Everyone is talking about using AI to do more, move faster, automate everything. I believe they're solving the wrong problem.</p>
   <p class="attention-body"><strong>The crisis isn't productivity. It's attention.</strong></p>
   <p class="attention-body">But it goes deeper than that. The real mental health crisis isn't just that people are overwhelmed. It's that <strong>most people have never mapped the full web of meaning in their life.</strong></p>
-  <p class="attention-body">Your unique gifts. The problems only you can solve. The roles you play&mdash;as a father, a mother, a daughter, a founder, a friend. How deeply valuable each of those roles is. The family dynamics and generational patterns that shaped how you think, love, and lead&mdash;patterns that aren't random, but predictable once you can finally see them. In the chaos of constant doing, that entire web becomes invisible. You can't see it. So you can't live from it. And when you can't live from it, <strong>nothing feels meaningful</strong>&mdash;even when you're succeeding by every external measure.</p>
-  <p class="attention-body">There's an old idea that <strong>how deeply you love someone is measured by the quality of attention you give them.</strong> I believe that. And I believe we're living in a moment where that attention is under siege&mdash;not by distraction, but by a life that was never designed around what actually matters to you.</p>
-  <p class="attention-body">I call this <strong>Attention Intelligence</strong>&mdash;the ability to see the full web of your life clearly, understand the family systems and archetypes that shaped you, and direct your focus toward growing the things that give it meaning. AI, used correctly, doesn't replace your judgment. <strong>It becomes a thinking partner that helps you recover it</strong>&mdash;mapping what you could never see alone.</p>
+  <p class="attention-body">Your unique gifts. The problems only you can solve. The roles you play, as a father, a mother, a daughter, a founder, a friend. How deeply valuable each of those roles is. The family dynamics and generational patterns that shaped how you think, love, and lead - patterns that aren't random, but predictable once you can finally see them. In the chaos of constant doing, that entire web becomes invisible. You can't see it. So you can't live from it. And when you can't live from it, <strong>nothing feels meaningful</strong>. Even when you're succeeding by every external measure.</p>
+  <p class="attention-body">But here's what most people never realize: <strong>who you are matters.</strong> Not in some abstract, motivational way. In a concrete, generational way. When you step into who you were actually meant to be, instead of operating from the voices of people who misunderstood you, the effect ripples outward. Your children grow up with confidence because they watched you live from yours. Your partner feels held because you're finally present. Your friendships deepen. The beauty, love, and clarity you create by being fully yourself is carried forward by everyone your life touches.</p>
+  <p class="attention-body">That's the real cost of never mapping it. It's not just your life that goes unlived. It's the version of your family, your relationships, your legacy that never gets to exist.</p>
+  <p class="attention-body">There's an old idea that <strong>how deeply you love someone is measured by the quality of attention you give them.</strong> I believe that. And I believe we're living in a moment where that attention is under siege. Not by distraction, but by a life that was never designed around what actually matters to you.</p>
+  <p class="attention-body">I call this <strong>Attention Intelligence</strong>. The ability to see the full web of your life clearly, understand the family systems and archetypes that shaped you, and direct your focus toward growing the things that give it meaning. AI, used correctly, doesn't replace your judgment. <strong>It becomes a thinking partner that helps you recover it</strong>. Mapping what you could never see alone.</p>
   <div class="attention-emphasis">
-   <div class="attention-emphasis-text">This is the work I'm building. Through consulting, speaking, the <strong>More Human</strong> newsletter, and <strong>Oliza.ai</strong>&mdash;a platform designed to make AI a thinking partner, not a replacement for thinking.</div>
+   <div class="attention-emphasis-text">This is the work I'm building. Through consulting, speaking, the <strong>More Human</strong> newsletter, and <strong>Oliza.ai</strong> - a platform designed to make AI a thinking partner, not a replacement for thinking.</div>
   </div>
  </div>
 </section>
@@ -592,30 +603,41 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <!-- ══════════════ SOLUTION ══════════════ -->
 <section class="solution-section">
  <div class="section-label">The Work</div>
- <h2 class="section-title">I help you see everything you're carrying&mdash;<br>and decide what <em>actually deserves your attention.</em></h2>
+ <h2 class="section-title">I help you see everything you're carrying.<br>And decide what <em>actually deserves your attention.</em></h2>
 
- <div class="solution-grid">
-  <div>
-   <p class="solution-body">
-    Most people carrying too much don't need more tools. They don't need another system. Another hack.
-   </p>
-   <p class="solution-body">
-    They need to <strong>define what actually matters</strong>&mdash;and then build everything around protecting it.
-   </p>
-   <p class="solution-body">
-    That's where this work begins. Not with tools. With you.
-   </p>
-   <ul class="solution-list">
-    <li><strong>Define it.</strong> Map the full web of meaning in your life&mdash;your unique gifts, the roles you play, the problems only you can solve, the family systems and generational patterns that shaped how you operate, and what you're actually building all of this for</li>
-    <li><strong>See it.</strong> Map where your attention actually goes every day&mdash;and confront the gap between that web of meaning and how you're actually spending your life</li>
-    <li><strong>Right-size it.</strong> You may be operating at 200% when this phase of your life calls for 70%. And maybe 100% was never about output&mdash;it was about energy and attention</li>
-    <li><strong>Then build.</strong> Once you know what deserves your focus, we bring in the tools&mdash;AI, systems, structure&mdash;to protect it</li>
-   </ul>
-  </div>
-  <div>
-   <div class="problem-emphasis">
-    The tools come last. The human work comes first. <strong>That's what makes this different from everything else.</strong>
+ <div class="solution-inner">
+  <p class="solution-intro">
+   Most people carrying too much don't need more tools. They don't need another system. Another hack.
+  </p>
+  <p class="solution-intro">
+   They need to <strong>define what actually matters</strong>, and then build everything around protecting it. That's where this work begins. Not with tools. With you.
+  </p>
+
+  <div class="solution-steps">
+   <div class="solution-step">
+    <div class="solution-step-num">Step 01</div>
+    <div class="solution-step-title">Define it.</div>
+    <div class="solution-step-body">Map the full web of meaning in your life. Your unique gifts, the roles you play, the problems only you can solve, the family systems and generational patterns that shaped how you operate, and what you're actually building all of this for.</div>
    </div>
+   <div class="solution-step">
+    <div class="solution-step-num">Step 02</div>
+    <div class="solution-step-title">See it.</div>
+    <div class="solution-step-body">Map where your attention actually goes every day, and confront the gap between that web of meaning and how you're actually spending your life.</div>
+   </div>
+   <div class="solution-step">
+    <div class="solution-step-num">Step 03</div>
+    <div class="solution-step-title">Right-size it.</div>
+    <div class="solution-step-body">You may be operating at 200% when this phase of your life calls for 70%. And maybe 100% was never about output. It was about energy and attention.</div>
+   </div>
+   <div class="solution-step">
+    <div class="solution-step-num">Step 04</div>
+    <div class="solution-step-title">Then build.</div>
+    <div class="solution-step-body">Once you know what deserves your focus, we bring in the tools. AI, systems, structure. Not to do more, but to protect what matters.</div>
+   </div>
+  </div>
+
+  <div class="solution-pullquote">
+   <div class="solution-pullquote-text">The tools come last. The human work comes first. <strong>That's what makes this different from everything else.</strong></div>
   </div>
  </div>
 </section>
@@ -629,28 +651,28 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    This is not coaching. This is not another productivity system. And we don't start with tools.
   </p>
   <p class="consulting-body">
-   We start with <strong>you</strong>&mdash;what your life is actually for, where your attention is going, and why your nervous system won't come down. The tools come after the human work is done.
+   We start with <strong>you</strong>. What your life is actually for, where your attention is going, and why your nervous system won't come down. The tools come after the human work is done.
   </p>
  </div>
  <div class="services-list" style="max-width:720px;margin:0 auto;">
   <div class="svc">
    <div>
     <div class="svc-name">Define what matters</div>
-    <div class="svc-desc">Before we touch a single tool, we define what a meaningful life looks like for you&mdash;right now, in this phase, with these stakes</div>
+    <div class="svc-desc">Before we touch a single tool, we define what a meaningful life looks like for you. Right now, in this phase, with these stakes</div>
    </div>
    <div class="svc-icon">Week 1</div>
   </div>
   <div class="svc">
    <div>
     <div class="svc-name">Right-size how you operate</div>
-    <div class="svc-desc">You may be running at 200% when this season calls for 70%. We recalibrate&mdash;not based on output, but on energy, attention, and what your life actually needs</div>
+    <div class="svc-desc">You may be running at 200% when this season calls for 70%. We recalibrate. Not based on output, but on energy, attention, and what your life actually needs</div>
    </div>
    <div class="svc-icon">Week 1</div>
   </div>
   <div class="svc">
    <div>
     <div class="svc-name">Build the systems to protect it</div>
-    <div class="svc-desc">Now we bring in AI, delegation, and structure&mdash;not to do more, but to guard the space you created. And here's what nobody expects: when you give yourself more space, business, relationships, everything tends to grow</div>
+    <div class="svc-desc">Now we bring in AI, delegation, and structure. Not to do more, but to guard the space you created. And here's what nobody expects: when you give yourself more space, business, relationships, everything tends to grow</div>
    </div>
    <div class="svc-icon">Week 2</div>
   </div>
@@ -676,17 +698,17 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="audience-card">
    <div class="audience-label">Operators</div>
    <div class="audience-title">Founder-Operators &amp; CEOs</div>
-   <div class="audience-body">You built something real. But somewhere along the way, you disappeared into it. Your nervous system is always on. And the person you come home to&mdash;your partner, your kids&mdash;they're getting what's left, not what's best. Understanding how you're wired, how your partner is wired, changes everything.</div>
+   <div class="audience-body">You built something real. But somewhere along the way, you disappeared into it. Your nervous system is always on. And the person you come home to, your partner, your kids, they're getting what's left, not what's best. Understanding how you're wired, how your partner is wired, changes everything.</div>
   </div>
   <div class="audience-card">
    <div class="audience-label">Caregivers</div>
    <div class="audience-title">Carrying More Than People See</div>
-   <div class="audience-body">You're holding everyone together. But no one is holding you. Whether it's a sick child, an aging parent, or a partner under pressure&mdash;when you understand the archetypes at play, you stop navigating caregiving through conflict and start navigating it through clarity. The weight doesn't disappear, but the misunderstandings do.</div>
+   <div class="audience-body">You're holding everyone together. But no one is holding you. Whether it's a sick child, an aging parent, or a partner under pressure. When you understand the archetypes at play, you stop navigating caregiving through conflict and start navigating it through clarity. The weight doesn't disappear, but the misunderstandings do.</div>
   </div>
   <div class="audience-card">
    <div class="audience-label">Educators</div>
    <div class="audience-title">Homeschooling Parents</div>
-   <div class="audience-body">You chose this because you wanted something better for your kids. But the invisible workload buried the joy that made you start. When you understand your child's archetype&mdash;how they're wired to learn, relate, and grow&mdash;and combine that with AI's ability to create truly personalized education, you can raise a generation of flourishing critical thinkers. The heaviness lifts because you're no longer doing it alone, and you're finally working <em>with</em> who they are.</div>
+   <div class="audience-body">You chose this because you wanted something better for your kids. But the invisible workload buried the joy that made you start. When you understand your child's archetype, how they're wired to learn, relate, and grow, and combine that with AI's ability to create truly personalized education, you can raise a generation of flourishing critical thinkers. The heaviness lifts because you're no longer doing it alone, and you're finally working <em>with</em> who they are.</div>
   </div>
  </div>
 </section>
@@ -697,7 +719,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <h2 class="section-title">Built in boardrooms.<br><em>Forged in crisis.</em></h2>
 
  <div class="cred-intro">
-  <p>Two decades of building and operating businesses through real-world complexity. And then a season that broke everything open&mdash;a child's cancer diagnosis, parents' illnesses, a pandemic&mdash;that forced me to rebuild how I think, lead, and live. <strong>The business credentials gave me the skills. The crisis gave me the work.</strong></p>
+  <p>Two decades of building and operating businesses through real-world complexity. And then a season that broke everything open. A child's cancer diagnosis, parents' illnesses, a pandemic. That forced me to rebuild how I think, lead, and live. <strong>The business credentials gave me the skills. The crisis gave me the work.</strong></p>
  </div>
 
  <div class="cred-cards">
@@ -709,7 +731,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="cred-card">
    <div class="cred-card-metric">Fortune 500</div>
    <div class="cred-card-headline">Client Roster</div>
-   <div class="cred-card-body">Pepsi, Lenovo, McDonald's, Blue Cross Blue Shield &mdash; national campaigns from a bootstrapped agency</div>
+   <div class="cred-card-body">Pepsi, Lenovo, McDonald's, Blue Cross Blue Shield. National campaigns from a bootstrapped agency</div>
   </div>
   <div class="cred-card">
    <div class="cred-card-metric">7M</div>
@@ -724,7 +746,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="cred-card">
    <div class="cred-card-metric">6 Years</div>
    <div class="cred-card-headline">Crisis &amp; AI Pioneer</div>
-   <div class="cred-card-body">Navigated a multi-generational family crisis using AI as a cognitive scaffold &mdash; the origin of this work</div>
+   <div class="cred-card-body">Navigated a multi-generational family crisis using AI as a cognitive scaffold. The origin of this work</div>
   </div>
  </div>
  <div style="text-align:center;margin-top:28px;">
@@ -748,7 +770,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    </div>
    <div class="talk-right">
     <p class="talk-body">
-     This talk begins with a question most people avoid&mdash;and it changes every conversation that follows. Through an exercise that redefines what a meaningful life looks like, audiences confront the gap between what they say matters and where their attention actually goes. Then we close that gap&mdash;together.
+     This talk begins with a question most people avoid. And it changes every conversation that follows. Through an exercise that redefines what a meaningful life looks like, audiences confront the gap between what they say matters and where their attention actually goes. Then we close that gap. Together.
     </p>
     <div class="talk-formats">
      <div class="talk-format">Keynote</div>
@@ -768,7 +790,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    </div>
    <div class="talk-right">
     <p class="talk-body">
-     Everyone is using AI to move faster. Almost no one is using it to see more clearly. This talk reframes AI as a tool for defining what's meaningful in your life&mdash;and then focusing your attention on growing those things instead of drowning in everything else.
+     Everyone is using AI to move faster. Almost no one is using it to see more clearly. This talk reframes AI as a tool for defining what's meaningful in your life. And then focusing your attention on growing those things instead of drowning in everything else.
     </p>
     <div class="talk-formats">
      <div class="talk-format">Keynote</div>
@@ -788,7 +810,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    </div>
    <div class="talk-right">
     <p class="talk-body">
-     You chose to carry this weight because it mattered. But somewhere along the way, the carrying became your whole identity&mdash;and the life underneath it went quiet. This talk helps caregivers, parents, and leaders name what they've been holding, release what isn't theirs, and come back to the life they're building all of this for.
+     You chose to carry this weight because it mattered. But somewhere along the way, the carrying became your whole identity. And the life underneath it went quiet. This talk helps caregivers, parents, and leaders name what they've been holding, release what isn't theirs, and come back to the life they're building all of this for.
     </p>
     <div class="talk-formats">
      <div class="talk-format">Keynote</div>
@@ -819,9 +841,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
    <p class="story-body-text">Until life became something I couldn't power through.</p>
 
-   <p class="story-body-text">I built and sold a multimillion-dollar Amazon brand in under two years, outselling <strong>Hallmark and American Greetings</strong> in their own category. I grew <strong>PureFlix</strong> into HubSpot's largest client contact database at 7 million contacts. I reengineered hospital departments at 17. In 2008, while competitors were closing their doors, my agency grew&mdash;earning the <strong>Make Mine a Million Dollar Business Award</strong> through American Express during the financial crisis.</p>
+   <p class="story-body-text">I built and sold a multimillion-dollar Amazon brand in under two years, outselling <strong>Hallmark and American Greetings</strong> in their own category. I grew <strong>PureFlix</strong> into HubSpot's largest client contact database at 7 million contacts. I reengineered hospital departments at 17. In 2008, while competitors were closing their doors, my agency grew. Earning the <strong>Make Mine a Million Dollar Business Award</strong> through American Express during the financial crisis.</p>
 
-   <p class="story-body-text">But the real systems challenge came in 2019, when a six-year siege of family crisis began. My father's hospice. My mother's broken leg. A pandemic. My husband's brother diagnosed with terminal cancer. And then, in January 2024, our daughter Eliza was diagnosed with cancer.</p>
+   <p class="story-body-text">But the real systems challenge came in 2019, when a six-year siege of family crisis began. My father's hospice. My mother's broken leg. A pandemic. My husband's brother diagnosed with terminal cancer. And then, in January 2024, our four-year-old daughter Eliza was diagnosed with leukemia.</p>
 
    <p class="story-body-text">I used AI to research treatment protocols, organize the overwhelming logistics of care, and stay present for our son Ollie, who held his sister's hand through all of it. I am not a medical professional. I am a mother who refused to be helpless.</p>
 
@@ -829,7 +851,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
     <div class="ip-text">The AI "thinking partners" I built to survive were exactly what every person carrying too much needs to find themselves again. <strong>I don't just understand systems. I understand the weight of the human carrying them.</strong></div>
    </div>
 
-   <p class="story-body-text">Our AI platform is called <strong>Oliza</strong>, a blend of Ollie and Eliza's names. Eliza rings the bell in May 2026. Every company I've built, every stage I walk onto, every talk I give&mdash;it is all for them. That is not a tagline. That is the whole story.</p>
+   <p class="story-body-text">Our AI platform is called <strong>Oliza</strong>, a blend of Ollie and Eliza's names. Eliza rings the bell in May 2026. Every company I've built, every stage I walk onto, every talk I give. It is all for them. That is not a tagline. That is the whole story.</p>
 
    <div style="margin-top:28px;">
     <a href="./about.html" style="font-family:var(--f-sans);font-size:11px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:color .2s;display:inline-flex;align-items:center;gap:8px;">Read the Full Story <span style="font-size:14px;">&rarr;</span></a>
@@ -873,21 +895,21 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    <li class="wakeup-regret">"I wish I had let myself be happier."</li>
   </ul>
 
-  <div class="wakeup-cite">From Bronnie Ware's research with patients in palliative care &mdash; <a href="https://bronnieware.com/blog/regrets-of-the-dying/" target="_blank">The Top Five Regrets of the Dying</a></div>
+  <div class="wakeup-cite">From Bronnie Ware's research with patients in palliative care. <a href="https://bronnieware.com/blog/regrets-of-the-dying/" target="_blank">The Top Five Regrets of the Dying</a></div>
 
-  <p class="wakeup-body" style="margin-top:40px;">Every single one of these is an attention problem. Not a time problem. Not a productivity problem. These are the words of people who had time&mdash;but never mapped what made their life meaningful. They never saw the web&mdash;their unique gifts, their irreplaceable roles, the things only they could bring to the world.</p>
+  <p class="wakeup-body" style="margin-top:40px;">Every single one of these is an attention problem. Not a time problem. Not a productivity problem. These are the words of people who had time. But never mapped what made their life meaningful. They never saw the web. Their unique gifts, their irreplaceable roles, the things only they could bring to the world.</p>
 
   <p class="wakeup-body">They were busy. They were responsible. They were needed. They were running like they were running out of time. But they had time. <strong>What they didn't have was their attention in the right places.</strong> And they missed the beauty of their own lives because of it.</p>
 
   <div class="wakeup-personal">
-   <p>I know because I was living that way too. Before my daughter was diagnosed with leukemia, I was so deep in the doing that I was missing it&mdash;the life that was right in front of me. <strong>Her diagnosis was my wake-up call.</strong></p>
+   <p>I know because I was living that way too. Before my daughter was diagnosed with leukemia, I was so deep in the doing that I was missing it. The life that was right in front of me. <strong>Her diagnosis was my wake-up call.</strong></p>
   </div>
 
   <p class="wakeup-body">You don't have to wait for illness. You don't have to wait for loss. You don't have to wait for the moment that forces you to see what was always there.</p>
 
   <p class="wakeup-body"><strong>You can start paying attention to the right things now.</strong></p>
 
-  <p class="wakeup-body">That's what AI is actually capable of. Not replacing you. Not making you faster. But giving you back the clarity to see what matters&mdash;while you still have time to live it.</p>
+  <p class="wakeup-body">That's what AI is actually capable of. Not replacing you. Not making you faster. But giving you back the clarity to see what matters. While you still have time to live it.</p>
 
   <p class="wakeup-close"><strong>Live a life you'll never regret.</strong><br>Start by giving your attention to what deserves it.</p>
  </div>
