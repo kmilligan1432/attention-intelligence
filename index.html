@@ -125,21 +125,22 @@ nav {
 .solution-list li::before { content:''; position:absolute; left:0; top:17px; width:18px; height:1px; background:var(--gold); }
 
 /* ══ CONSULTING ══ */
-.consulting-section { background:var(--navy); padding:100px 72px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; position:relative; overflow:hidden; }
+.consulting-section { background:var(--navy); padding:100px 72px; position:relative; overflow:hidden; }
 .consulting-section::before { content:''; position:absolute; top:-80px; right:-80px; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle,rgba(27,51,37,.3) 0%,transparent 70%); pointer-events:none; }
 .consulting-label { font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.4em; text-transform:uppercase; color:var(--gold-light); margin-bottom:14px; display:flex; align-items:center; gap:12px; }
 .consulting-label::before { content:''; width:28px; height:1px; background:var(--gold); }
 .consulting-title { font-family:var(--f-display); font-size:clamp(34px,3.5vw,50px); font-weight:300; color:var(--ivory); line-height:1.05; margin-bottom:24px; }
 .consulting-title em { font-style:italic; color:var(--gold-light); }
-.consulting-body { font-family:var(--f-body); font-size:17px; font-weight:400; color:rgba(250,248,242,.55); line-height:1.78; margin-bottom:16px; }
-.consulting-body strong { color:rgba(250,248,242,.88); font-weight:700; }
+.consulting-inner { max-width:720px; margin:0 auto 56px; }
+.consulting-body { font-family:var(--f-body); font-size:20px; font-weight:400; color:rgba(250,248,242,.75); line-height:1.85; margin-bottom:20px; }
+.consulting-body strong { color:var(--ivory); font-weight:700; }
 .btn-gold-solid { display:inline-block; background:var(--gold); color:var(--navy); border:none; padding:16px 36px; font-family:var(--f-sans); font-size:11px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; transition:all .2s; }
 .btn-gold-solid:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 12px 32px rgba(184,146,42,.35); }
 .services-list { display:flex; flex-direction:column; gap:2px; }
 .svc { display:flex; align-items:center; justify-content:space-between; padding:24px 28px; gap:20px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.07); transition:background .2s; }
 .svc:hover { background:rgba(255,255,255,.07); }
 .svc-name { font-family:var(--f-display); font-size:22px; font-weight:600; color:var(--ivory); letter-spacing:.01em; }
-.svc-desc { font-family:var(--f-sans); font-size:11px; font-weight:300; color:rgba(255,255,255,.35); margin-top:3px; }
+.svc-desc { font-family:var(--f-body); font-size:15px; font-weight:400; color:rgba(255,255,255,.55); margin-top:4px; line-height:1.5; }
 .svc-icon { font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-light); white-space:nowrap; flex-shrink:0; }
 
 /* ══ WHO THIS IS FOR ══ */
@@ -184,13 +185,13 @@ nav {
 /* ══ POSITIONING ══ */
 .positioning-section { background:var(--forest); padding:100px 72px; position:relative; overflow:hidden; }
 .positioning-section::before { content:''; position:absolute; top:-80px; left:-80px; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle,rgba(184,146,42,.08) 0%,transparent 70%); pointer-events:none; }
-.positioning-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-.positioning-title { font-family:var(--f-display); font-size:clamp(34px,3.5vw,50px); font-weight:300; color:var(--ivory); line-height:1.05; margin-bottom:24px; }
+.positioning-inner { max-width:720px; margin:0 auto; position:relative; text-align:center; }
+.positioning-title { font-family:var(--f-display); font-size:clamp(36px,4vw,56px); font-weight:300; color:var(--ivory); line-height:1.1; margin-bottom:40px; }
 .positioning-title em { font-style:italic; color:var(--gold-light); }
-.positioning-body { font-family:var(--f-body); font-size:17px; font-weight:400; color:rgba(250,248,242,.6); line-height:1.78; margin-bottom:16px; }
-.positioning-body strong { color:rgba(250,248,242,.88); font-weight:700; }
-.positioning-emphasis { margin-top:24px; border-left:3px solid var(--gold); padding:20px 24px; background:rgba(255,255,255,.04); }
-.positioning-emphasis-text { font-family:var(--f-display); font-size:19px; font-style:italic; font-weight:300; color:rgba(250,248,242,.8); line-height:1.55; }
+.positioning-body { font-family:var(--f-body); font-size:20px; font-weight:400; color:rgba(250,248,242,.75); line-height:1.85; margin-bottom:20px; text-align:left; }
+.positioning-body strong { color:var(--ivory); font-weight:700; }
+.positioning-emphasis { margin-top:36px; padding:28px 36px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); background:rgba(255,255,255,.04); }
+.positioning-emphasis-text { font-family:var(--f-display); font-size:clamp(22px,2.4vw,28px); font-style:italic; font-weight:400; color:var(--gold-light); line-height:1.5; text-align:center; }
 .positioning-emphasis-text strong { font-style:normal; font-weight:600; color:var(--ivory); }
 
 /* ══ SPEAKING ══ */
@@ -277,16 +278,14 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .problem-grid { grid-template-columns:1fr; gap:40px; }
  .solution-section { padding:64px 24px; }
  .solution-grid { grid-template-columns:1fr; gap:40px; }
- .consulting-section { grid-template-columns:1fr; padding:64px 24px; gap:40px; }
+ .consulting-section { padding:64px 24px; }
  .cred-strip { grid-template-columns:1fr 1fr; }
  .audience-section { padding:64px 24px; }
  .audience-grid { grid-template-columns:1fr; }
  .attention-section { padding:64px 24px; }
- .attention-grid { grid-template-columns:1fr; gap:40px; }
  .cred-section { padding:64px 24px; }
  .cred-cards { grid-template-columns:repeat(3,1fr); }
  .positioning-section { padding:64px 24px; }
- .positioning-grid { grid-template-columns:1fr; gap:40px; }
  .speaking-section { padding:64px 24px; }
  .talk { grid-template-columns:1fr; padding:40px 0; }
  .talk-left { padding-right:0; margin-bottom:24px; }
@@ -332,7 +331,6 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .cred-strip-cell { border-right:none; border-bottom:1px solid rgba(255,255,255,.06); }
  .cred-strip-cell:last-child { border-bottom:none; }
  .attention-section { padding:48px 18px; }
- .attention-grid { grid-template-columns:1fr; gap:28px; }
 }
 
 /* ══ CREDIBILITY STRIP ══ */
@@ -363,29 +361,29 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  background:radial-gradient(ellipse,rgba(27,51,37,.25) 0%,transparent 70%);
  pointer-events:none;
 }
-.attention-grid {
- display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;
+.attention-inner {
+ max-width:720px; margin:0 auto; position:relative;
 }
 .attention-title {
- font-family:var(--f-display); font-size:clamp(34px,3.5vw,50px);
- font-weight:300; color:var(--ivory); line-height:1.05; margin-bottom:24px;
- position:relative;
+ font-family:var(--f-display); font-size:clamp(36px,4vw,56px);
+ font-weight:300; color:var(--ivory); line-height:1.1; margin-bottom:40px;
+ text-align:center; position:relative;
 }
 .attention-title em { font-style:italic; color:var(--gold-light); }
 .attention-body {
- font-family:var(--f-body); font-size:17px; font-weight:400;
- color:rgba(250,248,242,.6); line-height:1.78; margin-bottom:16px;
+ font-family:var(--f-body); font-size:20px; font-weight:400;
+ color:rgba(250,248,242,.75); line-height:1.85; margin-bottom:20px;
  position:relative;
 }
-.attention-body strong { color:rgba(250,248,242,.88); font-weight:700; }
+.attention-body strong { color:var(--ivory); font-weight:700; }
 .attention-emphasis {
- margin-top:24px; border-left:3px solid var(--gold);
- padding:20px 24px; background:rgba(255,255,255,.04);
- position:relative;
+ margin-top:36px; padding:28px 36px;
+ border-top:2px solid var(--gold); border-bottom:2px solid var(--gold);
+ background:rgba(255,255,255,.04); position:relative;
 }
 .attention-emphasis-text {
- font-family:var(--f-display); font-size:19px; font-style:italic;
- font-weight:300; color:rgba(250,248,242,.8); line-height:1.55;
+ font-family:var(--f-display); font-size:clamp(20px,2.2vw,26px); font-style:italic;
+ font-weight:400; color:var(--gold-light); line-height:1.55; text-align:center;
 }
 .attention-emphasis-text strong { font-style:normal; font-weight:600; color:var(--ivory); }
 </style>
@@ -494,22 +492,16 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
 <!-- ══════════════ THE THESIS ══════════════ -->
 <section class="attention-section">
- <div class="attention-grid">
-  <div>
-   <div class="section-label" style="color:var(--gold-light);">The Thesis</div>
-   <h2 class="attention-title">This is not an<br><em>efficiency problem.</em></h2>
-   <p class="attention-body">Everyone is talking about using AI to do more, move faster, automate everything.</p>
-   <p class="attention-body">I believe they're solving the wrong problem.</p>
-   <p class="attention-body"><strong>The crisis isn't productivity. It's attention.</strong></p>
-   <p class="attention-body">When your attention is fragmented&mdash;when everything is competing for space in your mind at once&mdash;no amount of speed or automation fixes that.</p>
-  </div>
-  <div>
-   <p class="attention-body">Your decisions suffer. Your relationships suffer. Your ability to lead, to parent, to be present for the people you love&mdash;all of it erodes.</p>
-   <p class="attention-body">There's an old idea that <strong>how deeply you love someone is measured by the quality of attention you give them.</strong> I believe that. And I believe we're living in a moment where that attention is under siege.</p>
-   <p class="attention-body">I call this <strong>Attention Intelligence</strong>&mdash;the ability to see what you're carrying, release what isn't yours, and direct your focus toward what actually deserves it. AI, used correctly, doesn't replace your judgment. <strong>It helps you recover it.</strong></p>
-   <div class="attention-emphasis">
-    <div class="attention-emphasis-text">This is the work I'm building. Through consulting, speaking, the <strong>More Human</strong> newsletter, and <strong>Oliza.ai</strong>&mdash;a platform designed to make AI a thinking partner, not a replacement for thinking.</div>
-   </div>
+ <div class="attention-inner">
+  <div class="section-label" style="color:var(--gold-light);justify-content:center;">The Thesis</div>
+  <h2 class="attention-title">This is not an<br><em>efficiency problem.</em></h2>
+  <p class="attention-body">Everyone is talking about using AI to do more, move faster, automate everything. I believe they're solving the wrong problem.</p>
+  <p class="attention-body"><strong>The crisis isn't productivity. It's attention.</strong></p>
+  <p class="attention-body">When your attention is fragmented&mdash;when everything is competing for space in your mind at once&mdash;no amount of speed or automation fixes that. Your decisions suffer. Your relationships suffer. Your ability to lead, to parent, to be present for the people you love&mdash;all of it erodes.</p>
+  <p class="attention-body">There's an old idea that <strong>how deeply you love someone is measured by the quality of attention you give them.</strong> I believe that. And I believe we're living in a moment where that attention is under siege.</p>
+  <p class="attention-body">I call this <strong>Attention Intelligence</strong>&mdash;the ability to see what you're carrying, release what isn't yours, and direct your focus toward what actually deserves it. AI, used correctly, doesn't replace your judgment. <strong>It helps you recover it.</strong></p>
+  <div class="attention-emphasis">
+   <div class="attention-emphasis-text">This is the work I'm building. Through consulting, speaking, the <strong>More Human</strong> newsletter, and <strong>Oliza.ai</strong>&mdash;a platform designed to make AI a thinking partner, not a replacement for thinking.</div>
   </div>
  </div>
 </section>
@@ -549,18 +541,17 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
 <!-- ══════════════ CONSULTING ══════════════ -->
 <section class="consulting-section" id="consulting">
- <div>
-  <div class="consulting-label">CEO Attention Reset</div>
-  <h2 class="consulting-title">A focused 2-week<br><em>engagement.</em></h2>
+ <div class="consulting-inner">
+  <div class="consulting-label" style="justify-content:center;">CEO Attention Reset</div>
+  <h2 class="consulting-title" style="text-align:center;">A focused 2-week<br><em>engagement.</em></h2>
   <p class="consulting-body">
    This is not coaching. This is not another productivity system.
   </p>
   <p class="consulting-body">
    It's a <strong>reset of how you carry the weight</strong>&mdash;so your nervous system can finally come down, and you can think like yourself again.
   </p>
-  <button class="btn-gold-solid" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;" style="margin-top:8px;">Apply for the Attention Reset &rarr;</button>
  </div>
- <div class="services-list">
+ <div class="services-list" style="max-width:720px;margin:0 auto;">
   <div class="svc">
    <div>
     <div class="svc-name">Give your soul space to breathe</div>
@@ -589,6 +580,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    </div>
    <div class="svc-icon">Life</div>
   </div>
+ </div>
+ <div style="text-align:center;margin-top:40px;">
+  <button class="btn-gold-solid" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Apply for the Attention Reset &rarr;</button>
  </div>
 </section>
 
@@ -627,29 +621,29 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
  <div class="cred-cards">
   <div class="cred-card">
-   <div class="cred-card-metric">&lt;2 yrs</div>
-   <div class="cred-card-headline">Amazon Exit</div>
-   <div class="cred-card-body">Built and sold a multimillion-dollar Amazon business in under 2 years</div>
+   <div class="cred-card-metric">Exit</div>
+   <div class="cred-card-headline">Multimillion-Dollar Sale</div>
+   <div class="cred-card-body">Built and sold an Amazon brand in under 2 years, outselling Hallmark and American Greetings</div>
   </div>
   <div class="cred-card">
-   <div class="cred-card-metric">Platinum</div>
-   <div class="cred-card-headline">HubSpot Agency</div>
-   <div class="cred-card-body">Led a marketing agency to HubSpot Platinum status, managing large-scale systems and data</div>
+   <div class="cred-card-metric">Fortune 500</div>
+   <div class="cred-card-headline">Client Roster</div>
+   <div class="cred-card-body">Pepsi, Lenovo, McDonald's, Blue Cross Blue Shield &mdash; national campaigns from a bootstrapped agency</div>
   </div>
   <div class="cred-card">
-   <div class="cred-card-metric">$130K/mo</div>
-   <div class="cred-card-headline">PureFlix Retainer</div>
-   <div class="cred-card-body">Secured and managed a $130,000/month marketing engagement</div>
+   <div class="cred-card-metric">7M</div>
+   <div class="cred-card-headline">HubSpot's Largest Client</div>
+   <div class="cred-card-body">Managed the largest client contact database in HubSpot history at 7 million contacts</div>
   </div>
   <div class="cred-card">
-   <div class="cred-card-metric">2005</div>
-   <div class="cred-card-headline">Leadership Durham</div>
-   <div class="cred-card-body">Recognized early as a rising community leader</div>
+   <div class="cred-card-metric">Author</div>
+   <div class="cred-card-headline">Published &amp; Speaking</div>
+   <div class="cred-card-body">Published author, national industry speaker, and five-star rated business educator</div>
   </div>
   <div class="cred-card">
-   <div class="cred-card-metric">Viral</div>
-   <div class="cred-card-headline">Red Sox Last Supper</div>
-   <div class="cred-card-body">Featured in Johnny Damon's home on MTV Cribs and covered by national media</div>
+   <div class="cred-card-metric">6 Years</div>
+   <div class="cred-card-headline">Crisis &amp; AI Pioneer</div>
+   <div class="cred-card-body">Navigated a multi-generational family crisis using AI as a cognitive scaffold &mdash; the origin of this work</div>
   </div>
  </div>
  <div style="text-align:center;margin-top:28px;">
@@ -662,18 +656,12 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="section-label" style="color:var(--gold-light);">Perspective</div>
  <h2 class="positioning-title">I've seen this<br><em>shift before.</em></h2>
 
- <div class="positioning-grid">
-  <div>
-   <p class="positioning-body">In 2008, while many agencies were struggling, we leaned early into content marketing&mdash;before it was widely adopted.</p>
-   <p class="positioning-body">While competitors were losing ground, our business grew.</p>
-   <p class="positioning-body">Not because we worked harder. <strong>Because we saw the shift early&mdash;and built around it.</strong></p>
-  </div>
-  <div>
-   <p class="positioning-body">I see the same pattern happening now with AI.</p>
-   <p class="positioning-body">Most people are using it for speed. Very few are using it to <strong>think more clearly and operate differently.</strong></p>
-   <div class="positioning-emphasis">
-    <div class="positioning-emphasis-text"><strong>That's where the real advantage is.</strong></div>
-   </div>
+ <div class="positioning-inner">
+  <p class="positioning-body">In 2008, while many agencies were struggling, we leaned early into content marketing&mdash;before it was widely adopted. While competitors were losing ground, our business grew.</p>
+  <p class="positioning-body">Not because we worked harder. <strong>Because we saw the shift early&mdash;and built around it.</strong></p>
+  <p class="positioning-body">I see the same pattern happening now with AI. Most people are using it for speed. Very few are using it to <strong>think more clearly, carry less, and be more present.</strong></p>
+  <div class="positioning-emphasis">
+   <div class="positioning-emphasis-text">That's not an efficiency advantage. <strong>That's a life advantage.</strong></div>
   </div>
  </div>
 </section>
