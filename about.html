@@ -134,8 +134,8 @@ nav {
 
 /* Section dividers */
 .section-break {
- max-width:680px; margin:0 auto;
- padding:12px 72px;
+ max-width:820px; margin:0 auto;
+ padding:48px 0 16px;
  display:flex; align-items:center; gap:24px;
 }
 .sb-line { flex:1; height:1px; background:rgba(184,146,42,.4); }
@@ -187,17 +187,15 @@ nav {
 }
 
 /* Credential list */
-.cred-list { list-style:none; padding:0; margin:24px 0; }
+.cred-list { list-style:none; padding:0; margin:28px 0; }
 .cred-list li {
  font-family:var(--f-body); font-size:18px;
  color:var(--body-text); line-height:1.85;
- padding:10px 0 10px 32px; position:relative;
- border-bottom:1px solid var(--rule);
+ padding:8px 0 8px 24px; position:relative;
 }
-.cred-list li:last-child { border-bottom:none; }
 .cred-list li::before {
- content:''; position:absolute; left:0; top:19px;
- width:18px; height:1px; background:var(--gold);
+ content:''; position:absolute; left:0; top:17px;
+ width:6px; height:6px; border-radius:50%; background:var(--gold);
 }
 .cred-list li strong { font-weight:700; color:var(--navy); }
 
@@ -288,7 +286,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .nav-links.open { display:flex; }
  .about-hero { padding:120px 28px 64px; }
  .narrative { padding:36px 28px; }
- .section-break { padding:6px 28px; }
+ .section-break { padding:36px 24px 12px; }
  .narrative-dark { padding:36px 28px; }
  .narrative-forest { padding:36px 28px; }
  .cta-section { padding:64px 24px; }
@@ -302,7 +300,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 @media (max-width:480px) {
  .about-hero { padding:100px 18px 48px; }
  .narrative { padding:28px 18px; }
- .section-break { padding:4px 18px; }
+ .section-break { padding:28px 18px 8px; max-width:100%; }
  .narrative-dark { padding:28px 18px; }
  .narrative-forest { padding:28px 18px; }
  .cta-section { padding:48px 18px; }
@@ -410,7 +408,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 </div>
 
 <!-- ══════════════ SECTION 5B — THE DEEPER MAP ══════════════ -->
-<div class="section-break" style="margin-top:0;">
+<div class="section-break">
  <div class="sb-line"></div>
  <div class="sb-label">The Deeper Map</div>
  <div class="sb-line"></div>
@@ -430,7 +428,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 </div>
 
 <!-- ══════════════ SECTION 6 — THE RESULT ══════════════ -->
-<div class="section-break" style="margin-top:0;">
+<div class="section-break">
  <div class="sb-line"></div>
  <div class="sb-label">The Result</div>
  <div class="sb-line"></div>
