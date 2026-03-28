@@ -785,6 +785,141 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 .footer-links { display:flex; gap:24px; }
 .footer-link { font-family:var(--f-sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.25); text-decoration:none; cursor:pointer; transition:color .2s; }
 .footer-link:hover { color:var(--gold); }
+
+/* ══════════════════════════════════════════
+   MOBILE NAV TOGGLE
+══════════════════════════════════════════ */
+.nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:6px; }
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--navy); margin:5px 0; transition:all .3s; }
+
+/* ══════════════════════════════════════════
+   TABLET — max 768px
+══════════════════════════════════════════ */
+@media (max-width:768px) {
+
+ /* NAV */
+ nav { padding:14px 24px; }
+ .nav-toggle { display:block; }
+ .nav-links {
+  display:none; flex-direction:column; gap:20px;
+  position:absolute; top:100%; left:0; right:0;
+  background:rgba(250,248,242,.98); backdrop-filter:blur(14px);
+  padding:28px 24px; border-bottom:1px solid var(--rule);
+  align-items:flex-start;
+ }
+ .nav-links.open { display:flex; }
+
+ /* HERO */
+ .hero { grid-template-columns:1fr; min-height:auto; }
+ .hero-left { padding:80px 28px 48px; }
+ .hero-right { padding:48px 28px; }
+ .hero-photo { width:280px; height:280px; }
+ .hero-buttons { flex-direction:column; gap:10px; }
+ .hero-buttons .btn-gold,
+ .hero-buttons .btn-outline-ivory { width:100%; text-align:center; }
+
+ /* FACTS BAND */
+ .facts-band { grid-template-columns:1fr 1fr; }
+ .fact-cell:nth-child(5) { grid-column:1 / -1; }
+
+ /* SPEAKING */
+ .speaking-section { padding:64px 24px; }
+ .talk { grid-template-columns:1fr; padding:40px 0; }
+ .talk-left { padding-right:0; margin-bottom:24px; }
+ .talk-right { padding-left:0; border-left:none; border-top:1px solid var(--rule); padding-top:24px; }
+ .talk-number { font-size:56px; }
+
+ /* FEES */
+ .fees { grid-template-columns:1fr 1fr; }
+
+ /* STORY */
+ .story-section { padding:64px 24px; }
+ .story-intro-grid { grid-template-columns:1fr; gap:32px; }
+ .si-left { position:static; }
+ .photo-inset-right,
+ .photo-inset-left { float:none; width:100%; margin:24px 0; }
+ .photo-grid-2 { grid-template-columns:1fr; }
+ .photo-grid-2 .photo-item img { height:auto; min-height:200px; }
+
+ /* CONSULTING */
+ .consulting-section { grid-template-columns:1fr; padding:64px 24px; gap:40px; }
+ .cred-bar { grid-template-columns:1fr; }
+
+ /* TESTIMONIALS */
+ .testi-section { padding:64px 24px; }
+ .testi-grid { grid-template-columns:1fr; }
+
+ /* NEWSLETTER */
+ .newsletter-section { grid-template-columns:1fr; padding:64px 24px; gap:40px; }
+
+ /* ARTICLES */
+ .articles-section { padding:64px 24px; }
+ .articles-grid { grid-template-columns:1fr; }
+
+ /* CTA */
+ .cta-section { padding:64px 24px; }
+ .cta-buttons { flex-direction:column; align-items:center; gap:10px; }
+ .cta-buttons .btn-gold,
+ .cta-buttons .btn-outline-gold { width:100%; max-width:320px; text-align:center; }
+
+ /* FOOTER */
+ footer { flex-direction:column; gap:16px; padding:28px 24px; text-align:center; }
+ .footer-links { flex-wrap:wrap; justify-content:center; gap:16px; }
+}
+
+/* ══════════════════════════════════════════
+   PHONE — max 480px
+══════════════════════════════════════════ */
+@media (max-width:480px) {
+
+ /* HERO */
+ .hero-left { padding:72px 18px 36px; }
+ .hero-right { padding:36px 18px; }
+ .hero-photo { width:220px; height:220px; }
+ .hero-talks { gap:0; }
+ .ht-title { font-size:17px; }
+
+ /* FACTS BAND */
+ .facts-band { grid-template-columns:1fr; }
+ .fact-cell { border-right:none; border-bottom:1px solid rgba(255,255,255,.06); }
+ .fact-cell:last-child { border-bottom:none; }
+
+ /* SPEAKING */
+ .speaking-section { padding:48px 18px; }
+ .talk-formats { gap:6px; }
+ .talk-format { font-size:10px; padding:5px 10px; }
+
+ /* FEES */
+ .fees { grid-template-columns:1fr; }
+
+ /* STORY */
+ .story-section { padding:48px 18px; }
+ .photo-full img { min-height:240px; }
+
+ /* CONSULTING */
+ .consulting-section { padding:48px 18px; gap:28px; }
+ .svc { flex-direction:column; align-items:flex-start; gap:8px; }
+
+ /* TESTIMONIALS */
+ .testi-section { padding:48px 18px; }
+ .testi-card { padding:28px 22px; }
+
+ /* NEWSLETTER */
+ .newsletter-section { padding:48px 18px; gap:28px; }
+ .nl-stat { font-size:48px; }
+ .nl-form { gap:8px; }
+ .nl-btn { width:100%; text-align:center; }
+
+ /* ARTICLES */
+ .articles-section { padding:48px 18px; }
+ .article-card { padding:28px 22px 24px; }
+
+ /* CTA */
+ .cta-section { padding:48px 18px; }
+
+ /* FOOTER */
+ footer { padding:24px 18px; }
+}
 </style>
 </head>
 <body>
@@ -792,6 +927,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <!-- NAV -->
 <nav>
  <div class="nav-logo">Barbra Bannon <em>Milligan</em></div>
+ <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+  <span></span><span></span><span></span>
+ </button>
  <div class="nav-links">
   <a class="nav-link" href="#speaking">Speaking</a>
   <a class="nav-link" href="#story">Story</a>
