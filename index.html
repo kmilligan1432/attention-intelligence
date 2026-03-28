@@ -328,7 +328,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .cta-section { padding:48px 18px; }
  footer { padding:24px 18px; }
  .cred-strip { grid-template-columns:1fr; }
- .cred-strip-cell { border-right:none; border-bottom:1px solid rgba(255,255,255,.06); }
+ .cred-strip-cell { border-right:none; border-bottom:1px solid rgba(255,255,255,.08); padding:22px 18px; }
  .cred-strip-cell:last-child { border-bottom:none; }
  .attention-section { padding:48px 18px; }
 }
@@ -340,13 +340,18 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  border-top:3px solid var(--gold);
 }
 .cred-strip-cell {
- padding:24px 28px; text-align:center;
- border-right:1px solid rgba(255,255,255,.06);
+ padding:28px 32px; text-align:center;
+ border-right:1px solid rgba(255,255,255,.08);
 }
 .cred-strip-cell:last-child { border-right:none; }
+.cred-strip-metric {
+ font-family:var(--f-sans); font-size:11px; font-weight:400;
+ letter-spacing:.2em; text-transform:uppercase;
+ color:var(--gold-light); margin-bottom:8px;
+}
 .cred-strip-text {
- font-family:var(--f-display); font-size:16px; font-weight:400;
- color:var(--ivory); line-height:1.4;
+ font-family:var(--f-display); font-size:18px; font-weight:400;
+ color:rgba(250,248,242,.92); line-height:1.45;
 }
 
 /* ══ ATTENTION VS RELATIONAL ══ */
@@ -520,16 +525,20 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <!-- ══════════════ CREDIBILITY STRIP ══════════════ -->
 <div class="cred-strip">
  <div class="cred-strip-cell">
-  <div class="cred-strip-text">Built and sold a multimillion-dollar business</div>
+  <div class="cred-strip-metric">Built &amp; Exited</div>
+  <div class="cred-strip-text">Multimillion-dollar business sold in under 2 years</div>
  </div>
  <div class="cred-strip-cell">
-  <div class="cred-strip-text">Led a HubSpot Platinum agency managing large-scale systems</div>
+  <div class="cred-strip-metric">Fortune 500</div>
+  <div class="cred-strip-text">Pepsi, Lenovo, McDonald's, Blue Cross Blue Shield</div>
  </div>
  <div class="cred-strip-cell">
-  <div class="cred-strip-text">Managed a $130K/month marketing engagement</div>
+  <div class="cred-strip-metric">Published</div>
+  <div class="cred-strip-text">Author, national speaker, five-star business educator</div>
  </div>
  <div class="cred-strip-cell">
-  <div class="cred-strip-text">Early adopter of content marketing and AI systems</div>
+  <div class="cred-strip-metric">Origin</div>
+  <div class="cred-strip-text">6 years using AI as a cognitive scaffold through family crisis</div>
  </div>
 </div>
 
@@ -588,7 +597,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="solution-grid">
   <div>
    <p class="solution-body">
-    Most high-performing people don't need more tools. They don't need another system. Another hack.
+    Most people carrying too much don't need more tools. They don't need another system. Another hack.
    </p>
    <p class="solution-body">
     They need to <strong>define what actually matters</strong>&mdash;and then build everything around protecting it.
@@ -672,12 +681,12 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="audience-card">
    <div class="audience-label">Caregivers</div>
    <div class="audience-title">Carrying More Than People See</div>
-   <div class="audience-body">You're holding everyone together. But no one is holding you. When you understand the archetypes at play&mdash;yours, your parent's, your siblings'&mdash;you stop navigating elder care through conflict and start navigating it through clarity. The weight doesn't disappear, but the misunderstandings do.</div>
+   <div class="audience-body">You're holding everyone together. But no one is holding you. Whether it's a sick child, an aging parent, or a partner under pressure&mdash;when you understand the archetypes at play, you stop navigating caregiving through conflict and start navigating it through clarity. The weight doesn't disappear, but the misunderstandings do.</div>
   </div>
   <div class="audience-card">
    <div class="audience-label">Educators</div>
    <div class="audience-title">Homeschooling Parents</div>
-   <div class="audience-body">You chose this because you wanted something better for your kids. But the invisible workload buried the joy that made you start. When you understand your child's archetype&mdash;how they're wired to learn, relate, and grow&mdash;you can build educational structures that reduce stress and optimize learning. The heaviness lifts because you're finally working <em>with</em> who they are, not against it.</div>
+   <div class="audience-body">You chose this because you wanted something better for your kids. But the invisible workload buried the joy that made you start. When you understand your child's archetype&mdash;how they're wired to learn, relate, and grow&mdash;and combine that with AI's ability to create truly personalized education, you can raise a generation of flourishing critical thinkers. The heaviness lifts because you're no longer doing it alone, and you're finally working <em>with</em> who they are.</div>
   </div>
  </div>
 </section>
@@ -685,10 +694,10 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <!-- ══════════════ CREDIBILITY ══════════════ -->
 <section class="cred-section">
  <div class="section-label">Experience</div>
- <h2 class="section-title">Experience that<br><em>informs this work.</em></h2>
+ <h2 class="section-title">Built in boardrooms.<br><em>Forged in crisis.</em></h2>
 
  <div class="cred-intro">
-  <p>I've spent the last two decades building and operating businesses through real-world complexity. Not theory. Not frameworks borrowed from books. <strong>Actual operations, actual stakes, actual outcomes.</strong></p>
+  <p>Two decades of building and operating businesses through real-world complexity. And then a season that broke everything open&mdash;a child's cancer diagnosis, parents' illnesses, a pandemic&mdash;that forced me to rebuild how I think, lead, and live. <strong>The business credentials gave me the skills. The crisis gave me the work.</strong></p>
  </div>
 
  <div class="cred-cards">
@@ -720,21 +729,6 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  </div>
  <div style="text-align:center;margin-top:28px;">
   <a href="./credentials.html" style="font-family:var(--f-sans);font-size:11px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);text-decoration:none;transition:color .2s;display:inline-flex;align-items:center;gap:8px;">See Full Background <span style="font-size:14px;">→</span></a>
- </div>
-</section>
-
-<!-- ══════════════ POSITIONING ══════════════ -->
-<section class="positioning-section">
- <div class="section-label" style="color:var(--gold-light);">Perspective</div>
- <h2 class="positioning-title">I've seen this<br><em>shift before.</em></h2>
-
- <div class="positioning-inner">
-  <p class="positioning-body">In 2008, while many agencies were struggling, we leaned early into content marketing&mdash;before it was widely adopted. While competitors were losing ground, our business grew.</p>
-  <p class="positioning-body">Not because we worked harder. <strong>Because we saw the shift early&mdash;and built around it.</strong></p>
-  <p class="positioning-body">I see the same pattern happening now with AI. Most people are using it for speed. Very few are using it to <strong>think more clearly, carry less, and be more present.</strong></p>
-  <div class="positioning-emphasis">
-   <div class="positioning-emphasis-text">That's not an efficiency advantage. <strong>That's a life advantage.</strong></div>
-  </div>
  </div>
 </section>
 
@@ -832,10 +826,14 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    <p class="story-body-text">I used AI to research treatment protocols, organize the overwhelming logistics of care, and stay present for our son Ollie, who held his sister's hand through all of it. I am not a medical professional. I am a mother who refused to be helpless.</p>
 
    <div class="inline-pull">
-    <div class="ip-text">The AI "thinking partners" I built to survive were exactly what every high-performer needs to thrive. <strong>I don't just understand systems. I understand the weight of the human carrying them.</strong></div>
+    <div class="ip-text">The AI "thinking partners" I built to survive were exactly what every person carrying too much needs to find themselves again. <strong>I don't just understand systems. I understand the weight of the human carrying them.</strong></div>
    </div>
 
    <p class="story-body-text">Our AI platform is called <strong>Oliza</strong>, a blend of Ollie and Eliza's names. Eliza rings the bell in May 2026. Every company I've built, every stage I walk onto, every talk I give&mdash;it is all for them. That is not a tagline. That is the whole story.</p>
+
+   <div style="margin-top:28px;">
+    <a href="./about.html" style="font-family:var(--f-sans);font-size:11px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:color .2s;display:inline-flex;align-items:center;gap:8px;">Read the Full Story <span style="font-size:14px;">&rarr;</span></a>
+   </div>
 
   </div>
  </div>
