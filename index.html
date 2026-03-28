@@ -155,6 +155,9 @@ nav {
 /* ══ WHO THIS IS FOR ══ */
 .audience-section { background:var(--parchment); padding:80px 72px; }
 .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:48px; }
+.audience-card-wide { grid-column:1/-1; background:var(--ivory); padding:48px 36px; text-align:center; border-top:2px solid var(--gold); }
+.audience-card-wide .audience-title { font-size:clamp(24px,2.2vw,30px); }
+.audience-card-wide .audience-body { max-width:640px; margin:0 auto; }
 .audience-card { background:var(--ivory); padding:48px 36px; }
 .audience-card:hover { background:var(--ivory-warm); transition:background .2s; }
 .audience-label { font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
@@ -643,7 +646,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
     <div class="solution-step-title">Right-size it.</div>
     <div class="solution-step-body">You may be operating at 200% when this phase of your life calls for 70%. And maybe 100% was never about output. It was about energy and attention.</div>
     <div class="solution-step-examples">
-     <div class="solution-step-ex"><span class="solution-step-ex-label">CEO</span> Uses AI to reclaim 10 hours a week of operational noise, and puts that time back into his family</div>
+     <div class="solution-step-ex"><span class="solution-step-ex-label">CEO</span> Realizes his nervous system is still running in startup mode ten years later, and half of what he carries isn't even his anymore</div>
      <div class="solution-step-ex"><span class="solution-step-ex-label">Caregiver</span> Recognizes she's been parenting from her mother's fear instead of her own wisdom, and stops</div>
      <div class="solution-step-ex"><span class="solution-step-ex-label">Homeschool</span> Drops the rigid curriculum and gives herself permission to follow her child's pace</div>
     </div>
@@ -720,8 +723,8 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
  <div class="audience-grid">
   <div class="audience-card">
-   <div class="audience-label">Operators</div>
-   <div class="audience-title">Founder-Operators &amp; CEOs</div>
+   <div class="audience-label">Leaders</div>
+   <div class="audience-title">Leaders &amp; CEOs</div>
    <div class="audience-body">You built something real. But somewhere along the way, you disappeared into it. Your nervous system is always on. And the person you come home to, your partner, your kids, they're getting what's left, not what's best. Understanding how you're wired, how your partner is wired, changes everything.</div>
   </div>
   <div class="audience-card">
@@ -733,6 +736,11 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    <div class="audience-label">Educators</div>
    <div class="audience-title">Homeschooling Parents</div>
    <div class="audience-body">You chose this because you wanted something better for your kids. But the invisible workload buried the joy that made you start. When you understand your child's archetype, how they're wired to learn, relate, and grow, and combine that with AI's ability to create truly personalized education, you can raise a generation of flourishing critical thinkers. The heaviness lifts because you're no longer doing it alone, and you're finally working <em>with</em> who they are.</div>
+  </div>
+  <div class="audience-card-wide">
+   <div class="audience-label">Everyone Else</div>
+   <div class="audience-title">If You Felt Something Reading This</div>
+   <div class="audience-body">You don't need a title to qualify. If you're carrying more than people see, if you've been operating from someone else's version of who you should be, if you know something needs to change but you can't see what, this work is for you too.</div>
   </div>
  </div>
 </section>
