@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XSLSR4BWGS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XSLSR4BWGS');
+</script>
+<title>About — Barbra Bannon Milligan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+ --navy:    #0D1F3C;
+ --navy-mid:  #162840;
+ --forest:   #1B3325;
+ --forest-mid: #243D2E;
+ --gold:    #B8922A;
+ --gold-light: #D4AA48;
+ --gold-pale: #F0E4C0;
+ --ivory:   #FAF8F2;
+ --ivory-warm: #F5F1E8;
+ --parchment: #EDE6D6;
+ --ink:    #1A1814;
+ --body-text: #2C2820;
+ --mid-text:  #5A5248;
+ --soft-text: #8A8278;
+ --rule:    #D8D0C0;
+ --f-display: 'Cormorant Garamond', serif;
+ --f-body:   'EB Garamond', serif;
+ --f-sans:   'Jost', sans-serif;
+}
+
+html { scroll-behavior:smooth; }
+body { font-family:var(--f-body); background:var(--ivory); color:var(--body-text); overflow-x:hidden; }
+h1,h2,h3 { font-family:var(--f-display); font-weight:400; }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.a1{opacity:0;animation:fadeUp .9s .15s ease forwards}
+.a2{opacity:0;animation:fadeUp .9s .35s ease forwards}
+.a3{opacity:0;animation:fadeUp .9s .55s ease forwards}
+
+/* ══ NAV ══ */
+nav {
+ position:fixed; top:0; left:0; right:0; z-index:100;
+ background:rgba(250,248,242,.97); backdrop-filter:blur(14px);
+ border-bottom:1px solid var(--rule);
+ padding:18px 64px;
+ display:flex; justify-content:space-between; align-items:center;
+}
+.nav-logo { font-family:var(--f-display); font-size:18px; font-weight:400; color:var(--navy); letter-spacing:.04em; text-decoration:none; }
+.nav-logo em { font-style:italic; color:var(--gold); }
+.nav-links { display:flex; gap:36px; align-items:center; }
+.nav-link { font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--soft-text); text-decoration:none; cursor:pointer; transition:color .2s; }
+.nav-link:hover { color:var(--navy); }
+.nav-cta { font-family:var(--f-sans); font-size:11px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:var(--ivory); background:var(--navy); border:none; padding:11px 24px; cursor:pointer; transition:background .2s; text-decoration:none; }
+.nav-cta:hover { background:var(--navy-mid); }
+
+/* ══ HERO ══ */
+.about-hero {
+ background:var(--navy); padding:160px 72px 100px;
+ position:relative; overflow:hidden;
+}
+.about-hero::before {
+ content:''; position:absolute; inset:0;
+ background:
+  radial-gradient(ellipse 70% 60% at 20% 80%, rgba(27,51,37,.5) 0%, transparent 60%),
+  radial-gradient(ellipse 50% 40% at 80% 20%, rgba(184,146,42,.06) 0%, transparent 55%);
+ pointer-events:none;
+}
+.about-hero-inner { max-width:720px; position:relative; z-index:1; }
+.about-hero-label {
+ font-family:var(--f-sans); font-size:10px; font-weight:300;
+ letter-spacing:.4em; text-transform:uppercase;
+ color:var(--gold-light); margin-bottom:24px;
+ display:flex; align-items:center; gap:12px;
+}
+.about-hero-label::before { content:''; width:28px; height:1px; background:var(--gold); }
+.about-hero h1 {
+ font-family:var(--f-display); font-size:clamp(36px,4.5vw,56px);
+ font-weight:300; color:var(--ivory); line-height:1.15;
+ margin-bottom:24px;
+}
+.about-hero h1 em { font-style:italic; color:var(--gold-light); }
+.about-hero-sub {
+ font-family:var(--f-body); font-size:19px; font-weight:400;
+ color:rgba(250,248,242,.5); line-height:1.75; max-width:600px;
+}
+
+/* ══ NARRATIVE SECTIONS ══ */
+.narrative {
+ max-width:680px; margin:0 auto;
+ padding:80px 72px;
+}
+.narrative p {
+ font-family:var(--f-body); font-size:18px; font-weight:400;
+ color:var(--body-text); line-height:1.85; margin-bottom:16px;
+}
+.narrative p strong { font-weight:700; color:var(--navy); }
+.narrative p.line-break { margin-bottom:8px; }
+.narrative p.standalone {
+ font-family:var(--f-display); font-size:clamp(22px,2.4vw,28px);
+ font-weight:400; font-style:italic; color:var(--navy);
+ line-height:1.5; margin:32px 0;
+}
+.narrative p.single-word {
+ font-family:var(--f-body); font-size:18px;
+ color:var(--body-text); line-height:1.85;
+ margin-bottom:8px;
+}
+
+/* Pull quote — gold borders */
+.pull-quote {
+ margin:48px 0;
+ padding:32px 40px;
+ border-top:2px solid var(--gold);
+ border-bottom:2px solid var(--gold);
+ background:var(--gold-pale);
+}
+.pull-quote p {
+ font-family:var(--f-display); font-size:clamp(22px,2.4vw,28px);
+ font-weight:400; font-style:italic;
+ color:var(--navy); line-height:1.5; margin-bottom:0;
+}
+.pull-quote p strong { font-style:normal; font-weight:700; color:var(--forest); }
+
+/* Section dividers */
+.section-break {
+ max-width:680px; margin:0 auto;
+ padding:0 72px;
+ display:flex; align-items:center; gap:16px;
+}
+.sb-line { flex:1; height:1px; background:var(--rule); }
+.sb-label {
+ font-family:var(--f-sans); font-size:9px; font-weight:300;
+ letter-spacing:.3em; text-transform:uppercase;
+ color:var(--gold); white-space:nowrap;
+}
+
+/* Dark narrative band */
+.narrative-dark {
+ background:var(--navy); padding:80px 72px;
+}
+.narrative-dark-inner {
+ max-width:680px; margin:0 auto;
+}
+.narrative-dark p {
+ font-family:var(--f-body); font-size:18px; font-weight:400;
+ color:rgba(250,248,242,.6); line-height:1.85; margin-bottom:16px;
+}
+.narrative-dark p strong { color:rgba(250,248,242,.9); font-weight:700; }
+.narrative-dark p.standalone {
+ font-family:var(--f-display); font-size:clamp(22px,2.4vw,28px);
+ font-weight:400; font-style:italic;
+ color:var(--gold-light); line-height:1.5; margin:32px 0;
+}
+
+/* Forest narrative band */
+.narrative-forest {
+ background:var(--forest); padding:80px 72px;
+}
+.narrative-forest-inner {
+ max-width:680px; margin:0 auto;
+}
+.narrative-forest p {
+ font-family:var(--f-body); font-size:18px; font-weight:400;
+ color:rgba(250,248,242,.6); line-height:1.85; margin-bottom:16px;
+}
+.narrative-forest p strong { color:rgba(250,248,242,.9); font-weight:700; }
+
+/* Warm narrative band */
+.narrative-warm {
+ background:var(--ivory-warm);
+}
+
+/* Parchment narrative band */
+.narrative-parch {
+ background:var(--parchment);
+}
+
+/* Credential list */
+.cred-list { list-style:none; padding:0; margin:24px 0; }
+.cred-list li {
+ font-family:var(--f-body); font-size:18px;
+ color:var(--body-text); line-height:1.85;
+ padding:10px 0 10px 32px; position:relative;
+ border-bottom:1px solid var(--rule);
+}
+.cred-list li:last-child { border-bottom:none; }
+.cred-list li::before {
+ content:''; position:absolute; left:0; top:19px;
+ width:18px; height:1px; background:var(--gold);
+}
+.cred-list li strong { font-weight:700; color:var(--navy); }
+
+/* Reader bridge — inset cards */
+.bridge-items {
+ display:flex; flex-direction:column; gap:0;
+ margin:32px 0;
+}
+.bridge-item {
+ padding:20px 28px;
+ border-left:3px solid var(--gold);
+ background:var(--gold-pale);
+ margin-bottom:2px;
+}
+.bridge-item p {
+ font-family:var(--f-display); font-size:20px; font-weight:400;
+ font-style:italic; color:var(--navy); line-height:1.5; margin-bottom:0;
+}
+
+/* What I do list */
+.what-list {
+ margin:24px 0; padding:0; list-style:none;
+}
+.what-list li {
+ font-family:var(--f-body); font-size:18px; color:var(--body-text);
+ line-height:1.85; padding:6px 0 6px 32px; position:relative;
+}
+.what-list li::before {
+ content:''; position:absolute; left:0; top:17px;
+ width:18px; height:1px; background:var(--gold);
+}
+
+/* ══ CTA ══ */
+.cta-section {
+ background:var(--navy); padding:100px 72px;
+ text-align:center; position:relative; overflow:hidden;
+}
+.cta-section::before {
+ content:''; position:absolute; top:50%; left:50%;
+ transform:translate(-50%,-50%); width:700px; height:400px;
+ background:radial-gradient(ellipse,rgba(27,51,37,.35) 0%,transparent 70%);
+ pointer-events:none;
+}
+.cta-title {
+ font-family:var(--f-display); font-size:clamp(36px,4.5vw,56px);
+ font-weight:300; color:var(--ivory); line-height:1.1;
+ margin-bottom:40px; position:relative;
+}
+.cta-title em { font-style:italic; color:var(--gold-light); }
+.cta-buttons { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; }
+.btn-gold {
+ background:var(--gold); color:var(--navy); border:none;
+ padding:15px 32px; font-family:var(--f-sans); font-size:11px;
+ font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+ cursor:pointer; transition:all .2s; text-decoration:none;
+}
+.btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 12px 32px rgba(184,146,42,.3); }
+.btn-outline-gold {
+ background:transparent; color:rgba(255,255,255,.5);
+ border:1px solid rgba(255,255,255,.18);
+ padding:15px 32px; font-family:var(--f-sans); font-size:11px;
+ font-weight:300; letter-spacing:.18em; text-transform:uppercase;
+ cursor:pointer; transition:all .2s; text-decoration:none;
+}
+.btn-outline-gold:hover { border-color:var(--gold); color:var(--gold-light); }
+.cta-contact {
+ font-family:var(--f-sans); font-size:11px; font-weight:300;
+ letter-spacing:.15em; color:rgba(255,255,255,.22);
+ text-transform:uppercase; margin-top:28px; position:relative;
+}
+
+/* ══ FOOTER ══ */
+footer { background:var(--ink); padding:32px 72px; display:flex; justify-content:space-between; align-items:center; }
+.footer-logo { font-family:var(--f-display); font-size:15px; font-weight:400; color:var(--gold-pale); }
+.footer-logo em { font-style:italic; color:var(--gold); }
+.footer-copy { font-family:var(--f-sans); font-size:10px; letter-spacing:.14em; color:rgba(255,255,255,.2); text-transform:uppercase; }
+.footer-links { display:flex; gap:24px; }
+.footer-link { font-family:var(--f-sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.25); text-decoration:none; cursor:pointer; transition:color .2s; }
+.footer-link:hover { color:var(--gold); }
+
+/* ══ MOBILE NAV TOGGLE ══ */
+.nav-toggle { display:none; background:none; border:none; cursor:pointer; padding:6px; }
+.nav-toggle span { display:block; width:22px; height:2px; background:var(--navy); margin:5px 0; transition:all .3s; }
+
+/* ══ TABLET ══ */
+@media (max-width:768px) {
+ nav { padding:14px 24px; }
+ .nav-toggle { display:block; }
+ .nav-links { display:none; flex-direction:column; gap:20px; position:absolute; top:100%; left:0; right:0; background:rgba(250,248,242,.98); backdrop-filter:blur(14px); padding:28px 24px; border-bottom:1px solid var(--rule); align-items:flex-start; }
+ .nav-links.open { display:flex; }
+ .about-hero { padding:120px 28px 64px; }
+ .narrative { padding:56px 28px; }
+ .section-break { padding:0 28px; }
+ .narrative-dark { padding:56px 28px; }
+ .narrative-forest { padding:56px 28px; }
+ .cta-section { padding:64px 24px; }
+ .cta-buttons { flex-direction:column; align-items:center; gap:10px; }
+ .cta-buttons .btn-gold, .cta-buttons .btn-outline-gold { width:100%; max-width:320px; text-align:center; }
+ footer { flex-direction:column; gap:16px; padding:28px 24px; text-align:center; }
+ .footer-links { flex-wrap:wrap; justify-content:center; gap:16px; }
+}
+
+/* ══ PHONE ══ */
+@media (max-width:480px) {
+ .about-hero { padding:100px 18px 48px; }
+ .narrative { padding:40px 18px; }
+ .section-break { padding:0 18px; }
+ .narrative-dark { padding:40px 18px; }
+ .narrative-forest { padding:40px 18px; }
+ .cta-section { padding:48px 18px; }
+ footer { padding:24px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <a class="nav-logo" href="./index.html">Barbra Bannon <em>Milligan</em></a>
+ <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+  <span></span><span></span><span></span>
+ </button>
+ <div class="nav-links">
+  <a class="nav-link" href="./index.html#consulting">Work With Me</a>
+  <a class="nav-link" href="./index.html#speaking">Speaking</a>
+  <a class="nav-link" href="./about.html" style="color:var(--navy);">About</a>
+  <a class="nav-link" href="./index.html#newsletter">Newsletter</a>
+  <a class="nav-link" href="mailto:barb@barbramilligan.com">Contact</a>
+  <button class="nav-cta" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
+ </div>
+</nav>
+
+<!-- ══════════════ SECTION 1 — HERO ══════════════ -->
+<section class="about-hero">
+ <div class="about-hero-inner">
+  <div class="about-hero-label a1">About</div>
+  <h1 class="a2">I didn't set out to build this work.<br><em>I needed it to survive my life.</em></h1>
+  <p class="about-hero-sub a3">What started as a way to think clearly during the hardest season of my life became the foundation of how I help others do the same.</p>
+ </div>
+</section>
+
+<!-- ══════════════ SECTION 2 — OPENING STORY ══════════════ -->
+<div class="narrative">
+ <p>For most of my life, I was the person who could handle anything.</p>
+ <p>I built businesses.<br>I solved problems.<br>I took on more than most people would.</p>
+ <p>And I was proud of that.</p>
+ <p>Then life stacked everything at once.</p>
+ <p>A global pandemic.<br>A newborn.<br>My mother diagnosed with breast cancer.<br>My father diagnosed with bladder cancer.<br>My mother breaking her leg.</p>
+ <p>I made it through that season.</p>
+ <p>Barely.</p>
+ <p>But I made it.</p>
+ <p>And then something happened that changed everything.</p>
+ <p class="standalone"><strong>My daughter was diagnosed with cancer at four and a half years old.</strong></p>
+</div>
+
+<!-- ══════════════ SECTION 3 — THE BREAKING POINT ══════════════ -->
+<div class="section-break">
+ <div class="sb-line"></div>
+ <div class="sb-label">The Breaking Point</div>
+ <div class="sb-line"></div>
+</div>
+
+<div class="narrative narrative-warm">
+ <p>That was the moment I realized something I had never admitted before.</p>
+ <p><strong>I could not do it all.</strong></p>
+ <p>And if I tried, something in me was going to break.</p>
+ <p>Not metaphorically. Physically.</p>
+ <p>My body started sending signals.<br>My nervous system was shot.<br>My mind was constantly scanning for what I might be missing.</p>
+ <p>Because this time, the stakes were different.</p>
+ <p>If I missed something, it wasn't a delayed email or a missed opportunity.</p>
+ <p class="standalone">It felt like my daughter could die.</p>
+ <p>That kind of pressure changes how your brain works.</p>
+ <p>It creates a constant buzz in the background of your mind.<br>A red alert that never fully turns off.</p>
+ <p>You're moving through your day, but you're not fully there.</p>
+ <p>You're scanning. Tracking. Holding.</p>
+ <p><strong>Everything.</strong></p>
+</div>
+
+<!-- ══════════════ SECTION 4 — DISCOVERY OF AI ══════════════ -->
+<div class="section-break">
+ <div class="sb-line"></div>
+ <div class="sb-label">The Discovery</div>
+ <div class="sb-line"></div>
+</div>
+
+<div class="narrative">
+ <p>And in that place, I started talking to AI.</p>
+ <p>Not for productivity.</p>
+ <p>Not for shortcuts.</p>
+ <p>But because I needed somewhere to put my thoughts.</p>
+ <p><strong>I needed help thinking.</strong></p>
+ <p>I started telling it everything:</p>
+ <p>What I was managing.<br>What I was afraid of.<br>What I needed to remember.<br>What I didn't want to miss.</p>
+ <p>And something unexpected happened.</p>
+ <p class="standalone">It started reflecting it back to me. <em>Clearly.</em></p>
+</div>
+
+<!-- ══════════════ SECTION 5 — THE SHIFT ══════════════ -->
+<div class="narrative-dark">
+ <div class="narrative-dark-inner">
+  <p class="standalone">It was like taking my brain and placing it in front of me.</p>
+  <p>I could see it.</p>
+  <p><strong>All of it.</strong></p>
+  <p>The appointments.<br>The medications.<br>The decisions.<br>The emotional weight.<br>The invisible responsibilities I had been carrying alone.</p>
+  <p>And once I could see it, something shifted.</p>
+  <p>I realized:</p>
+  <p><strong>I didn't have to hold all of it at once.</strong></p>
+  <p>Some things could wait.<br>Some things could be simplified.<br>Some things could be asked for help.</p>
+  <p>And some things weren't mine to carry at all.</p>
+ </div>
+</div>
+
+<!-- ══════════════ SECTION 6 — THE RESULT ══════════════ -->
+<div class="section-break" style="margin-top:0;">
+ <div class="sb-line"></div>
+ <div class="sb-label">The Result</div>
+ <div class="sb-line"></div>
+</div>
+
+<div class="narrative">
+ <p>As that weight lifted, something else came back.</p>
+ <p><strong>Clarity.</strong></p>
+ <p><strong>Presence.</strong></p>
+ <p><strong>The ability to think again.</strong></p>
+ <p>The ability to be who I needed to be.</p>
+ <p>Because I didn't just need to survive that season.</p>
+ <p>I needed to show up for my daughter.</p>
+ <p>I needed to preserve her childhood.</p>
+ <p>I needed to make the hospital feel like a place where she could still be a child.</p>
+
+ <div class="pull-quote">
+  <p>There's a scene in <em>Life is Beautiful</em> where a father, in the middle of a concentration camp, creates a game so his son doesn't experience the full weight of what's happening. Even when he knows what's coming. <strong>That stayed with me.</strong></p>
+ </div>
+
+ <p>Because that's what I needed to do.</p>
+ <p>I was terrified.</p>
+ <p>But I still had to create lightness.</p>
+ <p>And I was able to do that.</p>
+ <p>Not because everything was okay.</p>
+ <p class="standalone">But because my mind was no longer carrying everything alone.</p>
+</div>
+
+<!-- ══════════════ SECTION 7 — WHY THIS BECAME MY WORK ══════════════ -->
+<div class="section-break">
+ <div class="sb-line"></div>
+ <div class="sb-label">Why This Became My Work</div>
+ <div class="sb-line"></div>
+</div>
+
+<div class="narrative narrative-warm">
+ <p>That experience changed how I see everything.</p>
+ <p>Business.<br>Parenting.<br>Caregiving.<br>Leadership.</p>
+ <p>I realized that most high-performing people are not overwhelmed because they are incapable.</p>
+ <p><strong>They are overwhelmed because they are carrying too much.</strong></p>
+ <p>Mentally.<br>Emotionally.<br>Invisibly.</p>
+ <p>And most of it is never mapped.<br>Never externalized.<br>Never seen clearly.</p>
+ <p>So it just sits in the background.</p>
+ <p>Draining energy.<br>Fragmenting attention.<br>Reducing clarity.</p>
+</div>
+
+<!-- ══════════════ SECTION 8 — READER BRIDGE ══════════════ -->
+<div class="narrative narrative-parch">
+ <p>If you've ever felt like:</p>
+ <div class="bridge-items">
+  <div class="bridge-item"><p>Your brain never shuts off</p></div>
+  <div class="bridge-item"><p>You're holding more than anyone sees</p></div>
+  <div class="bridge-item"><p>You're constantly trying not to drop something important</p></div>
+ </div>
+ <p><strong>That's not a personal failure.</strong></p>
+ <p>That's unstructured mental load.</p>
+ <p class="standalone">And once you can see it, <strong>you can change it.</strong></p>
+</div>
+
+<!-- ══════════════ SECTION 9 — CREDENTIALS ══════════════ -->
+<div class="section-break">
+ <div class="sb-line"></div>
+ <div class="sb-label">Experience</div>
+ <div class="sb-line"></div>
+</div>
+
+<div class="narrative">
+ <p>Before all of this, I spent two decades building and operating businesses.</p>
+ <ul class="cred-list">
+  <li>Built and sold a <strong>multimillion-dollar Amazon business</strong> in under 2 years</li>
+  <li>Led a marketing agency to <strong>HubSpot Platinum status</strong></li>
+  <li>Managed large-scale systems and a <strong>$130,000/month retainer</strong></li>
+  <li>Recognized early through <strong>Leadership Durham</strong> as a rising community leader</li>
+  <li>Created a viral Red Sox "Last Supper" piece featured on <strong>MTV Cribs in Johnny Damon's home</strong> and covered nationally</li>
+ </ul>
+ <p>I've always been drawn to what's coming next.</p>
+ <p>In 2008, we leaned into content marketing early while others were struggling.</p>
+ <p>That decision grew the business while others were closing their doors.</p>
+ <p class="standalone">I see the same shift happening now with AI.</p>
+</div>
+
+<!-- ══════════════ SECTION 10 — POSITIONING ══════════════ -->
+<div class="narrative-forest">
+ <div class="narrative-forest-inner">
+  <p><strong>Most people are using AI to do more.</strong></p>
+  <p>I use it to help people think more clearly.</p>
+  <p>Because the real bottleneck is not effort.</p>
+  <p><strong>It's attention.</strong></p>
+  <p>When your attention is fragmented, everything suffers.</p>
+  <p>Your decisions.<br>Your relationships.<br>Your ability to lead.</p>
+  <p>AI, when used correctly, becomes a thinking partner.</p>
+  <p>It helps you see what you are carrying.</p>
+  <p><strong>So you can decide what actually deserves your attention.</strong></p>
+ </div>
+</div>
+
+<!-- ══════════════ SECTION 11 — WHAT I DO NOW ══════════════ -->
+<div class="section-break">
+ <div class="sb-line"></div>
+ <div class="sb-label">What I Do Now</div>
+ <div class="sb-line"></div>
+</div>
+
+<div class="narrative">
+ <p>Today, I work with:</p>
+ <p><strong>Founder-operators and CEOs.</strong><br><strong>Caregivers.</strong><br><strong>Homeschooling parents.</strong></p>
+ <p>People who are capable, driven, and carrying more than most people realize.</p>
+ <p>I help them:</p>
+ <ul class="what-list">
+  <li>See clearly what they are holding</li>
+  <li>Reduce what doesn't belong</li>
+  <li>Rebuild how they operate</li>
+ </ul>
+ <p>So they can move through their lives with <strong>clarity instead of constant pressure.</strong></p>
+</div>
+
+<!-- ══════════════ SECTION 12 — FINAL CLOSE ══════════════ -->
+<div class="narrative narrative-warm" style="padding-bottom:100px;">
+ <p>My daughter will finish treatment just before she turns seven.</p>
+ <p>And when I look back on those years, I don't just see what we survived.</p>
+ <p class="standalone"><strong>I see how we lived.</strong></p>
+ <p>There was still laughter.<br>There was still lightness.<br>There was still childhood.</p>
+ <p>And I don't think that would have been possible if I had kept carrying everything the way I was before.</p>
+</div>
+
+<!-- ══════════════ SECTION 13 — CTA ══════════════ -->
+<section class="cta-section">
+ <h2 class="cta-title">You don't have to carry<br><em>everything alone.</em></h2>
+ <div class="cta-buttons">
+  <button class="btn-gold" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
+  <button class="btn-outline-gold" onclick="window.location.href='./index.html#speaking'">Book Me to Speak</button>
+  <button class="btn-outline-gold" onclick="window.location.href='./index.html#newsletter'">Subscribe to More Human</button>
+ </div>
+ <div class="cta-contact"><a href="mailto:barb@barbramilligan.com" style="color:inherit;text-decoration:none;">barb@barbramilligan.com</a> &nbsp;&middot;&nbsp; Charlottesville, VA &nbsp;&middot;&nbsp; Available Nationally</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <div class="footer-logo">Barbra Bannon <em>Milligan</em></div>
+ <div class="footer-copy">&copy; 2026 Barbra Bannon Milligan &middot; All rights reserved</div>
+ <div class="footer-links">
+  <a class="footer-link" href="./index.html#consulting">Work With Me</a>
+  <a class="footer-link" href="./index.html#speaking">Speaking</a>
+  <a class="footer-link" href="./about.html">About</a>
+  <a class="footer-link" href="./index.html#newsletter">Newsletter</a>
+  <a class="footer-link" href="mailto:barb@barbramilligan.com">Contact</a>
+ </div>
+</footer>
+
+</body>
+</html>
