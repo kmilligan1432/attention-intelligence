@@ -13,7 +13,7 @@ Add new tasks under the appropriate priority heading. Move items to **Done** whe
 
 ## Medium Priority
 
-- [ ] **Check mobile responsiveness** — Test all sections across phone and tablet breakpoints. Fix any layout issues, especially the hero, navigation, and video embed.
+- [ ] **Check mobile responsiveness** — Initial tablet (768px) and phone (480px) breakpoints added with hamburger nav, stacking grids, and reduced padding. Needs real-device testing and refinement.
 - [ ] **Add a favicon** — Design or source a favicon that fits the brand (forest green/copper palette) and add it to the HTML head.
 
 ## Low Priority
@@ -22,7 +22,8 @@ _(nothing yet)_
 
 ## Done
 
-_(nothing yet)_
+- [x] **Add Calendly embed** — Popup widget wired to all three "Book Barbra" buttons.
+- [x] **Set up Google Analytics** — GA measurement ID G-XSLSR4BWGS added to head.
 
 ---
 
