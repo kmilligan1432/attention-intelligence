@@ -23,6 +23,7 @@ Add new tasks under the appropriate priority heading. Move items to **Done** whe
 
 ## Done
 
+- [x] **Created credentials.html** — Dedicated background/credentials page with 5-era visual timeline. Linked from homepage Experience section and about page Credentials section via "See Full Background →".
 - [x] **Created BACKLOG.md** — Single place to manage tasks and decisions.
 - [x] **Set up Google Analytics** — GA measurement ID G-XSLSR4BWGS installed.
 - [x] **Set up Calendly embed** — Calendly popup widget integrated into all CTAs.
@@ -57,3 +58,4 @@ Add new tasks under the appropriate priority heading. Move items to **Done** whe
 | 2026-03-28 | Nav CTA changed to "Work With Me" | More approachable than "Book Barbra" for the founder-operator audience. |
 | 2026-03-28 | Created dedicated about.html (13 sections) | Long-form first-person narrative: opening story, breaking point, AI discovery, the shift, result, why this became my work, reader bridge, credentials, positioning, what I do now, final close + CTA. |
 | 2026-03-28 | Nav "About" now links to about.html | Separate page allows the full emotional narrative without compromising homepage conversion flow. |
+| 2026-03-28 | Created credentials.html as dedicated background page | Gemini-generated 5-era timeline (Prodigy Foundation → Agency/Corporate → E-Commerce → Thought Leadership → Resilient Innovator) is too detailed for homepage or about page. Separate page preserves homepage conversion pacing and about page narrative flow. Linked from both pages via "See Full Background →". |

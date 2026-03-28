@@ -98,7 +98,7 @@ nav {
 /* ══ NARRATIVE SECTIONS ══ */
 .narrative {
  max-width:680px; margin:0 auto;
- padding:80px 72px;
+ padding:48px 72px;
 }
 .narrative p {
  font-family:var(--f-body); font-size:18px; font-weight:400;
@@ -135,19 +135,19 @@ nav {
 /* Section dividers */
 .section-break {
  max-width:680px; margin:0 auto;
- padding:0 72px;
+ padding:8px 72px;
  display:flex; align-items:center; gap:16px;
 }
 .sb-line { flex:1; height:1px; background:var(--rule); }
 .sb-label {
- font-family:var(--f-sans); font-size:9px; font-weight:300;
- letter-spacing:.3em; text-transform:uppercase;
+ font-family:var(--f-sans); font-size:11px; font-weight:400;
+ letter-spacing:.25em; text-transform:uppercase;
  color:var(--gold); white-space:nowrap;
 }
 
 /* Dark narrative band */
 .narrative-dark {
- background:var(--navy); padding:80px 72px;
+ background:var(--navy); padding:48px 72px;
 }
 .narrative-dark-inner {
  max-width:680px; margin:0 auto;
@@ -165,7 +165,7 @@ nav {
 
 /* Forest narrative band */
 .narrative-forest {
- background:var(--forest); padding:80px 72px;
+ background:var(--forest); padding:48px 72px;
 }
 .narrative-forest-inner {
  max-width:680px; margin:0 auto;
@@ -289,10 +289,10 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .nav-links { display:none; flex-direction:column; gap:20px; position:absolute; top:100%; left:0; right:0; background:rgba(250,248,242,.98); backdrop-filter:blur(14px); padding:28px 24px; border-bottom:1px solid var(--rule); align-items:flex-start; }
  .nav-links.open { display:flex; }
  .about-hero { padding:120px 28px 64px; }
- .narrative { padding:56px 28px; }
- .section-break { padding:0 28px; }
- .narrative-dark { padding:56px 28px; }
- .narrative-forest { padding:56px 28px; }
+ .narrative { padding:36px 28px; }
+ .section-break { padding:6px 28px; }
+ .narrative-dark { padding:36px 28px; }
+ .narrative-forest { padding:36px 28px; }
  .cta-section { padding:64px 24px; }
  .cta-buttons { flex-direction:column; align-items:center; gap:10px; }
  .cta-buttons .btn-gold, .cta-buttons .btn-outline-gold { width:100%; max-width:320px; text-align:center; }
@@ -303,10 +303,10 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 /* ══ PHONE ══ */
 @media (max-width:480px) {
  .about-hero { padding:100px 18px 48px; }
- .narrative { padding:40px 18px; }
- .section-break { padding:0 18px; }
- .narrative-dark { padding:40px 18px; }
- .narrative-forest { padding:40px 18px; }
+ .narrative { padding:28px 18px; }
+ .section-break { padding:4px 18px; }
+ .narrative-dark { padding:28px 18px; }
+ .narrative-forest { padding:28px 18px; }
  .cta-section { padding:48px 18px; }
  footer { padding:24px 18px; }
 }
@@ -368,7 +368,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <p>My body started sending signals.<br>My nervous system was shot.<br>My mind was constantly scanning for what I might be missing.</p>
  <p>Because this time, the stakes were different.</p>
  <p>If I missed something, it wasn't a delayed email or a missed opportunity.</p>
- <p class="standalone">It felt like my daughter could die.</p>
+ <p class="standalone">My daughter could die.</p>
  <p>That kind of pressure changes how your brain works.</p>
  <p>It creates a constant buzz in the background of your mind.<br>A red alert that never fully turns off.</p>
  <p>You're moving through your day, but you're not fully there.</p>
@@ -491,6 +491,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <p>In 2008, we leaned into content marketing early while others were struggling.</p>
  <p>That decision grew the business while others were closing their doors.</p>
  <p class="standalone">I see the same shift happening now with AI.</p>
+ <div style="text-align:center;margin-top:24px;">
+  <a href="./credentials.html" style="font-family:var(--f-sans);font-size:11px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:color .2s;display:inline-flex;align-items:center;gap:8px;">See Full Background <span style="font-size:14px;">→</span></a>
+ </div>
 </div>
 
 <!-- ══════════════ SECTION 10 — POSITIONING ══════════════ -->

@@ -153,14 +153,33 @@ nav {
 
 /* ══ CREDIBILITY ══ */
 .cred-section { background:var(--ivory); padding:100px 72px; }
-.cred-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-.cred-body { font-family:var(--f-body); font-size:17px; font-weight:400; color:var(--body-text); line-height:1.78; margin-bottom:20px; }
-.cred-body strong { font-weight:700; color:var(--navy); }
-.cred-list { list-style:none; padding:0; margin:0; }
-.cred-list li { font-family:var(--f-body); font-size:17px; color:var(--body-text); line-height:1.78; padding:12px 0; padding-left:32px; position:relative; border-bottom:1px solid var(--rule); }
-.cred-list li:last-child { border-bottom:none; }
-.cred-list li::before { content:''; position:absolute; left:0; top:21px; width:18px; height:1px; background:var(--gold); }
-.cred-list li strong { font-weight:700; color:var(--navy); }
+.cred-intro { max-width:640px; margin-bottom:56px; }
+.cred-intro p { font-family:var(--f-body); font-size:18px; font-weight:400; color:var(--body-text); line-height:1.78; }
+.cred-intro strong { font-weight:700; color:var(--navy); }
+.cred-cards { display:grid; grid-template-columns:repeat(5,1fr); gap:2px; }
+.cred-card {
+ background:var(--navy); padding:36px 28px; position:relative; overflow:hidden;
+ transition:background .2s;
+}
+.cred-card:hover { background:var(--navy-mid); }
+.cred-card::before {
+ content:''; position:absolute; top:0; left:0; right:0; height:3px;
+ background:var(--gold); transform:scaleX(0); transform-origin:left;
+ transition:transform .4s ease;
+}
+.cred-card:hover::before { transform:scaleX(1); }
+.cred-card-metric {
+ font-family:var(--f-display); font-size:32px; font-weight:600;
+ color:var(--gold-light); line-height:1; margin-bottom:12px;
+}
+.cred-card-headline {
+ font-family:var(--f-display); font-size:19px; font-weight:600;
+ color:var(--ivory); line-height:1.25; margin-bottom:8px;
+}
+.cred-card-body {
+ font-family:var(--f-sans); font-size:12px; font-weight:300;
+ color:rgba(255,255,255,.4); line-height:1.6;
+}
 
 /* ══ POSITIONING ══ */
 .positioning-section { background:var(--forest); padding:100px 72px; position:relative; overflow:hidden; }
@@ -195,7 +214,7 @@ nav {
 .si-left { position:sticky; top:100px; }
 .story-lede { font-family:var(--f-display); font-size:clamp(22px,2.5vw,30px); font-weight:300; font-style:italic; color:var(--navy); line-height:1.6; margin-bottom:20px; }
 .story-lede strong { font-style:normal; font-weight:700; }
-.story-body-text { font-family:var(--f-body); font-size:17px; font-weight:400; color:var(--body-text); line-height:1.8; margin-bottom:18px; }
+.story-body-text { font-family:var(--f-body); font-size:19px; font-weight:400; color:var(--body-text); line-height:1.8; margin-bottom:20px; }
 .story-body-text strong { font-weight:700; color:var(--navy); }
 .inline-pull { margin:36px 0; padding:28px 36px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); background:var(--gold-pale); }
 .ip-text { font-family:var(--f-display); font-size:clamp(22px,2.4vw,30px); font-weight:400; font-style:italic; color:var(--navy); line-height:1.5; }
@@ -265,7 +284,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .attention-section { padding:64px 24px; }
  .attention-grid { grid-template-columns:1fr; gap:40px; }
  .cred-section { padding:64px 24px; }
- .cred-grid { grid-template-columns:1fr; gap:40px; }
+ .cred-cards { grid-template-columns:repeat(3,1fr); }
  .positioning-section { padding:64px 24px; }
  .positioning-grid { grid-template-columns:1fr; gap:40px; }
  .speaking-section { padding:64px 24px; }
@@ -296,6 +315,8 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .audience-section { padding:48px 18px; }
  .audience-card { padding:32px 24px; }
  .cred-section { padding:48px 18px; }
+ .cred-cards { grid-template-columns:1fr; }
+ .cred-card { padding:28px 22px; }
  .positioning-section { padding:48px 18px; }
  .speaking-section { padding:48px 18px; }
  .talk-formats { gap:6px; }
@@ -576,19 +597,39 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="section-label">Experience</div>
  <h2 class="section-title">Experience that<br><em>informs this work.</em></h2>
 
- <div class="cred-grid">
-  <div>
-   <p class="cred-body">I've spent the last two decades building and operating businesses through real-world complexity. Not theory. Not frameworks borrowed from books. <strong>Actual operations, actual stakes, actual outcomes.</strong></p>
+ <div class="cred-intro">
+  <p>I've spent the last two decades building and operating businesses through real-world complexity. Not theory. Not frameworks borrowed from books. <strong>Actual operations, actual stakes, actual outcomes.</strong></p>
+ </div>
+
+ <div class="cred-cards">
+  <div class="cred-card">
+   <div class="cred-card-metric">&lt;2 yrs</div>
+   <div class="cred-card-headline">Amazon Exit</div>
+   <div class="cred-card-body">Built and sold a multimillion-dollar Amazon business in under 2 years</div>
   </div>
-  <div>
-   <ul class="cred-list">
-    <li>Built and sold a <strong>multimillion-dollar Amazon business</strong> in under 2 years</li>
-    <li>Led a marketing agency to <strong>HubSpot Platinum status</strong>, managing large-scale client systems and data</li>
-    <li>Secured and managed a <strong>$130,000/month retainer</strong> with PureFlix</li>
-    <li>Recognized early as a rising leader through <strong>Leadership Durham</strong></li>
-    <li>Created a viral Red Sox "Last Supper" piece featured in <strong>Johnny Damon's home on MTV Cribs</strong> and covered by national media</li>
-   </ul>
+  <div class="cred-card">
+   <div class="cred-card-metric">Platinum</div>
+   <div class="cred-card-headline">HubSpot Agency</div>
+   <div class="cred-card-body">Led a marketing agency to HubSpot Platinum status, managing large-scale systems and data</div>
   </div>
+  <div class="cred-card">
+   <div class="cred-card-metric">$130K/mo</div>
+   <div class="cred-card-headline">PureFlix Retainer</div>
+   <div class="cred-card-body">Secured and managed a $130,000/month marketing engagement</div>
+  </div>
+  <div class="cred-card">
+   <div class="cred-card-metric">2005</div>
+   <div class="cred-card-headline">Leadership Durham</div>
+   <div class="cred-card-body">Recognized early as a rising community leader</div>
+  </div>
+  <div class="cred-card">
+   <div class="cred-card-metric">Viral</div>
+   <div class="cred-card-headline">Red Sox Last Supper</div>
+   <div class="cred-card-body">Featured in Johnny Damon's home on MTV Cribs and covered by national media</div>
+  </div>
+ </div>
+ <div style="text-align:center;margin-top:28px;">
+  <a href="./credentials.html" style="font-family:var(--f-sans);font-size:11px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);text-decoration:none;transition:color .2s;display:inline-flex;align-items:center;gap:8px;">See Full Background <span style="font-size:14px;">→</span></a>
  </div>
 </section>
 
