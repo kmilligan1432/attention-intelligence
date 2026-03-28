@@ -7,8 +7,9 @@ Add new tasks under the appropriate priority heading. Move items to **Done** whe
 
 ## High Priority
 
-- [ ] **Add Calendly embed** — Embed booking widget in the Speaking section and wire up the "Book Barbra" CTA. Update CONTEXT.md with the Calendly URL once live.
-- [ ] **Set up Google Analytics** — Add GA measurement ID to the site. Update CONTEXT.md with the ID once installed.
+- [x] **Add Calendly embed** — Embed booking widget in the Speaking section and wire up the "Book Barbra" CTA. Update CONTEXT.md with the Calendly URL once live.
+- [ ] **Configure Calendly availability** — Connect Barbra's other calendars to Calendly and set up the correct available time slots so the booking widget reflects real availability.
+- [x] **Set up Google Analytics** — Add GA measurement ID (G-XSLSR4BWGS) to the site.
 
 ## Medium Priority
 
