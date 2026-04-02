@@ -25,6 +25,7 @@
 <meta name="twitter:title" content="Barbra Bannon Milligan — Attention Intelligence">
 <meta name="twitter:description" content="Living AI systems that hold what you're carrying so your mind doesn't have to.">
 <meta name="twitter:image" content="https://barbramilligan.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230D1F3C'/><text x='50' y='68' font-family='serif' font-size='42' font-weight='400' fill='%23D4AA48' text-anchor='middle'>BBM</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <!-- Calendly popup embed -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -35,8 +36,8 @@
 :root {
  --navy:    #0D1F3C;
  --navy-mid:  #162840;
- --forest:   #1B3325;
- --forest-mid: #243D2E;
+ --forest:   #162B20;
+ --forest-mid: #1E3728;
  --gold:    #B8922A;
  --gold-light: #D4AA48;
  --gold-pale: #F0E4C0;
@@ -81,9 +82,9 @@ nav {
 .nav-logo { font-family:var(--f-display); font-size:18px; font-weight:400; color:var(--navy); letter-spacing:.04em; }
 .nav-logo em { font-style:italic; color:var(--gold); }
 .nav-links { display:flex; gap:36px; align-items:center; }
-.nav-link { font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--soft-text); text-decoration:none; cursor:pointer; transition:color .2s; }
+.nav-link { font-family:var(--f-sans); font-size:13px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--soft-text); text-decoration:none; cursor:pointer; transition:color .2s; }
 .nav-link:hover { color:var(--navy); }
-.nav-cta { font-family:var(--f-sans); font-size:11px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:var(--ivory); background:var(--navy); border:none; padding:11px 24px; cursor:pointer; transition:background .2s; }
+.nav-cta { font-family:var(--f-sans); font-size:13px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:var(--ivory); background:var(--navy); border:none; padding:11px 24px; cursor:pointer; transition:background .2s; }
 .nav-cta:hover { background:var(--navy-mid); }
 
 /* ══ HERO ══ */
@@ -108,8 +109,8 @@ nav {
 .hero-photo { width:420px; height:420px; border-radius:50%; object-fit:cover; object-position:center top; border:5px solid var(--ivory); box-shadow:0 20px 64px rgba(13,31,60,.18), 0 0 0 1px rgba(13,31,60,.06); }
 .photo-leaf-a { position:absolute; top:-26px; right:-22px; width:68px; height:auto; opacity:.65; animation:float 7s ease-in-out infinite; }
 .photo-leaf-b { position:absolute; bottom:-16px; left:-24px; width:48px; height:auto; opacity:.45; animation:floatB 10s ease-in-out infinite; }
-.photo-caption { margin-top:24px; font-family:var(--f-display); font-size:17px; font-weight:300; font-style:italic; color:var(--forest); line-height:1.5; max-width:280px; margin-left:auto; margin-right:auto; }
-.photo-caption span { display:block; font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:8px; font-style:normal; white-space:nowrap; }
+.photo-caption { margin-top:24px; font-family:var(--f-display); font-size:22px; font-weight:400; font-style:italic; color:var(--navy); line-height:1.5; max-width:280px; margin-left:auto; margin-right:auto; }
+.photo-caption span { display:block; font-family:var(--f-sans); font-size:12px; font-weight:400; letter-spacing:.2em; text-transform:uppercase; color:var(--mid-text); margin-top:8px; font-style:normal; white-space:nowrap; }
 
 /* ══ SECTION SHARED ══ */
 .section-label { font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.4em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; display:flex; align-items:center; gap:14px; }
@@ -124,7 +125,7 @@ nav {
 .problem-copy strong { font-weight:700; color:var(--navy); }
 .problem-list { font-family:var(--f-body); font-size:18px; font-weight:400; color:var(--body-text); line-height:1.85; }
 .problem-list strong { font-weight:700; color:var(--navy); }
-.problem-emphasis { margin-top:28px; padding:28px 36px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); background:var(--gold-pale); font-family:var(--f-display); font-size:clamp(20px,2.2vw,26px); font-weight:400; font-style:italic; color:var(--navy); line-height:1.5; }
+.problem-emphasis { margin-top:28px; padding:28px 36px; border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); background:var(--gold-pale); font-family:var(--f-display); font-size:clamp(20px,2.2vw,24px); font-weight:400; font-style:italic; color:var(--navy); line-height:1.55; }
 .problem-emphasis strong { font-style:normal; font-weight:700; color:var(--forest); }
 
 /* ══ SOLUTION SECTION ══ */
@@ -155,8 +156,6 @@ nav {
 .consulting-inner { max-width:720px; margin:0 auto 56px; }
 .consulting-body { font-family:var(--f-body); font-size:20px; font-weight:400; color:rgba(250,248,242,.75); line-height:1.85; margin-bottom:20px; }
 .consulting-body strong { color:var(--ivory); font-weight:700; }
-.btn-gold-solid { display:inline-block; background:var(--gold); color:var(--navy); border:none; padding:16px 36px; font-family:var(--f-sans); font-size:11px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; transition:all .2s; }
-.btn-gold-solid:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 12px 32px rgba(184,146,42,.35); }
 .consulting-extras { max-width:720px; margin:56px auto 0; border-top:1px solid rgba(255,255,255,.1); padding-top:48px; }
 .consulting-extras-title { font-family:var(--f-display); font-size:28px; font-weight:400; color:var(--ivory); text-align:center; margin-bottom:32px; }
 .consulting-extra-cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
@@ -209,8 +208,8 @@ nav {
  color:var(--ivory); line-height:1.25; margin-bottom:8px;
 }
 .cred-card-body {
- font-family:var(--f-sans); font-size:12px; font-weight:300;
- color:rgba(255,255,255,.4); line-height:1.6;
+ font-family:var(--f-sans); font-size:14px; font-weight:400;
+ color:rgba(255,255,255,.75); line-height:1.7;
 }
 
 /* ══ POSITIONING ══ */
@@ -286,7 +285,21 @@ nav {
 .cta-buttons { display:flex; gap:14px; justify-content:center; position:relative; }
 .btn-outline-gold { background:transparent; color:rgba(255,255,255,.5); border:1px solid rgba(255,255,255,.18); padding:16px 36px; font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; transition:all .2s; }
 .btn-outline-gold:hover { border-color:var(--gold); color:var(--gold-light); }
-.cta-contact { font-family:var(--f-sans); font-size:11px; font-weight:300; letter-spacing:.15em; color:rgba(255,255,255,.22); text-transform:uppercase; margin-top:28px; position:relative; }
+.btn-navy { display:inline-block; background:var(--navy); color:var(--ivory); border:none; padding:14px 28px; font-family:var(--f-sans); font-size:12px; font-weight:400; letter-spacing:.15em; text-transform:uppercase; cursor:pointer; transition:all .2s; }
+.btn-navy:hover { background:var(--navy-mid); transform:translateY(-2px); box-shadow:0 8px 24px rgba(13,31,60,.25); }
+.btn-outline-navy { display:inline-block; background:transparent; color:var(--navy); border:1px solid var(--navy); padding:14px 28px; font-family:var(--f-sans); font-size:12px; font-weight:400; letter-spacing:.15em; text-transform:uppercase; cursor:pointer; transition:all .2s; }
+.btn-outline-navy:hover { background:var(--navy); color:var(--ivory); }
+.cta-contact { font-family:var(--f-sans); font-size:13px; font-weight:300; letter-spacing:.1em; color:rgba(255,255,255,.45); margin-top:28px; position:relative; }
+/* ══ CONTACT FORM ══ */
+.contact-section { background:var(--ivory-warm); padding:80px 72px; }
+.contact-inner { max-width:560px; margin:0 auto; }
+.contact-form { display:flex; flex-direction:column; gap:14px; margin-top:28px; }
+.contact-input { padding:14px 18px; border:1px solid var(--rule); background:var(--ivory); font-family:var(--f-body); font-size:16px; color:var(--ink); outline:none; transition:border-color .2s; }
+.contact-input:focus { border-color:var(--gold); }
+.contact-input::placeholder { color:var(--rule); }
+.contact-textarea { padding:14px 18px; border:1px solid var(--rule); background:var(--ivory); font-family:var(--f-body); font-size:16px; color:var(--ink); outline:none; min-height:140px; resize:vertical; transition:border-color .2s; }
+.contact-textarea:focus { border-color:var(--gold); }
+.contact-textarea::placeholder { color:var(--rule); }
 
 /* ══ FOOTER ══ */
 footer { background:var(--ink); padding:32px 72px; display:flex; justify-content:space-between; align-items:center; }
@@ -338,6 +351,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .cta-section { padding:64px 24px; }
  .cta-buttons { flex-direction:column; align-items:center; gap:10px; }
  .cta-buttons .btn-gold, .cta-buttons .btn-outline-gold { width:100%; max-width:320px; text-align:center; }
+ .contact-section { padding:64px 24px; }
  footer { flex-direction:column; gap:16px; padding:28px 24px; text-align:center; }
  .footer-links { flex-wrap:wrap; justify-content:center; gap:16px; }
 }
@@ -372,6 +386,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .nl-form { gap:8px; }
  .nl-btn { width:100%; text-align:center; }
  .cta-section { padding:48px 18px; }
+ .contact-section { padding:48px 18px; }
  footer { padding:24px 18px; }
  .cred-strip { grid-template-columns:1fr; }
  .cred-strip-cell { border-right:none; border-bottom:1px solid rgba(255,255,255,.08); padding:22px 18px; }
@@ -497,8 +512,8 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 }
 .wakeup-close strong { font-style:normal; font-weight:600; }
 .wakeup-cite {
- font-family:var(--f-sans); font-size:11px; font-weight:300;
- letter-spacing:.1em; color:var(--soft-text);
+ font-family:var(--f-sans); font-size:13px; font-weight:400;
+ letter-spacing:.05em; color:var(--body-text);
  margin-top:12px;
 }
 .wakeup-cite a { color:var(--gold); text-decoration:none; }
@@ -523,9 +538,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="nav-links">
   <a class="nav-link" href="#consulting">Work With Me</a>
   <a class="nav-link" href="#speaking">Speaking</a>
-  <a class="nav-link" href="./about.html">About</a>
+  <a class="nav-link" href="#story">About</a>
   <a class="nav-link" href="#newsletter">Newsletter</a>
-  <a class="nav-link" href="mailto:barb@barbramilligan.com" target="_blank">Contact</a>
+  <a class="nav-link" href="#contact">Contact</a>
   <button class="nav-cta" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
  </div>
 </nav>
@@ -538,7 +553,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="hero-name-last a2">Milligan</div>
   <div class="hero-maiden a2">Charlottesville, VA</div>
   <div class="hero-tagline a3">
-   What you give your attention to is what your life becomes. In a world of infinite noise, that's no longer a philosophy. It's the most important skill we have.
+   Most people are being driven by forces they have never named.
   </div>
   <div class="hero-subheadline a4">
    I create living AI systems that hold what you're carrying so your mind doesn't have to. For leaders, caregivers, and parents who want to stop reacting and start choosing.
@@ -572,19 +587,19 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <div class="cred-strip">
  <div class="cred-strip-cell">
   <div class="cred-strip-metric">Built &amp; Exited</div>
-  <div class="cred-strip-text">Multimillion-dollar business sold in under 2 years</div>
+  <div class="cred-strip-text">Multimillion-dollar business in under 2 years</div>
  </div>
  <div class="cred-strip-cell">
-  <div class="cred-strip-metric">Fortune 500</div>
+  <div class="cred-strip-metric">Fortune 500 Customers</div>
   <div class="cred-strip-text">Pepsi, Lenovo, McDonald's, Blue Cross Blue Shield</div>
  </div>
  <div class="cred-strip-cell">
   <div class="cred-strip-metric">Published</div>
-  <div class="cred-strip-text">Author, national speaker, five-star business educator</div>
+  <div class="cred-strip-text">Author and national speaker</div>
  </div>
  <div class="cred-strip-cell">
   <div class="cred-strip-metric">Origin</div>
-  <div class="cred-strip-text">7 years using AI as a thinking partner through crisis</div>
+  <div class="cred-strip-text">4 years using AI as a thinking partner through crisis</div>
  </div>
 </div>
 
@@ -613,15 +628,13 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <section class="attention-section">
  <div class="attention-inner">
   <div class="section-label" style="color:var(--gold-light);justify-content:center;">The Thesis</div>
-  <h2 class="attention-title">This is not an<br><em>efficiency problem.</em></h2>
-  <p class="attention-body">Everyone is talking about using AI to do more, move faster, automate everything. I believe they're solving the wrong problem. <strong>The crisis isn't productivity. It's attention.</strong> Most people have never mapped the full web of meaning in their life. The roles, the family dynamics, the generational patterns that shape how you think, love, and lead. That entire web stays invisible. And when you can't see it, nothing feels meaningful. Even when you're succeeding by every external measure.</p>
-  <p class="attention-body">When your cognitive load is too high, your relational intelligence plummets. You become reactive, impatient, absent. The people who need you most get the worst version of you. <strong>Not because you don't care. Because you're in survival mode.</strong></p>
-  <p class="attention-body">And your life narrows. It becomes habits on repeat, black and white, stripped of the color and meaning and choice that made it yours. Your partner gets the leftovers. Your kids get the short version. Your friends fade. And you lose yourself somewhere in the middle of holding it all together. You don't even have the bandwidth to wonder what you'll do with this one wild and beautiful life you have.</p>
+  <h2 class="attention-title">You are not overwhelmed because you are doing too much.<br><em>You are carrying too much.</em></h2>
+  <p class="attention-body">Everyone is talking about using AI to do more, move faster, automate everything. I believe they're solving the wrong problem. <strong>The crisis isn't productivity. It's attention.</strong> Most people have never mapped the full web of meaning in their life. The roles, the family dynamics, the generational patterns that shape how you think, love, and lead. That entire web stays invisible. And when you can't see it, the people who need you most get the worst version of you. <strong>Not because you don't care. Because you're in survival mode.</strong></p>
   <p class="attention-body"><strong>There has never been another you, and there never will be again.</strong> The odds of you existing at all are roughly 1 in 10<sup>2,685,000</sup>. For 3.8 billion years, every one of your ancestors survived long enough, found each other, and created the exact chain of events that led to you. You are not replaceable. The people closest to you don't get another version of who you were meant to be for them.</p>
-  <p class="attention-body">This is where AI changes everything. Not by making you more productive. By holding the full complexity of your life so you can finally see it, think clearly through it, and become more of who you already are. <strong>The real interface between humans and AI isn't efficiency. It's becoming more human.</strong> So you can live the life you were actually born for.</p>
-  <p class="attention-body">I call this <strong>Attention Intelligence</strong>. It's not a philosophy. It's a system. We use AI to build a living map of your life: your roles, your family systems, your archetypes, your generational patterns, where your attention goes, and where it should go. The AI holds that full architecture as your thinking partner. It sees connections you can't track alone. It evolves as your life evolves. And it helps you make decisions from clarity instead of chaos.</p>
+  <p class="attention-body">This is where AI changes everything. Not by making you more productive. By holding the full complexity of your life so you can finally see it, think clearly through it, and become more of who you already are. <strong>The real interface between humans and AI isn't efficiency. It's becoming more human.</strong></p>
+  <p class="attention-body">I call this <strong>Attention Intelligence</strong>. It's a system. We use AI to build a living map of your life. The AI holds that full architecture as your thinking partner. It evolves as your life evolves. And it helps you make decisions from clarity instead of chaos.</p>
   <div class="attention-emphasis">
-   <div class="attention-emphasis-text">This is the work I'm building. Through consulting, speaking, the <strong>More Human</strong> newsletter, and <strong>Oliza.ai</strong> - a platform designed to make AI work for your life, not replace your thinking.</div>
+   <div class="attention-emphasis-text">This is the work I'm building. Through consulting, speaking, and the <strong>More Human</strong> newsletter.</div>
   </div>
  </div>
 </section>
@@ -633,55 +646,32 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
  <div class="solution-inner">
   <p class="solution-intro">
-   Most people carrying too much don't need more tools. They need to finally see the full architecture of their life in one place. Once you can see it, the noise quiets. Your mind gets lighter. And you can think clearly enough to actually live from who you are.
+   You don't need more tools. You need to finally see the full architecture of your life in one place. Once you can see it, the noise quiets, your mind gets lighter, and you can think clearly enough to actually live from who you are.
   </p>
   <p class="solution-intro">
-   I know because I lived it. Seven years of compounded family trauma, and this is what got my family through. Not just surviving, but coming out the other side closer, more hopeful, and more alive than when it started. Building my own living AI system didn't just save my life. It saved the people I love too.
-  </p>
-  <p class="solution-intro">
-   That's what this work builds. Together, we create a <strong>living AI system</strong> that holds your entire context: your roles, your family dynamics, your mental load, your goals, your patterns. It stays with you. It evolves with you. And it gives you the clarity to navigate whatever life brings next, not just survive it, but come through it stronger.
+   Together, we create a <strong>living AI system</strong> that holds your entire context. It stays with you, evolves with you, and gives you the clarity to navigate whatever life brings next.
   </p>
 
   <div class="solution-steps">
    <div class="solution-step">
     <div class="solution-step-num">Step 01</div>
     <div class="solution-step-title">Map it.</div>
-    <div class="solution-step-body">We build your life architecture map: every role, responsibility, relationship, and pattern you're carrying. Family systems. Generational cycles. Archetypes. All externalized into an AI system that holds the full picture so your mind doesn't have to.</div>
-    <div class="solution-step-examples">
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Leader</span> Sees that the role consuming them isn't the one that actually matters most</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Caregiver</span> Maps her family's archetypes and finally understands why she carries everyone's weight</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Homeschool</span> Discovers her child's archetype and redesigns learning around how they're actually wired</div>
-    </div>
+    <div class="solution-step-body">See the full architecture of your life in one place: every role, relationship, and invisible weight you're carrying.</div>
    </div>
    <div class="solution-step">
     <div class="solution-step-num">Step 02</div>
     <div class="solution-step-title">Audit it.</div>
-    <div class="solution-step-body">Run an attention audit: where your time, energy, and focus actually go every day vs. what you just mapped as meaningful. The AI surfaces the gap. Most people have never seen it this clearly.</div>
-    <div class="solution-step-examples">
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Leader</span> Sees they spend 80% of their energy on things that won't appear in their obituary</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Caregiver</span> Realizes she's giving her best hours to logistics and her worst to the people she loves</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Homeschool</span> Notices her own anxiety is driving the schedule, not her child's curiosity</div>
-    </div>
+    <div class="solution-step-body">Surface the gap between where your attention goes and what actually matters to you.</div>
    </div>
    <div class="solution-step">
     <div class="solution-step-num">Step 03</div>
     <div class="solution-step-title">Right-size it.</div>
-    <div class="solution-step-body">The AI helps you see what actually requires you and what doesn't. Not based on productivity metrics, but on what this season of your life actually needs. Some things get released. Some get delegated. Some get the attention they've been starved of.</div>
-    <div class="solution-step-examples">
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Leader</span> Recognizes they've been carrying everyone else's weight for so long that they forgot to ask what this season of their life actually requires</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Caregiver</span> Recognizes she's been parenting from her mother's fear instead of her own wisdom, and stops</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Homeschool</span> Drops the rigid curriculum and gives herself permission to follow her child's pace</div>
-    </div>
+    <div class="solution-step-body">Release what isn't yours. Protect what is. Stop carrying what this season of your life doesn't require.</div>
    </div>
    <div class="solution-step">
     <div class="solution-step-num">Step 04</div>
     <div class="solution-step-title">Build the system.</div>
-    <div class="solution-step-body">Your AI thinking partner is configured with your full life context: archetype profiles, family system dynamics, decision frameworks, and attention priorities. It stays with you after the engagement ends. It evolves as your life evolves. You're never carrying it alone again.</div>
-    <div class="solution-step-examples">
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Leader</span> Uses AI to hold the operational complexity so they can stop managing and start leading</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Caregiver</span> Uses AI to manage medical logistics so she can be present, not panicked</div>
-     <div class="solution-step-ex"><span class="solution-step-ex-label">Homeschool</span> Creates personalized AI learning tools that turn her child's curiosity into a real education</div>
-    </div>
+    <div class="solution-step-body">Your AI thinking partner holds the full complexity so you never carry it alone again.</div>
    </div>
   </div>
 
@@ -696,9 +686,6 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="consulting-inner">
   <div class="consulting-label" style="justify-content:center;">The Attention Reset</div>
   <h2 class="consulting-title" style="text-align:center;">A focused 2-week<br><em>engagement.</em></h2>
-  <p class="consulting-body">
-   This is not coaching. A coach talks with you for an hour and then you're on your own until next week. This builds something that stays.
-  </p>
   <p class="consulting-body">
    Before we begin, you receive a private workbook that primes your memory and prepares you for a deeper conversation. Then across two weeks we move through five phases together. Each one builds on the last. Together they produce a complete map of who you are, what you're carrying, and what actually matters. And a system that holds all of it so you never carry it alone again.
   </p>
@@ -727,7 +714,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    <div>
     <div class="svc-name">Phase 3: The Attention Map</div>
     <div class="svc-desc" style="margin-top:4px;"><strong style="color:var(--gold-light);font-weight:400;font-style:italic;">What you're actually carrying.</strong></div>
-    <div class="svc-desc">We surface everything currently living in your mind across every area of your life. Every responsibility, decision, emotional weight, and invisible obligation you're tracking. Then we map the gap between where your attention is actually going and what you identified as meaningful in Phase 2. Most people have never seen this gap this clearly. It's where the stress lives.</div>
+    <div class="svc-desc">We surface everything currently living in your mind across every area of your life. Every responsibility, decision, emotional weight, and invisible obligation you're tracking. Then we map the gap between where your attention is actually going and what you identified as meaningful in Phase 2. It's where the stress lives.</div>
    </div>
    <div class="svc-icon">Week 2</div>
   </div>
@@ -750,11 +737,11 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  </div>
  <div style="max-width:640px;margin:48px auto 0;text-align:center;">
   <p class="consulting-body" style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);">
-   We meet four times across two weeks. Each session opens the next phase of your AI conversation. Between sessions you work privately with your AI thinking partner, going deeper than any session with a human could take you, on your own timeline and in your own words. Barbra does not need to know what you share with your AI. She is the guide who stands at the threshold of each phase. The AI is where the depth lives.
+   We meet four times across two weeks. Each session opens the next phase of your AI conversation. Between sessions you work privately with your AI thinking partner, going deeper than any session with a human could take you, on your own timeline and in your own words. I do not need to know what you share with your AI. I am the guide who stands at the threshold of each phase. The AI is where the depth lives.
   </p>
  </div>
  <div style="text-align:center;margin-top:40px;">
-  <button class="btn-gold-solid" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Let's See If This Is Right for You &rarr;</button>
+  <button class="btn-navy" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Let's See If This Is Right for You &rarr;</button>
  </div>
 
  <div class="consulting-extras">
@@ -793,7 +780,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="audience-card">
    <div class="audience-label">Educators</div>
    <div class="audience-title">Homeschooling Parents</div>
-   <div class="audience-body">You chose this because you wanted something better for your kids. But the invisible workload buried the joy that made you start. When you understand your child's archetype, how they're wired to learn, relate, and grow, and combine that with AI's ability to create truly personalized education, you can raise a generation of flourishing critical thinkers. The heaviness lifts because you're no longer doing it alone, and you're finally working <em>with</em> who they are.</div>
+   <div class="audience-body">You chose this because you wanted something better for your children. But the invisible workload buried the joy that made you start. When you understand your child's archetype, how they're wired to learn, relate, and grow, and combine that with AI's ability to create truly personalized education, you can raise a generation of flourishing critical thinkers. The heaviness lifts because you're no longer doing it alone, and you're finally working <em>with</em> who they are.</div>
   </div>
   <div class="audience-card-wide">
    <div class="audience-label">Everyone Else</div>
@@ -831,16 +818,16 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="cred-card">
    <div class="cred-card-metric">Author</div>
    <div class="cred-card-headline">Published &amp; Speaking</div>
-   <div class="cred-card-body">Published author, national industry speaker, and five-star rated business educator</div>
+   <div class="cred-card-body">Published author and national industry speaker on AI, attention, and human performance</div>
   </div>
   <div class="cred-card">
-   <div class="cred-card-metric">7 Years</div>
+   <div class="cred-card-metric">4 Years</div>
    <div class="cred-card-headline">Crisis &amp; AI Pioneer</div>
    <div class="cred-card-body">Navigated a multi-generational family crisis using AI as a cognitive scaffold. The origin of this work</div>
   </div>
  </div>
  <div style="text-align:center;margin-top:36px;">
-  <a href="./living-proof.html" style="display:inline-block;background:var(--gold);color:var(--navy);border:none;padding:16px 40px;font-family:var(--f-sans);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .2s;" onmouseover="this.style.background='var(--gold-light)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(184,146,42,.3)'" onmouseout="this.style.background='var(--gold)';this.style.transform='none';this.style.boxShadow='none'">See the Living Proof &nbsp;&rarr;</a>
+  <a href="./living-proof.html" class="btn-navy" style="text-decoration:none;">See the Living Proof &nbsp;&rarr;</a>
  </div>
 </section>
 
@@ -860,7 +847,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    </div>
    <div class="talk-right">
     <p class="talk-body">
-     This talk begins with a question most people avoid. And it changes every conversation that follows. Through an exercise that redefines what a meaningful life looks like, audiences confront the gap between what they say matters and where their attention actually goes. Then we close that gap. Together.
+     This talk begins with a question most people avoid: what actually matters to you? Through a live exercise, audiences map what they say matters against where their attention actually goes. The gap is always larger than they expect. By the end, they leave with a clear picture of what needs to change and the resolve to change it.
     </p>
     <div class="talk-formats">
      <div class="talk-format">Keynote</div>
@@ -868,6 +855,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
      <div class="talk-format">Corporate</div>
      <div class="talk-format">Executive Retreats</div>
     </div>
+    <div style="margin-top:20px;"><button class="btn-navy" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Book This Talk &rarr;</button></div>
    </div>
   </div>
 
@@ -888,6 +876,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
      <div class="talk-format">Corporate</div>
      <div class="talk-format">Entrepreneurial Groups</div>
     </div>
+    <div style="margin-top:20px;"><button class="btn-navy" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Book This Talk &rarr;</button></div>
    </div>
   </div>
 
@@ -908,6 +897,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
      <div class="talk-format">Caregiver Conferences</div>
      <div class="talk-format">Education Summits</div>
     </div>
+    <div style="margin-top:20px;"><button class="btn-navy" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Book This Talk &rarr;</button></div>
    </div>
   </div>
 
@@ -953,7 +943,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
    <p class="story-body-text">When my marriage ended in my late twenties, I rebuilt from nothing. From that came <strong>Spark Evolution</strong>, meeting my husband at a <strong>TED Talk</strong>, my two incredible children, and eventually an Amazon brand I built and sold for millions in under two years, outselling <strong>Hallmark and American Greetings</strong> in their own category. Every season of my life has been about building through whatever comes.</p>
 
-   <p class="story-body-text">But the real systems challenge came in 2019, when a seven-year siege of family crisis began. My father's hospice. My mother's broken leg. A pandemic. My husband's brother diagnosed with terminal cancer. And then, in January 2024, our four-year-old daughter Eliza was diagnosed with leukemia.</p>
+   <p class="story-body-text">But the real systems challenge came when a siege of family crisis began. My father's hospice. My mother, in her late seventies and caring for a dying husband, breaking her leg and becoming bedridden. A pandemic. My brother-in-law diagnosed with terminal brain cancer. And then, in January 2024, our four-year-old daughter Eliza was diagnosed with leukemia.</p>
 
    <p class="story-body-text">I used AI to research treatment protocols, organize the overwhelming logistics of care, and stay present for our son Ollie, who held his sister's hand through all of it. I am not a medical professional. I am a mother who refused to be helpless.</p>
 
@@ -961,10 +951,10 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
     <div class="ip-text">The systems I built to survive were exactly what every person carrying too much needs to find themselves again. <strong>I don't just understand systems. I understand the weight of the human carrying them.</strong></div>
    </div>
 
-   <p class="story-body-text">Our AI platform is called <strong>Oliza</strong>, a blend of Ollie and Eliza's names. Eliza rings the bell in May 2026. Every company I've built, every stage I walk onto, every talk I give. It is all for them. That is not a tagline. That is the whole story.</p>
+   <p class="story-body-text">Eliza rings the bell in May 2026. Every company I've built, every stage I walk onto, every talk I give. It is all for them. That is not a tagline. That is my whole story.</p>
 
    <div style="margin-top:36px;">
-    <a href="./about.html" style="display:inline-block;background:transparent;color:var(--navy);border:1px solid var(--gold);padding:16px 36px;font-family:var(--f-sans);font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .2s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--navy)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(184,146,42,.25)'" onmouseout="this.style.background='transparent';this.style.color='var(--navy)';this.style.transform='none';this.style.boxShadow='none'">Read the Full Story &nbsp;&rarr;</a>
+    <a href="./about.html" class="btn-outline-navy" style="text-decoration:none;">Read My Story &nbsp;&rarr;</a>
    </div>
 
   </div>
@@ -995,7 +985,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <section class="wakeup-section">
  <div class="wakeup-inner">
   <div class="wakeup-label">Before It's Too Late</div>
-  <h2 class="wakeup-title">At the end of life, no one regrets<br><em>not sending that email.</em></h2>
+  <h2 class="wakeup-title">At the end of life, no one wishes they had stayed later,<br>worked harder, or <em>written one more prompt.</em></h2>
 
   <ul class="wakeup-regrets">
    <li class="wakeup-regret">"I wish I'd had the courage to live a life true to myself."</li>
@@ -1007,9 +997,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
   <div class="wakeup-cite">From Bronnie Ware's research with patients in palliative care. <a href="https://bronnieware.com/blog/regrets-of-the-dying/" target="_blank">The Top Five Regrets of the Dying</a></div>
 
-  <p class="wakeup-body" style="margin-top:40px;">Every single one of these is an attention problem. Not a time problem. Not a productivity problem. These are the words of people who had time. But never mapped what made their life meaningful. They never saw the web. Their unique gifts, their irreplaceable roles, the things only they could bring to the world.</p>
-
-  <p class="wakeup-body">They were busy. They were responsible. They were needed. Their minds were full of open loops, things they were afraid of dropping. They were running like they were running out of time. But they had time. <strong>What they didn't have was a clear picture of where their attention was going.</strong> And they missed the beauty of their own lives because of it.</p>
+  <p class="wakeup-body" style="margin-top:40px;">Every single one of these is an attention problem. Not a time problem. These are the words of people who had time. <strong>What they didn't have was a clear picture of where their attention was going.</strong> And they missed the beauty of their own lives because of it.</p>
 
   <div class="wakeup-personal">
    <p>I know because I was living that way too. Before my daughter was diagnosed with leukemia, I was so deep in the doing that I was missing it. The life that was right in front of me. <strong>Her diagnosis was my wake-up call.</strong></p>
@@ -1029,13 +1017,28 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 <section class="cta-section">
  <div class="cta-sub" style="margin-bottom:16px;font-style:normal;font-size:11px;font-family:var(--f-sans);letter-spacing:.25em;text-transform:uppercase;color:rgba(250,248,242,.3);font-weight:300;">The More Human Project</div>
  <h2 class="cta-title">Your attention is your life.<br><em>Protect it.</em></h2>
- <div class="cta-sub">Consulting. Speaking. Oliza.ai. The More Human newsletter. One body of work, one belief: the future of AI should be more human.</div>
+ <div class="cta-sub">Consulting. Speaking. The More Human newsletter. One body of work, one belief: the future of AI should be more human.</div>
  <div class="cta-buttons">
   <button class="btn-gold" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
   <button class="btn-outline-gold" onclick="document.getElementById('speaking').scrollIntoView({behavior:'smooth'})">Book Me to Speak</button>
   <button class="btn-outline-gold" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Subscribe to More Human</button>
  </div>
- <div class="cta-contact"><a href="mailto:barb@barbramilligan.com" target="_blank" style="color:inherit;text-decoration:none;">barb@barbramilligan.com</a> &nbsp;&middot;&nbsp; Charlottesville, VA &nbsp;&middot;&nbsp; Available Nationally</div>
+ <div class="cta-contact">Charlottesville, VA &nbsp;&middot;&nbsp; Available Nationally</div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="contact-section" id="contact">
+ <div class="contact-inner">
+  <div class="section-label">Contact</div>
+  <h2 class="section-title" style="margin-bottom:16px;">Get in <em>touch.</em></h2>
+  <p style="font-family:var(--f-body);font-size:17px;color:var(--mid-text);line-height:1.75;margin-bottom:8px;">For speaking inquiries, consulting, or just to say hello.</p>
+  <form class="contact-form" onsubmit="event.preventDefault();var f=this;var b=f.querySelector('button');b.textContent='Sending...';setTimeout(function(){b.textContent='Sent!';f.reset();setTimeout(function(){b.textContent='Send Message →'},2000)},1000);">
+   <input class="contact-input" type="text" name="name" placeholder="Your name" required>
+   <input class="contact-input" type="email" name="email" placeholder="Your email" required>
+   <textarea class="contact-textarea" name="message" placeholder="Your message" required></textarea>
+   <button class="btn-navy" type="submit" style="align-self:flex-start;">Send Message &rarr;</button>
+  </form>
+ </div>
 </section>
 
 <!-- FOOTER -->
@@ -1045,9 +1048,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="footer-links">
   <a class="footer-link" href="#consulting">Work With Me</a>
   <a class="footer-link" href="#speaking">Speaking</a>
-  <a class="footer-link" href="./about.html">About</a>
+  <a class="footer-link" href="#story">About</a>
   <a class="footer-link" href="#newsletter">Newsletter</a>
-  <a class="footer-link" href="mailto:barb@barbramilligan.com" target="_blank">Contact</a>
+  <a class="footer-link" href="#contact">Contact</a>
  </div>
 </footer>
 
