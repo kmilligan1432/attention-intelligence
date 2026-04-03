@@ -119,12 +119,39 @@ nav {
 .photo-caption span { display:block; font-family:var(--f-sans); font-size:12px; font-weight:400; letter-spacing:.2em; text-transform:uppercase; color:var(--mid-text); margin-top:8px; font-style:normal; white-space:nowrap; }
 
 /* ══ GAP GRAPHIC ══ */
-.gap-section { padding:60px 24px; background:var(--ivory); }
+.gap-section { padding:100px 72px; background:var(--ivory); }
+.gap-inner { max-width:820px; margin:0 auto; }
+.gap-headline { font-family:var(--f-display); font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--navy); line-height:1.15; margin-bottom:36px; text-align:center; }
+.gap-headline em { font-style:italic; color:var(--gold); }
+.gap-explain { max-width:680px; margin:0 auto 64px; }
+.gap-explain p { font-family:var(--f-body); font-size:19px; font-weight:400; color:var(--body-text); line-height:1.85; margin-bottom:24px; text-align:center; }
+.gap-explain p:last-child { margin-bottom:0; }
+.gap-explain strong { font-weight:700; color:var(--navy); }
+.gap-explain em { font-style:italic; }
+.gap-divider-label { font-family:var(--f-sans); font-size:10px; font-weight:300; letter-spacing:.3em; text-transform:uppercase; color:var(--soft-text); text-align:center; margin-bottom:32px; }
+.gap-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.gap-col { padding:40px 36px; }
+.gap-col-left { background:var(--ivory-warm); border:1px solid var(--rule); border-right:none; }
+.gap-col-right { background:white; border:2px solid var(--gold); }
+.gap-col-label { font-family:var(--f-sans); font-size:10px; font-weight:400; letter-spacing:.25em; text-transform:uppercase; margin-bottom:24px; }
+.gap-col-left .gap-col-label { color:var(--soft-text); }
+.gap-col-right .gap-col-label { color:var(--gold); }
+.gap-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px; }
+.gap-list li { display:flex; align-items:baseline; gap:12px; font-family:var(--f-body); font-size:16px; line-height:1.6; }
+.gap-col-left .gap-list li { color:var(--mid-text); }
+.gap-col-right .gap-list li { color:var(--ink); font-weight:500; }
+.gap-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; margin-top:6px; }
+.gap-col-left .gap-dot { background:var(--soft-text); }
+.gap-col-right .gap-dot { background:var(--gold); }
+.gap-then { margin-top:14px; padding-top:14px; border-top:1px solid var(--rule); font-family:var(--f-display); font-size:15px; font-style:italic; color:var(--soft-text); }
+.gap-warning { max-width:640px; margin:40px auto 0; padding:24px 32px; border:1px solid var(--rule); background:var(--ivory-warm); text-align:center; }
+.gap-warning p:first-child { font-family:var(--f-body); font-size:15px; color:var(--mid-text); margin:0 0 6px; }
+.gap-warning p:last-child { font-family:var(--f-display); font-size:19px; font-weight:600; color:var(--navy); margin:0; }
 @media (max-width:600px) {
- .gap-grid { grid-template-columns:1fr !important; }
- .gap-vs { width:auto !important; height:40px !important; border-top:0.5px solid rgba(0,0,0,0.12); border-bottom:0.5px solid rgba(0,0,0,0.12); border-left:none !important; border-right:none !important; }
- .gap-left { border-radius:12px 12px 0 0 !important; }
- .gap-right { border-radius:0 0 12px 12px !important; }
+ .gap-section { padding:64px 24px; }
+ .gap-grid { grid-template-columns:1fr; }
+ .gap-col-left { border-right:1px solid var(--rule); border-bottom:none; }
+ .gap-col-right { border-top:none; }
 }
 
 /* ══ THE COST ══ */
@@ -258,6 +285,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .hero-photo { width:280px; height:280px; }
  .hero-buttons { flex-direction:column; gap:10px; }
  .hero-buttons .btn-primary-light, .hero-buttons .btn-secondary-light { width:100%; text-align:center; }
+ .gap-section { padding:64px 24px; }
  .cost-section { padding:64px 24px; }
  .mechanism-section { padding:64px 24px; }
  .reset-section { padding:64px 24px; }
@@ -368,41 +396,52 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  </div>
 </section>
 
-<!-- ══════════════ SECTION 2 — THE GAP GRAPHIC ══════════════ -->
+<!-- ══════════════ SECTION 2 — WHAT IS AN AI THINKING PARTNER ══════════════ -->
 <section class="gap-section">
-<div style="padding: 3rem 1rem; max-width: 700px; margin: 0 auto;">
-  <div class="gap-grid" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 2rem;">
-    <div class="gap-left" style="border: 0.5px solid rgba(0,0,0,0.12); border-radius: 12px 0 0 12px; padding: 1.5rem; background: #f5f0e8;">
-      <p style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin: 0 0 1rem; font-weight: 500;">Every AI tool starts here</p>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #aaa; flex-shrink: 0;"></span><span style="font-size: 15px; color: #666;">Your calendar</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #aaa; flex-shrink: 0;"></span><span style="font-size: 15px; color: #666;">Your emails</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #aaa; flex-shrink: 0;"></span><span style="font-size: 15px; color: #666;">Your tasks</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #aaa; flex-shrink: 0;"></span><span style="font-size: 15px; color: #666;">Your projects</span></div>
-      </div>
-    </div>
-    <div class="gap-vs" style="display: flex; align-items: center; justify-content: center; width: 40px; background: white; border-top: 0.5px solid rgba(0,0,0,0.12); border-bottom: 0.5px solid rgba(0,0,0,0.12);">
-      <span style="font-size: 16px; color: #aaa;">vs</span>
-    </div>
-    <div class="gap-right" style="border: 1.5px solid #c4a050; border-radius: 0 12px 12px 0; padding: 1.5rem; background: white;">
-      <p style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #c4a050; margin: 0 0 1rem; font-weight: 500;">Attention Intelligence starts here</p>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your history</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your inherited patterns</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your invisible load</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your relationships</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your grief</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your roles</span></div>
-        <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #c4a050; flex-shrink: 0;"></span><span style="font-size: 15px; color: #1a1a1a;">Your values</span></div>
-        <div style="margin-top: 6px; padding-top: 10px; border-top: 0.5px solid rgba(0,0,0,0.1);"><span style="font-size: 13px; color: #888; font-style: italic;">Then your tasks.</span></div>
-      </div>
-    </div>
+ <div class="gap-inner">
+  <div class="section-label" style="justify-content:center;">What No One Is Talking About</div>
+  <h2 class="gap-headline">You do not need another AI tool.<br><em>You need a thinking partner.</em></h2>
+
+  <div class="gap-explain">
+   <p>An AI thinking partner is an AI that has been trained on the full architecture of your life. Not your calendar. Not your to-do list. <strong>You.</strong></p>
+   <p>Your family history. Your inherited patterns. The roles you carry. The grief you hold. The values you protect. The invisible weight no one else sees.</p>
+   <p>It does not tell you what to do. It thinks with you. It holds context you cannot hold alone. It sees the patterns you are too close to see. And it is available at 11pm when no therapist, coach, or friend is picking up the phone.</p>
+   <p>Every AI company on earth is racing to make you more productive. <strong>No one is building AI that makes you more human.</strong></p>
+   <p>That is what Attention Intelligence is. And that is what I build with you.</p>
   </div>
-  <div style="text-align: center; padding: 1.25rem 1.5rem; border: 0.5px solid rgba(0,0,0,0.12); border-radius: 12px; background: #f5f0e8;">
-    <p style="font-size: 14px; color: #666; margin: 0 0 6px;">AI without individual context is not just low value.</p>
-    <p style="font-size: 16px; font-weight: 500; color: #0a1628; margin: 0;">It is dangerous.</p>
+
+  <div class="gap-divider-label">Here is the difference</div>
+
+  <div class="gap-grid">
+   <div class="gap-col gap-col-left">
+    <div class="gap-col-label">Every AI tool starts here</div>
+    <ul class="gap-list">
+     <li><span class="gap-dot"></span><span>Your calendar</span></li>
+     <li><span class="gap-dot"></span><span>Your emails</span></li>
+     <li><span class="gap-dot"></span><span>Your tasks</span></li>
+     <li><span class="gap-dot"></span><span>Your projects</span></li>
+    </ul>
+   </div>
+   <div class="gap-col gap-col-right">
+    <div class="gap-col-label">Attention Intelligence starts here</div>
+    <ul class="gap-list">
+     <li><span class="gap-dot"></span><span>Your history</span></li>
+     <li><span class="gap-dot"></span><span>Your inherited patterns</span></li>
+     <li><span class="gap-dot"></span><span>Your invisible load</span></li>
+     <li><span class="gap-dot"></span><span>Your relationships</span></li>
+     <li><span class="gap-dot"></span><span>Your grief</span></li>
+     <li><span class="gap-dot"></span><span>Your roles</span></li>
+     <li><span class="gap-dot"></span><span>Your values</span></li>
+    </ul>
+    <div class="gap-then">Then your tasks.</div>
+   </div>
   </div>
-</div>
+
+  <div class="gap-warning">
+   <p>AI without individual context is not just low value.</p>
+   <p>It is dangerous.</p>
+  </div>
+ </div>
 </section>
 
 <!-- ══════════════ SECTION 3 — THE COST ══════════════ -->
