@@ -129,7 +129,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 /* ══ 2 · THE REFRAME ══ */
 .reframe-section { background:var(--ivory); padding:100px 72px; }
 .reframe-inner { max-width:680px; margin:0 auto; }
-.reframe-headline { font-family:var(--f-display); font-size:clamp(36px,4.5vw,64px); font-weight:300; color:var(--navy); line-height:1.05; margin-bottom:48px; }
+.reframe-headline { font-family:var(--f-display); font-size:clamp(36px,4.5vw,64px); font-weight:300; color:var(--navy); line-height:1.05; margin-bottom:48px; text-align:center; }
 .reframe-headline em { font-style:italic; color:var(--gold); }
 .reframe-body { font-family:var(--f-body); font-size:19px; color:var(--body-text); line-height:1.85; margin-bottom:24px; }
 .reframe-body strong { font-weight:700; color:var(--navy); }
@@ -200,7 +200,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 .writing-newsletter-btn:hover { background:var(--navy); color:var(--ivory-warm); }
 
 /* ══ 11 · SPEAKING ══ */
-.speaking-section { background:var(--forest); padding:0; }
+.speaking-section { background:var(--ivory); padding:0; }
 .speaking-header { background:var(--forest); padding:80px 72px 60px; text-align:center; }
 .speaking-header .section-label { color:var(--gold-light); justify-content:center; }
 .speaking-header .section-label::before { background:var(--gold-light); }
@@ -210,16 +210,16 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 .speaking-cta { display:inline-block; margin-top:28px; font-family:var(--f-sans); font-size:12px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:var(--ivory-warm); border:1px solid rgba(250,248,242,.3); padding:14px 32px; text-decoration:none; cursor:pointer; transition:all .3s; background:transparent; }
 .speaking-cta:hover { background:rgba(250,248,242,.1); border-color:var(--gold); color:var(--gold); }
 .talks { display:flex; flex-direction:column; gap:0; padding:0 72px 80px; max-width:1100px; margin:0 auto; }
-.talk { display:grid; grid-template-columns:1fr 1fr; gap:0; border-top:1px solid rgba(250,248,242,.12); padding:60px 0; }
-.talk:last-child { border-bottom:1px solid rgba(250,248,242,.12); }
+.talk { display:grid; grid-template-columns:1fr 1fr; gap:0; border-top:1px solid var(--rule); padding:60px 0; }
+.talk:last-child { border-bottom:1px solid var(--rule); }
 .talk-left { padding-right:64px; }
-.talk-right { padding-left:64px; border-left:1px solid rgba(250,248,242,.12); }
-.talk-number { font-family:var(--f-display); font-size:80px; font-weight:300; color:rgba(250,248,242,.08); line-height:1; margin-bottom:16px; }
-.talk-audience { font-family:var(--f-sans); font-size:12px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-light); margin-bottom:12px; }
-.talk-title { font-family:var(--f-display); font-size:clamp(28px,3vw,38px); font-weight:600; color:var(--ivory-warm); line-height:1.1; margin-bottom:6px; }
-.talk-body { font-family:var(--f-body); font-size:18px; color:rgba(250,248,242,.7); line-height:1.78; margin-bottom:24px; }
+.talk-right { padding-left:64px; border-left:1px solid var(--rule); }
+.talk-number { font-family:var(--f-display); font-size:80px; font-weight:300; color:rgba(10,22,40,.07); line-height:1; margin-bottom:16px; }
+.talk-audience { font-family:var(--f-sans); font-size:12px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.talk-title { font-family:var(--f-display); font-size:clamp(28px,3vw,38px); font-weight:600; color:var(--navy); line-height:1.1; margin-bottom:6px; }
+.talk-body { font-family:var(--f-body); font-size:18px; color:var(--body-text); line-height:1.78; margin-bottom:24px; }
 .talk-formats { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
-.talk-format { font-family:var(--f-sans); font-size:12px; font-weight:300; letter-spacing:.12em; text-transform:uppercase; color:rgba(250,248,242,.5); border:1px solid rgba(250,248,242,.15); padding:6px 14px; }
+.talk-format { font-family:var(--f-sans); font-size:12px; font-weight:300; letter-spacing:.12em; text-transform:uppercase; color:var(--navy); border:1px solid rgba(10,22,40,.25); padding:6px 14px; }
 
 /* ══ 12 · REGRETS ══ */
 .regrets-section { background:var(--ivory-warm); padding:80px 72px; }
@@ -306,7 +306,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .talks { padding:0 24px 64px; }
  .talk { grid-template-columns:1fr; padding:40px 0; }
  .talk-left { padding-right:0; margin-bottom:24px; }
- .talk-right { padding-left:0; border-left:none; border-top:1px solid rgba(250,248,242,.12); padding-top:24px; }
+ .talk-right { padding-left:0; border-left:none; border-top:1px solid var(--rule); padding-top:24px; }
  .talk-number { font-size:56px; }
  .regrets-section { padding:64px 24px; }
  .closing-section { padding:64px 24px; }
@@ -432,7 +432,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <p class="reframe-body"><strong>Every AI company on earth is racing to make you more productive. No one is building AI that makes you more human.</strong></p>
   <div class="reframe-closing">
    <p class="reframe-declaration">That is what I do.</p>
-   <p class="reframe-dangerous">Because AI without individual context is not just low value. It is dangerous.</p>
+   <p class="reframe-dangerous">Because AI without individual context is not just low value.<br>It is <em><i>dangerous.</i></em></p>
   </div>
  </div>
 </section>
