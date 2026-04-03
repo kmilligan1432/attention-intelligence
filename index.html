@@ -53,7 +53,8 @@
 
 html { scroll-behavior:smooth; }
 body { font-family:var(--f-body); background:var(--ivory); color:var(--body-text); overflow-x:hidden; }
-h1,h2,h3 { font-family:var(--f-display); font-weight:400; }
+h1,h2,h3 { font-family:var(--f-display); font-weight:400; text-wrap:balance; }
+p, li, span, div { text-wrap:pretty; }
 
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 @keyframes float { 0%,100%{transform:translateY(0) rotate(-6deg)} 50%{transform:translateY(-10px) rotate(-3deg)} }
@@ -199,8 +200,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 .writing-newsletter-btn:hover { background:var(--navy); color:var(--ivory-warm); }
 
 /* ══ 11 · SPEAKING ══ */
-.speaking-section { background:var(--navy); padding:0; }
-.speaking-header { background:var(--navy); padding:80px 72px 60px; text-align:center; }
+.speaking-section { background:var(--forest); padding:0; }
+.speaking-header { background:var(--forest); padding:80px 72px 60px; text-align:center; }
 .speaking-header .section-label { color:var(--gold-light); justify-content:center; }
 .speaking-header .section-label::before { background:var(--gold-light); }
 .speaking-header .section-title { color:var(--ivory-warm); margin-bottom:20px; }
@@ -221,16 +222,16 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 .talk-format { font-family:var(--f-sans); font-size:12px; font-weight:300; letter-spacing:.12em; text-transform:uppercase; color:rgba(250,248,242,.5); border:1px solid rgba(250,248,242,.15); padding:6px 14px; }
 
 /* ══ 12 · REGRETS ══ */
-.regrets-section { background:#0a1628; padding:80px 72px; }
+.regrets-section { background:var(--ivory-warm); padding:80px 72px; }
 .regrets-inner { max-width:680px; margin:0 auto; text-align:center; }
-.regrets-headline { font-family:var(--f-display); font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--ivory); line-height:1.2; margin-bottom:48px; }
-.regrets-headline em { font-style:italic; color:var(--gold-light); }
+.regrets-headline { font-family:var(--f-display); font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--navy); line-height:1.2; margin-bottom:48px; }
+.regrets-headline em { font-style:italic; color:var(--gold); }
 .regrets-list { list-style:none; padding:0; margin:0 0 32px; display:flex; flex-direction:column; gap:20px; }
-.regrets-item { font-family:var(--f-display); font-size:clamp(18px,2vw,22px); font-weight:400; font-style:italic; color:rgba(245,240,232,.85); line-height:1.5; }
-.regrets-cite { font-family:var(--f-sans); font-size:13px; font-weight:300; letter-spacing:.05em; color:rgba(245,240,232,.35); margin-bottom:40px; }
-.regrets-cite a { color:rgba(245,240,232,.35); text-decoration:none; }
-.regrets-cite a:hover { color:var(--gold-light); }
-.regrets-body { font-family:var(--f-body); font-size:18px; color:rgba(245,240,232,.7); line-height:1.85; margin-bottom:36px; }
+.regrets-item { font-family:var(--f-display); font-size:clamp(18px,2vw,22px); font-weight:400; font-style:italic; color:var(--body-text); line-height:1.5; }
+.regrets-cite { font-family:var(--f-sans); font-size:13px; font-weight:300; letter-spacing:.05em; color:var(--soft-text); margin-bottom:40px; }
+.regrets-cite a { color:var(--soft-text); text-decoration:none; }
+.regrets-cite a:hover { color:var(--gold); }
+.regrets-body { font-family:var(--f-body); font-size:18px; color:var(--body-text); line-height:1.85; margin-bottom:36px; }
 
 /* ══ 13 · CLOSING ══ */
 .closing-section { background:var(--navy); padding:100px 72px; text-align:center; }
@@ -485,7 +486,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="daily-grid">
    <div class="daily-item"><span class="daily-dot"></span><span>Breaking the generational patterns you did not choose but have been living.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Managing your work so you spend time on what only you can do &mdash; and offload or automate everything that drains you.</span></div>
-   <div class="daily-item"><span class="daily-dot"></span><span>Figuring out why the same argument keeps happening in your closest relationships.</span></div>
+   <div class="daily-item"><span class="daily-dot"></span><span>Figuring out why the same argument keeps showing up in your closest relationships and what it is actually about.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Processing a difficult parenting moment before you react.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Preparing for a hard conversation before it happens so you show up grounded instead of reactive.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Deciding what this season of your life actually requires of you and what it does not.</span></div>
@@ -644,7 +645,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   </ul>
   <div class="regrets-cite">From Bronnie Ware's research with patients in palliative care. <a href="https://bronnieware.com/blog/regrets-of-the-dying/" target="_blank">The Top Five Regrets of the Dying</a></div>
   <p class="regrets-body">Every one of these is an attention problem. Not a time problem. You do not have to wait for illness to see what matters. You can start now.</p>
-  <button class="btn-primary-light" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
+  <button class="btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
  </div>
 </section>
 
@@ -654,9 +655,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <h2 class="closing-headline">Your attention is your life. <em>Protect it.</em></h2>
  <div class="closing-links">
   <a class="closing-link" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</a>
-  <span style="color:var(--rule);">&middot;</span>
   <a class="closing-link" href="#speaking">Book Me to Speak</a>
-  <span style="color:var(--rule);">&middot;</span>
   <a class="closing-link" href="https://www.linkedin.com/newsletters/more-human/" target="_blank">Subscribe to More Human</a>
  </div>
  <div class="closing-location">Charlottesville, VA &middot; Available Nationally</div>
