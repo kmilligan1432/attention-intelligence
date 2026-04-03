@@ -102,11 +102,12 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 
 /* ══ 2 · MY STORY ══ */
 .story-section { background:var(--navy); padding:0; overflow:hidden; }
-.story-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:600px; }
+.story-inner { max-width:100%; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:600px; }
 .story-photo-col { position:relative; overflow:hidden; }
 .story-photo-col img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
-.story-photo-col::after { content:''; position:absolute; inset:0; background:linear-gradient(to right, transparent 60%, var(--navy) 100%); pointer-events:none; }
-.story-text-col { display:flex; flex-direction:column; justify-content:center; padding:72px 64px 72px 48px; }
+.story-photo-col::before { content:''; position:absolute; inset:0; background:linear-gradient(to right, var(--navy) 0%, transparent 30%); pointer-events:none; z-index:1; }
+.story-photo-col::after { content:''; position:absolute; inset:0; background:linear-gradient(to right, transparent 50%, var(--navy) 100%); pointer-events:none; z-index:1; }
+.story-text-col { display:flex; flex-direction:column; justify-content:center; padding:72px 64px 72px 48px; max-width:600px; }
 .story-setup { font-family:var(--f-body); font-size:19px; color:rgba(250,248,242,.7); line-height:1.75; margin-bottom:32px; }
 .story-diagnosis { padding-left:24px; border-left:3px solid var(--gold); margin-bottom:36px; }
 .story-diagnosis-text { font-family:var(--f-display); font-size:clamp(22px,2.4vw,32px); font-weight:300; color:var(--ivory-warm); line-height:1.25; }
@@ -189,6 +190,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 
 /* ══ 11 · SPEAKING ══ */
 .speaking-section { background:var(--ivory); padding:100px 72px; }
+.speaking-header { max-width:680px; margin-bottom:64px; }
+.speaking-intro { font-family:var(--f-body); font-size:19px; color:var(--body-text); line-height:1.75; margin-top:-24px; }
 .talks { display:flex; flex-direction:column; gap:0; }
 .talk { display:grid; grid-template-columns:1fr 1fr; gap:0; border-top:1px solid var(--rule); padding:60px 0; }
 .talk:last-child { border-bottom:1px solid var(--rule); }
@@ -391,7 +394,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
     <div class="story-diagnosis-stop">It stopped everything.</div>
    </div>
    <p class="story-bridge">We are all one life-changing diagnosis away.</p>
-   <p class="story-body">My life is different now. I slowed down, but I am getting more done. I am more present, and more grateful for everything in my life. And I could not have done it without building my own AI thinking partner to survive it.</p>
+   <p class="story-body">My life is different now. I slowed down and somehow got more done. I became more present, more grateful for all of it. And I could not have done it without building my own AI thinking partner along the way.</p>
    <a href="./living-proof.html" class="story-link">Read the full story &rarr;</a>
   </div>
  </div>
@@ -462,7 +465,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
    <div class="daily-item"><span class="daily-dot"></span><span>Understanding what brings you joy, energy, and life so you can choose those things more deliberately.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Figuring out why the same argument keeps happening in your closest relationships.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Processing a difficult parenting moment before you react.</span></div>
-   <div class="daily-item"><span class="daily-dot"></span><span>Preparing for a hard conversation before it happens.</span></div>
+   <div class="daily-item"><span class="daily-dot"></span><span>Preparing for a hard conversation before it happens — so you walk in grounded, not reactive.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Deciding what this season of your life actually requires of you and what it does not.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Understanding a medical diagnosis at 11pm when you cannot call anyone.</span></div>
    <div class="daily-item"><span class="daily-dot"></span><span>Mapping a major decision against your values, your archetypes, and who you are becoming.</span></div>
@@ -494,25 +497,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 </section>
 
 
-<!-- ═══════ 9 · CREDENTIALS ═══════ -->
-<section class="cred-section">
- <div class="cred-inner">
-  <span class="cred-pill">Amazon FBA Exit</span>
-  <span class="cred-divider"></span>
-  <span class="cred-pill">Fortune 500 Clients</span>
-  <span class="cred-divider"></span>
-  <span class="cred-pill">HubSpot's Largest Retainer</span>
-  <span class="cred-divider"></span>
-  <span class="cred-pill">Published Author</span>
-  <span class="cred-divider"></span>
-  <span class="cred-pill">National Speaker</span>
-  <span class="cred-divider"></span>
-  <span class="cred-pill">4-Year Crisis &rarr; Methodology</span>
- </div>
-</section>
-
-
-<!-- ═══════ 10 · FEATURED WRITING — Brené-inspired editorial cards ═══════ -->
+<!-- ═══════ 9 · FEATURED WRITING — Brené-inspired editorial cards ═══════ -->
 <section class="writing-section" id="writing">
  <div class="writing-header">
   <h2 class="writing-title">Featured <em>Writing</em></h2>
@@ -541,10 +526,30 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 </section>
 
 
+<!-- ═══════ 10 · CREDENTIALS ═══════ -->
+<section class="cred-section">
+ <div class="cred-inner">
+  <span class="cred-pill">Amazon FBA Exit</span>
+  <span class="cred-divider"></span>
+  <span class="cred-pill">Fortune 500 Clients</span>
+  <span class="cred-divider"></span>
+  <span class="cred-pill">HubSpot's Largest Retainer</span>
+  <span class="cred-divider"></span>
+  <span class="cred-pill">Published Author</span>
+  <span class="cred-divider"></span>
+  <span class="cred-pill">National Speaker</span>
+  <span class="cred-divider"></span>
+  <span class="cred-pill">4-Year Crisis &rarr; Methodology</span>
+ </div>
+</section>
+
 <!-- ═══════ 11 · SPEAKING ═══════ -->
 <section class="speaking-section" id="speaking">
- <div class="section-label">Speaking</div>
- <h2 class="section-title">Three talks. One <em>question.</em></h2>
+ <div class="speaking-header">
+  <div class="section-label">Speaking</div>
+  <h2 class="section-title">Three talks. One <em>question.</em></h2>
+  <p class="speaking-intro">What would change if you could finally see where your attention is actually going?</p>
+ </div>
 
  <div class="talks">
   <div class="talk">
