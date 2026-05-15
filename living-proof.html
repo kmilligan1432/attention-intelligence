@@ -12,19 +12,19 @@
   gtag('config', 'G-XSLSR4BWGS');
 </script>
 <title>Living Proof — Barbra Bannon Milligan</title>
-<meta name="description" content="A real-time record of one family navigating crisis with Attention Intelligence. Two decades of building, leading, and starting over. Not theory. Living proof.">
+<meta name="description" content="Two decades of building, leading, and starting over. A real-time record of one family navigating crisis. Not theory. Living proof.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://barbramilligan.com/living-proof.html">
 <meta property="og:title" content="Living Proof — Barbra Bannon Milligan">
-<meta property="og:description" content="A real-time record of one family navigating crisis with Attention Intelligence. Not theory. Living proof.">
-<meta property="og:image" content="https://barbramilligan.com/og-image.png">
+<meta property="og:description" content="Two decades of building, leading, and starting over. Not theory. Living proof.">
+<meta property="og:image" content="https://barbramilligan.com/images/og-image-the-unlock.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Living Proof — Barbra Bannon Milligan">
-<meta name="twitter:description" content="A real-time record of one family navigating crisis with Attention Intelligence.">
-<meta name="twitter:image" content="https://barbramilligan.com/og-image.png">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230D1F3C'/><text x='50' y='68' font-family='serif' font-size='42' font-weight='400' fill='%23D4AA48' text-anchor='middle'>BBM</text></svg>">
+<meta name="twitter:description" content="Two decades of building, leading, and starting over. Not theory. Living proof.">
+<meta name="twitter:image" content="https://barbramilligan.com/images/og-image-the-unlock.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a1628'/><text x='50' y='68' font-family='serif' font-size='42' font-weight='400' fill='%23f5f0e8' text-anchor='middle'>BBM</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -32,10 +32,9 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
- --navy:    #0D1F3C;
- --navy-mid:  #162840;
+ --navy:    #0a1628;
+ --navy-mid:  #12203a;
  --forest:   #162B20;
- --forest-mid: #1E3728;
  --gold:    #B8922A;
  --gold-light: #D4AA48;
  --gold-pale: #F0E4C0;
@@ -54,7 +53,8 @@
 
 html { scroll-behavior:smooth; }
 body { font-family:var(--f-body); background:var(--ivory); color:var(--body-text); overflow-x:hidden; }
-h1,h2,h3 { font-family:var(--f-display); font-weight:400; }
+h1,h2,h3 { font-family:var(--f-display); font-weight:400; text-wrap:balance; }
+p, li, span, div { text-wrap:pretty; }
 
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 .a1{opacity:0;animation:fadeUp .9s .15s ease forwards}
@@ -72,21 +72,21 @@ nav {
 .nav-logo { font-family:var(--f-display); font-size:18px; font-weight:400; color:var(--navy); letter-spacing:.04em; text-decoration:none; }
 .nav-logo em { font-style:italic; color:var(--gold); }
 .nav-links { display:flex; gap:36px; align-items:center; }
-.nav-link { font-family:var(--f-sans); font-size:13px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--soft-text); text-decoration:none; cursor:pointer; transition:color .2s; }
+.nav-link { font-family:var(--f-sans); font-size:15px; font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:var(--soft-text); text-decoration:none; cursor:pointer; transition:color .2s; }
 .nav-link:hover { color:var(--navy); }
-.nav-cta { font-family:var(--f-sans); font-size:13px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:var(--ivory); background:var(--navy); border:none; padding:11px 24px; cursor:pointer; transition:background .2s; text-decoration:none; }
+.nav-cta { font-family:var(--f-sans); font-size:15px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:var(--ivory); background:var(--navy); border:none; padding:11px 24px; cursor:pointer; transition:background .2s; text-decoration:none; }
 .nav-cta:hover { background:var(--navy-mid); }
 
 /* ══ HERO ══ */
 .cred-hero {
- background:var(--navy); padding:160px 72px 100px;
+ background:radial-gradient(circle at 50% 62%, #4a5a7d 0%, #2c3a57 22%, #16243f 48%, #0a1628 72%, #050d18 100%); padding:160px 72px 100px;
  position:relative; overflow:hidden;
 }
-.cred-hero::before {
- content:''; position:absolute; inset:0;
- background:
-  radial-gradient(ellipse 50% 40% at 80% 20%, rgba(184,146,42,.06) 0%, transparent 55%);
- pointer-events:none;
+.cred-hero-glow {
+ position:absolute; width:700px; height:700px; left:50%; top:55%;
+ transform:translate(-50%,-50%);
+ background:radial-gradient(circle, rgba(196,160,90,.12) 0%, rgba(196,160,90,.04) 35%, rgba(196,160,90,0) 70%);
+ filter:blur(40px); pointer-events:none; z-index:0;
 }
 .cred-hero-inner { max-width:720px; position:relative; z-index:1; }
 .cred-hero-label {
@@ -215,14 +215,14 @@ nav {
 
 /* ══ CTA ══ */
 .cta-section {
- background:var(--navy); padding:100px 72px;
+ background:radial-gradient(circle at 50% 50%, #2c3a57 0%, #16243f 35%, #0a1628 70%, #050d18 100%); padding:100px 72px;
  text-align:center; position:relative; overflow:hidden;
 }
 .cta-section::before {
  content:''; position:absolute; top:50%; left:50%;
- transform:translate(-50%,-50%); width:700px; height:400px;
- background:none;
- pointer-events:none;
+ transform:translate(-50%,-50%); width:500px; height:500px;
+ background:radial-gradient(circle, rgba(196,160,90,.1) 0%, rgba(196,160,90,.03) 40%, transparent 70%);
+ filter:blur(30px); pointer-events:none;
 }
 .cta-title {
  font-family:var(--f-display); font-size:clamp(36px,4.5vw,56px);
@@ -246,6 +246,8 @@ nav {
  cursor:pointer; transition:all .2s; text-decoration:none;
 }
 .btn-outline-gold:hover { border-color:var(--gold); color:var(--gold-light); }
+.btn-primary-light { display:inline-block; background:var(--ivory); color:var(--navy); border:none; padding:15px 32px; font-family:var(--f-sans); font-size:12px; font-weight:400; letter-spacing:.18em; text-transform:uppercase; cursor:pointer; transition:all .2s; text-decoration:none; }
+.btn-primary-light:hover { background:var(--gold-light); transform:translateY(-2px); }
 .cta-contact {
  font-family:var(--f-sans); font-size:11px; font-weight:300;
  letter-spacing:.15em; color:rgba(255,255,255,.22);
@@ -256,9 +258,9 @@ nav {
 footer { background:var(--ink); padding:32px 72px; display:flex; justify-content:space-between; align-items:center; }
 .footer-logo { font-family:var(--f-display); font-size:15px; font-weight:400; color:var(--gold-pale); }
 .footer-logo em { font-style:italic; color:var(--gold); }
-.footer-copy { font-family:var(--f-sans); font-size:10px; letter-spacing:.14em; color:rgba(255,255,255,.2); text-transform:uppercase; }
+.footer-copy { font-family:var(--f-sans); font-size:12px; letter-spacing:.14em; color:rgba(255,255,255,.2); text-transform:uppercase; }
 .footer-links { display:flex; gap:24px; }
-.footer-link { font-family:var(--f-sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.25); text-decoration:none; cursor:pointer; transition:color .2s; }
+.footer-link { font-family:var(--f-sans); font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.25); text-decoration:none; cursor:pointer; transition:color .2s; }
 .footer-link:hover { color:var(--gold); }
 
 /* ══ MOBILE NAV TOGGLE ══ */
@@ -280,7 +282,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  .back-strip { padding:0 28px 36px; }
  .cta-section { padding:64px 24px; }
  .cta-buttons { flex-direction:column; align-items:center; gap:10px; }
- .cta-buttons .btn-gold, .cta-buttons .btn-outline-gold { width:100%; max-width:320px; text-align:center; }
+ .cta-buttons .btn-primary-light { width:100%; max-width:320px; text-align:center; }
  footer { flex-direction:column; gap:16px; padding:28px 24px; text-align:center; }
  .footer-links { flex-wrap:wrap; justify-content:center; gap:16px; }
 }
@@ -309,9 +311,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <span></span><span></span><span></span>
  </button>
  <div class="nav-links">
-  <a class="nav-link" href="./index.html#consulting">Work With Me</a>
+  <a class="nav-link" href="./index.html#reset">The Unlock</a>
   <a class="nav-link" href="./index.html#speaking">Speaking</a>
-  <a class="nav-link" href="./index.html#story">About</a>
+  <a class="nav-link" href="./about.html">About</a>
   <a class="nav-link" href="./index.html#newsletter">Newsletter</a>
   <a class="nav-link" href="./index.html#contact">Contact</a>
   <button class="nav-cta" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
@@ -320,6 +322,7 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
 <!-- ══════════════ HERO ══════════════ -->
 <section class="cred-hero">
+ <div class="cred-hero-glow"></div>
  <div class="cred-hero-inner">
   <div class="cred-hero-label a1">Living Proof</div>
   <h1 class="a2">Two decades of building,<br><em>leading, and starting over.</em></h1>
@@ -388,6 +391,11 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   </div>
 
   <div class="cred-entry">
+   <div class="cred-entry-title">Ollie</div>
+   <div class="cred-entry-body">Her son <strong>Oliver (Ollie)</strong> was born in 2015, during the agency years. Building a business and building a family at the same time.</div>
+  </div>
+
+  <div class="cred-entry">
    <div class="cred-entry-title">High-Stakes Data Management</div>
    <div class="cred-entry-body">Led a <strong>$130,000/month retainer</strong> and architected strategies for a <strong>7-million-contact database</strong>.</div>
   </div>
@@ -412,11 +420,6 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   <div class="cred-entry">
    <div class="cred-entry-title">High-Velocity USA E-Commerce</div>
    <div class="cred-entry-body">Built and scaled a <strong>premier Amazon brand</strong> within the United States, mastering logistics and brand positioning in a hyper-competitive landscape.</div>
-  </div>
-
-  <div class="cred-entry">
-   <div class="cred-entry-title">Ollie</div>
-   <div class="cred-entry-body">Her son <strong>Oliver (Ollie)</strong> was born during the Amazon growth phase. Building a business and building a family at the same time.</div>
   </div>
 
   <div class="cred-entry">
@@ -469,8 +472,8 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
   </div>
 
   <div class="cred-entry">
-   <div class="cred-entry-title">Founder of Attention Intelligence</div>
-   <div class="cred-entry-body">Developed a proprietary <strong>AI-powered framework</strong> designed to offload cognitive labor for leaders, caregivers, and parents navigating high-complexity lives.</div>
+   <div class="cred-entry-title">Creator of The Unlock</div>
+   <div class="cred-entry-body">Developed <strong>The Unlock</strong>, a six-movement methodology for leaders who have been broken open by life, designed to rebuild who they are and create a second brain that carries the work forward.</div>
   </div>
  </div>
 
@@ -483,11 +486,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
 <!-- ══════════════ CTA ══════════════ -->
 <section class="cta-section">
- <h2 class="cta-title">Ready to work with someone<br><em>who has been where you are?</em></h2>
+ <h2 class="cta-title">The most important work of your life<br><em>starts here.</em></h2>
  <div class="cta-buttons">
-  <button class="btn-gold" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barbramilligan'});return false;">Work With Me</button>
-  <button class="btn-outline-gold" onclick="window.location.href='./index.html#speaking'">Book Me to Speak</button>
-  <button class="btn-outline-gold" onclick="window.open('https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=6998717809656487937','_blank','noopener,noreferrer')">Subscribe to More Human</button>
+  <button class="btn-primary-light" onclick="document.location.href='./index.html#reset'">Begin the Most Important Work of Your Life &rarr;</button>
  </div>
  <div class="cta-contact"><a href="./index.html#contact" style="color:inherit;text-decoration:none;">Get in touch</a> &nbsp;&middot;&nbsp; Charlottesville, VA &nbsp;&middot;&nbsp; Available Nationally</div>
 </section>
@@ -497,9 +498,9 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
  <div class="footer-logo">Barbra Bannon <em>Milligan</em></div>
  <div class="footer-copy">&copy; 2026 Barbra Bannon Milligan &middot; All rights reserved</div>
  <div class="footer-links">
-  <a class="footer-link" href="./index.html#consulting">Work With Me</a>
+  <a class="footer-link" href="./index.html#reset">The Unlock</a>
   <a class="footer-link" href="./index.html#speaking">Speaking</a>
-  <a class="footer-link" href="./index.html#story">About</a>
+  <a class="footer-link" href="./about.html">About</a>
   <a class="footer-link" href="./index.html#newsletter">Newsletter</a>
   <a class="footer-link" href="./index.html#contact">Contact</a>
  </div>
