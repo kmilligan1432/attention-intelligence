@@ -91,17 +91,13 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(250,2
 .section-title em { font-style:italic; color:var(--gold); }
 
 /* ══ 1 · HERO — split layout with photo ══ */
-.hero { min-height:100vh; display:flex; align-items:center; justify-content:center; padding-top:57px; position:relative; overflow:hidden; background:var(--navy); }
-.hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 35%, rgba(18,32,58,.95) 0%, var(--navy) 70%); pointer-events:none; }
-.hero::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 40% 35% at 50% 30%, rgba(184,146,42,.04) 0%, transparent 60%); pointer-events:none; }
-.hero-leaf { position:absolute; pointer-events:none; z-index:1; opacity:.12; }
-.hero-leaf-a { top:12%; right:8%; animation:float 7s ease-in-out infinite; }
-.hero-leaf-b { bottom:15%; left:6%; animation:floatB 10s ease-in-out infinite; }
-.hero-leaf-c { top:55%; right:5%; animation:floatB 12s ease-in-out infinite; }
-.hero-scroll { position:absolute; bottom:28px; left:50%; transform:translateX(-50%); z-index:2; opacity:.25; animation:fadeUp .9s 1.2s ease forwards; }
-.hero-scroll svg { display:block; }
+.hero { min-height:100vh; display:flex; align-items:center; justify-content:center; padding-top:57px; position:relative; overflow:hidden; background:radial-gradient(ellipse at 50% 35%, #16243f 0%, #0a1628 70%, #060f1c 100%); }
+.hero-leaf { position:absolute; pointer-events:none; z-index:1; }
+.hero-leaf-a { top:12%; right:8%; opacity:.18; transform:rotate(-8deg); animation:float 7s ease-in-out infinite; }
+.hero-leaf-b { bottom:14%; left:6%; opacity:.15; transform:rotate(12deg); animation:floatB 10s ease-in-out infinite; }
+.hero-scroll { position:absolute; bottom:32px; left:50%; transform:translateX(-50%); z-index:2; }
 @keyframes scrollBob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(5px)} }
-.hero-scroll svg { animation:scrollBob 2.5s ease-in-out infinite; }
+.hero-scroll svg { display:block; animation:scrollBob 2.5s ease-in-out infinite; }
 .hero-left { background:transparent; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:90px 64px 80px; position:relative; overflow:hidden; max-width:900px; z-index:2; }
 .hero-issue { font-family:var(--f-sans); font-size:12px; font-weight:300; letter-spacing:.4em; text-transform:uppercase; color:var(--gold-light); margin-bottom:28px; display:flex; align-items:center; gap:12px; position:relative; z-index:1; }
 .hero-issue::before { content:''; width:28px; height:1px; background:var(--gold); }
@@ -411,25 +407,22 @@ footer { background:var(--ink); padding:32px 72px; display:flex; justify-content
 
 <!-- ═══════ 1 · HERO ═══════ -->
 <section class="hero">
- <!-- Leaf motifs -->
- <svg class="hero-leaf hero-leaf-a" viewBox="0 0 60 90" fill="none" width="64">
+ <!-- Leaf 1: top-right, 120px -->
+ <svg class="hero-leaf hero-leaf-a" viewBox="0 0 60 90" fill="none" width="120">
   <path d="M30 88C30 88 3 60 3 33C3 16 15 3 30 3C45 3 57 16 57 33C57 60 30 88 30 88Z" fill="#5C7A62" opacity=".8"/>
   <line x1="30" y1="9" x2="30" y2="82" stroke="#7A9A80" stroke-width="1" opacity=".4"/>
   <line x1="30" y1="30" x2="16" y2="48" stroke="#7A9A80" stroke-width=".7" opacity=".3"/>
   <line x1="30" y1="30" x2="44" y2="48" stroke="#7A9A80" stroke-width=".7" opacity=".3"/>
  </svg>
- <svg class="hero-leaf hero-leaf-b" viewBox="0 0 50 75" fill="none" width="48">
+ <!-- Leaf 2: bottom-left, 100px -->
+ <svg class="hero-leaf hero-leaf-b" viewBox="0 0 50 75" fill="none" width="100">
   <path d="M25 73C25 73 2 50 2 28C2 13 12 2 25 2C38 2 48 13 48 28C48 50 25 73 25 73Z" fill="#5C7A62" opacity=".7"/>
   <line x1="25" y1="8" x2="25" y2="68" stroke="#7A9A80" stroke-width=".8" opacity=".35"/>
  </svg>
- <svg class="hero-leaf hero-leaf-c" viewBox="0 0 40 60" fill="none" width="32">
-  <path d="M20 58C20 58 2 40 2 22C2 10 10 2 20 2C30 2 38 10 38 22C38 40 20 58 20 58Z" fill="#5C7A62" opacity=".6"/>
- </svg>
  <!-- Scroll cue -->
  <div class="hero-scroll">
-  <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
-   <line x1="10" y1="0" x2="10" y2="18" stroke="rgba(250,248,242,.4)" stroke-width="1"/>
-   <polyline points="4,14 10,21 16,14" fill="none" stroke="rgba(250,248,242,.4)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+   <polyline points="6,8 12,15 18,8" fill="none" stroke="#9aa5b5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
   </svg>
  </div>
  <div class="hero-left">
